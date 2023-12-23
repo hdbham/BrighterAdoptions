@@ -1,0 +1,22 @@
+{
+  "name": "11ty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass:build": "sass src/assets/sass/main.scss src/assets/css/main.css",
+    "sass:watch": "sass --watch styles/main.scss assets/css/style.css",
+    "start": "npx eleventy --serve --port=6269",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "sass": "^1.69.5"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1"
+  }
+}
