@@ -85,7 +85,7 @@
     <h2>Read our thoughts</h2>
   </header>
   <div class="posts">
-    {% for post in collections.all | reverse %}
+{% for post in collections.blogPosts | reverse %}
       <article>
         <a href="{{ post.url }}" class="image"><img src="{{ post.data.image }}" alt="" /></a>
         <h3>{{ post.data.title }}</h3>
@@ -106,12 +106,9 @@
 
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<!-- Scripts -->					
+		{% include "./_components/scripts.njk" %}
+
 
 	</body>
 </html>
