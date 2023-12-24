@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<img href=""> <title>Brighter Adoptions</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+		<link rel="stylesheet" href="/assets/css/main.css">	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							{% include "./_components/header.njk" %}
+							<!--CONTENT-->
+
+
+							<!--END CONTENT-->
+						</div>
+					</div>
+
+					{% include "./_components/sidebar.njk" %}
+
+			</div>
+
+		<!-- Scripts -->					
+		
+			<script src= "{{ breakpoints }}"></script>
+			<script src= "{{ browsermin }}"></script>
+			<script src= "{{ jquery }}"></script>
+			<script src= "{{ main }}"></script>
+			<script src= "{{ util }}"></script>
+
+	</body>
+</html>

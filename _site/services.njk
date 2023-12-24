@@ -21,25 +21,8 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-								                        <header id="header">
-									<img src="/assets/images/Logo.png" alt="logo heart with rays" style="max-height: 4rem; max-width: 10rem;"><a href="index.html" class="logo"><strong></strong></a>
-									<ul class="icons">
-										<!-- Twitter -->
-										<li><a href="#" class="icon brands fab fa-twitter" aria-label="Twitter"><span class="label">Twitter</span></a></li>
-										<!-- Facebook -->
-										<li><a href="#" class="icon brands fab fa-facebook-f" aria-label="Facebook"><span class="label">Facebook</span></a></li>
+							{% include "./_components/header.njk" %}
 
-										<!-- Snapchat -->
-										<li><a href="#" class="icon brands fab fa-snapchat-ghost" aria-label="Snapchat"><span class="label">Snapchat</span></a></li>
-
-										<!-- Instagram -->
-										<li><a href="#" class="icon brands fab fa-instagram" aria-label="Instagram"><span class="label">Instagram</span></a></li>
-
-										<!-- Medium -->
-										<li><a href="#" class="icon brands fab fa-medium-m" aria-label="Medium"><span class="label">Medium</span></a></li>
-
-									</ul>
-								</header>
 
 							<!-- Content -->
 								<section>
@@ -447,91 +430,7 @@ print 'It took ' + i + ' iterations to sort the deck.';
 						</div>
 					</div>
 
-													
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-
-							<!-- Search -->
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section>
-
-
-							<!-- Menu -->
-							<nav id="menu">
-								<header class="major">
-									<img src="/assets/images/LogoHeart.png" alt="logo heart with rays" style="padding: 0; margin-left: 30%; margin-top: 0%; margin-bottom: 10%;">
-<br>
-									<h2>Menu</h2>
-								</header>
-								<ul>
-									<li><a href="/index">Homepage</a></li>
-									<li><a href="/about">About Us</a></li>
-									<li><a href="/expectant_mothers">Expectant Mothers</a></li>
-									<li><a href="#">/adoptive_families</a></li>
-
-
-									<li>
-										<span class="opener">Services</span>
-										<ul>
-											<li><a href="#">Housing</a></li>
-											<li><a href="#">Medical</a></li>
-											<li><a href="#">Counseling Services</a></li>
-									</ul>
-							</nav>
-
-						<!-- Section -->
-							<section>
-								<header class="major">
-									<h2>Who We Are</h2>
-								</header>
-								<div class="mini-posts">
-									<article>
-										<a href="#" class="image"><img src="/assets/images/pic07.jpg" alt="" /></a>
-										<p>Sandi Quick - Owner and Director</p>
-									</article>
-									<article>
-										<a href="#" class="image"><img src="/assets/images/pic08.jpg" alt="" /></a>
-										<p>Shaylee Budora - CMHC</p>
-									</article>
-									<article>
-										<a href="#" class="image"><img src="/assets/images/pic09.jpg" alt="" /></a>
-										<p>Taylor Palmer - Caseworker</p>
-									</article>
-									<article>
-										<a href="#" class="image"><img src="/assets/images/pic09.jpg" alt="" /></a>
-										<p>Mary Jane - Assistant Caseworker</p>
-									</article>
-								</div>
-								<ul class="actions">
-									<li><a href="#" class="button">More</a></li>
-								</ul>
-							</section>
-
-						<!-- Section -->
-							<section>
-								<header class="major">
-									<h2>Get in touch</h2>
-								</header>
-								<p>if you have any questions, please don't hesitate to call us. with over 20 years of experience in the adoption business, we are committed to providing dedicated support. based in utah, we are here to help families grow with compassion. thank you!</p>
-								<ul class="contact">
-									<li class="icon solid fa-envelope"><a href="#">sandi@brigheradoption.com</a></li>
-									<li class="icon solid fa-phone">(801) 989-6386</li>
-									<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
-									Nashville, TN 00000-0000</li>
-								</ul>
-							</section>
-
-						<!-- Footer -->
-							<footer id="footer">
-								<p class="copyright">&copy; Brighter Adoption. All rights reserved. </a>.</p>
-							</footer>
-
-						</div>
-					</div>
+									{% include "./_components/sidebar.njk" %}
 
 
 			</div>
