@@ -2623,10 +2623,9 @@ button:disabled,
   white-space: nowrap;
   top: 0;
   width: 6em;
-  z-index: 100;
+  z-index: 10000;
 }
 #sidebar .toggle:before {
-  content: true;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -2686,7 +2685,7 @@ button:disabled,
     left: 0;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 10000;
   }
   #sidebar.inactive {
     box-shadow: none;
@@ -2720,8 +2719,8 @@ button:disabled,
 }
 @media screen and (max-width: 736px) {
   #sidebar .toggle {
-    text-indent: 9.25em;
-    width: 9.25em;
+    text-indent: 7.25em;
+    width: 7.25em;
   }
   #sidebar .toggle:before {
     color: #7f888f;
@@ -2980,10 +2979,6 @@ button:disabled,
   border-top: 0;
   margin-top: 0;
   padding-top: 0;
-}
-
-#sidebar {
-  margin: 1rem !important;
 }
 
 /*# sourceMappingURL=main.css.map */
