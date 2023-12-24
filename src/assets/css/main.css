@@ -2495,15 +2495,24 @@ button:disabled,
   #main > .inner {
     padding: 0 5em 0.1em 5em;
   }
+  #main > .inner > section {
+    padding: 5em 0 3em 0;
+  }
 }
 @media screen and (max-width: 1280px) {
   #main > .inner {
     padding: 0 4em 0.1em 4em;
   }
+  #main > .inner > section {
+    padding: 4em 0 2em 0;
+  }
 }
 @media screen and (max-width: 736px) {
   #main > .inner {
     padding: 0 2em 0.1em 2em;
+  }
+  #main > .inner > section {
+    padding: 3em 0 1em 0;
   }
 }
 
@@ -2565,31 +2574,29 @@ button:disabled,
   font-size: 0.9em;
   position: relative;
   width: 26em;
-  margin: 1rem;
 }
 #sidebar h2 {
   font-size: 1.3888888889em;
 }
-#sidebar .innnerSidebar {
+#sidebar > .innerSidebar {
   padding: 2.2222222222em 2.2222222222em 2.4444444444em 2.2222222222em;
-  margin: 1rem !important;
   position: relative;
   width: 26em;
 }
-#sidebar .innnerSidebar > * {
+#sidebar > .innerSidebar > * {
   border-bottom: solid 2px rgba(210, 215, 217, 0.75);
   margin: 0 0 3.5em 0;
   padding: 0 0 3.5em 0;
 }
-#sidebar .innnerSidebar > * > :last-child {
+#sidebar > .innerSidebar > * > :last-child {
   margin-bottom: 0;
 }
-#sidebar .innnerSidebar > *:last-child {
+#sidebar > .innerSidebar > *:last-child {
   border-bottom: 0;
   margin-bottom: 0;
   padding-bottom: 0;
 }
-#sidebar .innnerSidebar > .alt {
+#sidebar > .innerSidebar > .alt {
   background-color: #eff1f2;
   border-bottom: 0;
   margin: -2.2222222222em 0 4.4444444444em -2.2222222222em;
@@ -2649,11 +2656,11 @@ button:disabled,
   #sidebar {
     width: 24em;
   }
-  #sidebar > .innnerSidebar {
+  #sidebar > .innerSidebar {
     padding: 1.6666666667em 1.6666666667em 1.3333333333em 1.6666666667em;
     width: 24em;
   }
-  #sidebar > .innnerSidebar > .alt {
+  #sidebar > .innerSidebar > .alt {
     margin: -1.6666666667em 0 3.3333333333em -1.6666666667em;
     padding: 1.6666666667em;
     width: calc(100% + 3.3333333333em);
@@ -2684,7 +2691,7 @@ button:disabled,
   #sidebar.inactive {
     box-shadow: none;
   }
-  #sidebar > .innnerSidebar {
+  #sidebar > .innerSidebar {
     -webkit-overflow-scrolling: touch;
     height: 100%;
     left: 0;
@@ -2693,7 +2700,7 @@ button:disabled,
     position: absolute;
     top: 0;
   }
-  #sidebar > .innnerSidebar:after {
+  #sidebar > .innerSidebar:after {
     content: "";
     display: block;
     height: 4em;
