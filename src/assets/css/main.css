@@ -2629,6 +2629,7 @@ button:disabled,
   z-index: 10000;
 }
 #sidebar .toggle:before {
+  content: true;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -2722,13 +2723,11 @@ button:disabled,
 }
 @media screen and (max-width: 736px) {
   #sidebar .toggle {
-    text-indent: 7.25em;
-    width: 7.25em;
+    text-indent: 9.25em;
+    width: 9.25em;
   }
   #sidebar .toggle:before {
     color: #7f888f;
-    margin-left: -0.0625em;
-    margin-top: -0.25em;
     font-size: 1.1rem;
     z-index: 1;
   }

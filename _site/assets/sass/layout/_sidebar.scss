@@ -83,7 +83,7 @@
 		}
 
 		.toggle {
-			@include icon(false, solid);
+			@include icon(true, solid);
 			@include vendor('transition', 'left 0.5s ease');
 			-webkit-tap-highlight-color: rgba(255,255,255,0);
 			border: 0;
@@ -197,13 +197,13 @@
 
 		@include breakpoint('<=small') {
 			.toggle {
-				text-indent: 7.25em;
-				width: 7.25em;
+				text-indent: 9.25em;
+				width: 9.25em;
 
 				&:before {
 					color: _palette(fg);
-					margin-left: (-0.125em / 2);
-					margin-top: (-0.5em / 2);
+					// margin-left: (-0.125em / 2);
+					// margin-top: (-0.5em / 2);
 					font-size: 1.1rem;
 					z-index: 1;
 				}
