@@ -5,23 +5,18 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets/js/jquery.min.js");
     eleventyConfig.addPassthroughCopy("src/assets/js/main.js");
     eleventyConfig.addPassthroughCopy("src/assets/js/util.js");
-
+    eleventyConfig.addPassthroughCopy('src/_posts/**/*.md');
+    eleventyConfig.addPassthroughCopy('src/_layouts/**/*.njk');
+    eleventyConfig.addPassthroughCopy('src/includes/**/*.njk');
 
     eleventyConfig.addPassthroughCopy("src/assets/images");
     eleventyConfig.addPassthroughCopy("src/assets/sass/");
-    eleventyConfig.addPassthroughCopy("src/assets/webfonts/");
     eleventyConfig.addPassthroughCopy("./node_modules/@fortawesome/fontawesome-free/css/all.min.css");
 
-    // const { exec } = require('child_process');
-  
-    // exec('npm run sass:build', (err, stdout, stderr) => {
-    //   if (err) {
-    //     console.error(err);
-    //     return;
-    //   }
-    //   console.log(stdout);
-    // });
 
+    eleventyConfig.addCollection('blogPosts', function (collectionApi) {
+        return collectionApi.getFilteredByGlob('src/_posts/*.md');
+    });
 
     return {
         dir: {
@@ -29,7 +24,8 @@ module.exports = function(eleventyConfig) {
             includes: '_includes',
             components: '_components',
             partials: '_partials',
-            output: '_site'
+            output: '_site',
+            layouts: "_layouts",
         },
         templateFormats: ['md', 'njk', 'html'],
         markdownTemplateEngine: 'njk',
