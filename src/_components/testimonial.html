@@ -2,6 +2,7 @@
 	
 	
 	body{
+
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
@@ -14,17 +15,17 @@
 	.outerdiv
 	{
 		margin-top: -2rem;
-		width: 100%;
+		min-width: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
 	.innerdiv
 	{
-		/* transform: scale(0.9); */
-		margin: 1rem;
+		/* transform: scale(1.); */
+		margin: 10rem 0rem;	
 		display: grid;
-		grid-gap: 1.5rem;
+		grid-gap: 1rem;
 		grid-template-rows: repeat(2,22rem);
 		grid-template-columns: repeat(4,17rem);
 	}
@@ -135,7 +136,7 @@ $lapis-lazuli: #215B7Fff; */
 	}
 	.review p
 	{
-		font-size: 0.95rem;
+		font-size: 1.0rem;
 		color: #ffffff;
 		font-weight: 500;
 		opacity: 50%;
@@ -158,19 +159,32 @@ $lapis-lazuli: #215B7Fff; */
 		text-decoration: none;
 	}
 	
-	@media only screen and (max-width: 1000px)
+	@media only screen and (max-width: 1300px)
 	{
 		.innerdiv
 		{
-			/* transform: scale(0.7); */
+			display: flex; 
+			flex-direction: column;
+			transform: scale(1.1);
+			margin: 10rem 1rem 10rem 5rem;	
+			}	
+		.innerdiv > div {
+			padding: 3rem;
 		}
+		.review > p {
+		font-size: 14px;
+		}
+	}
+
 	}
 	@media only screen and (max-width: 800px)
 	{
 		.innerdiv
 		{
-			transform: scale(0.6);
-		}
+			display: flex; 
+			flex-direction: column;
+			transform: scale(1.5);
+			margin: 30rem 10rem 30rem 10rem;		}
 	}
 	@media only screen and (max-width: 600px)
 	{
@@ -181,10 +195,9 @@ $lapis-lazuli: #215B7Fff; */
 		{
 			display: flex; 
 			flex-direction: column;
-			transform: scale(1);
-			margin: 2rem;
-			margin-bottom: 5rem;
-		}
+			transform: scale(1.2);
+			margin: 20rem 7rem 20rem 7rem;
+			}
 		.attribution
 		{
 			position: relative;
@@ -221,7 +234,7 @@ $lapis-lazuli: #215B7Fff; */
         </div>
         <div class="review">
           <h4>Sandi is truly a Mother of Mothers.</h4>
-        <p>“Housing, abundant financial help, well-informed health care, a birthing plan and counseling was all included in this process. You choose which family gets blessed with your sweet babe, and its with great respect and care that your choices are honored. ”</p>
+        <p>“Housing, financial help, well-informed health care, a birthing plan and counseling was all included. You choose which family gets blessed with your sweet babe, and its with great respect and care that your choices are honored. ”</p>
         </div>
       </div>
       <!-- div3 -->
@@ -237,7 +250,7 @@ $lapis-lazuli: #215B7Fff; */
         </div>
         <div class="review dark">
           <h4>Thank you so much ❤️</h4>
-          <p>“My ten year old son had passed away during this pregnancy and she was so supportive with me. I’m now off probation, was helped from living in a homeless shelter, graduated my classes, paid off my fines, working , and I’m moving to live with my daughter & her dad. After this experience I’d definitely say everything happens for a reason. I know my baby has a loving couple who can care for him the way I wouldn’t have. That’s all I can ask for is to know he will be in great hands. The adoptive parents are really sweet and even giving the baby my son who passed away name as his middle name in memory of him.  You all have been so great and I was so scared to make this decision at the beginning but you saved the baby and also me. Thank you so much - Kendra ❤️”</p>
+          <p>“My ten year old son had passed away during this pregnancy and she was so supportive with me. I’m now off probation, was helped from living in a homeless shelter, graduated my classes, paid off my fines, working. Everything happens for a reason. I know my baby is loved. That’s all I can ask for is to know he will be in great hands. The adoptive parents are really sweet and even giving the baby my son who passed away name as his middle name in memory of him.  You all have been so great and I was so scared to make this decision at the beginning but you saved the baby and also me. Thank you so much - Kendra ❤️”</p>
         </div>
       </div>
       <!-- div4 -->
@@ -252,7 +265,7 @@ $lapis-lazuli: #215B7Fff; */
           </div>
         </div>
         <div class="review dark">
-          <h4>An overall wonderful and rewarding experience</h4>
+          <h4>A very rewarding experience</h4>
         <p>“ I am proud that I was able to find a company with such good spirits and no pressure because this has been the most difficult decision I have had to do in my life”</p>
         </div>
       </div>
@@ -263,7 +276,7 @@ $lapis-lazuli: #215B7Fff; */
             <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-patrick.jpg" alt="">
           </div>
           <div class="detbox">
-            <p class="name dark">Caroline</p>
+            <p class="name dark">Carolina</p>
             <p class="designation dark">Verified Graduate</p>
           </div>
         </div>

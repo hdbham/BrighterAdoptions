@@ -47,13 +47,15 @@
 		font-size: 0.9em;
 		position: relative;
 		width: _size(sidebar-width);
+		margin: 1rem;
 
 		h2 {
 			font-size: (1.25em / 0.9);
 		}
 
-		> .inner {
+		 .innnerSidebar {
 			@include padding($pad, $pad, (0, 0, $pad, 0));
+			margin: 1rem !important;
 			position: relative;
 			width: _size(sidebar-width);
 
@@ -99,7 +101,7 @@
 			white-space: nowrap;
 			top: 0;
 			width: 6em;
-			z-index: _misc(z-index-base);
+			z-index: 100;
 
 			&:before {
 				content: '\f0c9';
@@ -123,7 +125,7 @@
 
 			width: _size(sidebar-width-alt);
 
-			> .inner {
+			> .innnerSidebar {
 				@include padding($pad, $pad, (0, 0, $pad, 0));
 				width: _size(sidebar-width-alt);
 
@@ -157,13 +159,13 @@
 			left: 0;
 			position: fixed;
 			top: 0;
-			z-index: _misc(z-index-base);
+			z-index: 1;
 
 			&.inactive {
 				box-shadow: none;
 			}
 
-			> .inner {
+			> .innnerSidebar {
 				-webkit-overflow-scrolling: touch;
 				height: 100%;
 				left: 0;
@@ -202,8 +204,8 @@
 
 				&:before {
 					color: _palette(fg);
-					// margin-left: (-0.125em / 2);
-					// margin-top: (-0.5em / 2);
+					margin-left: (-0.125em / 2);
+					margin-top: (-0.5em / 2);
 					font-size: 1.1rem;
 					z-index: 1;
 				}
