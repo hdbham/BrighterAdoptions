@@ -52,7 +52,7 @@
 			font-size: (1.25em / 0.9);
 		}
 
-		> .innerSidebar {
+		> .inner {
 			@include padding($pad, $pad, (0, 0, $pad, 0));
 			position: relative;
 			width: _size(sidebar-width);
@@ -123,7 +123,7 @@
 
 			width: _size(sidebar-width-alt);
 
-			> .innerSidebar {
+			> .inner {
 				@include padding($pad, $pad, (0, 0, $pad, 0));
 				width: _size(sidebar-width-alt);
 
@@ -163,7 +163,7 @@
 				box-shadow: none;
 			}
 
-			> .innerSidebar {
+			> .inner {
 				-webkit-overflow-scrolling: touch;
 				height: 100%;
 				left: 0;
