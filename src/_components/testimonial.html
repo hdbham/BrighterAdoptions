@@ -186,17 +186,23 @@ $lapis-lazuli: #215B7Fff; */
 			transform: scale(1.5);
 			margin: 30rem 10rem 30rem 10rem;		}
 	}
-	@media only screen and (max-width: 600px)
-	{
-		.div1 {
-			background-position-x: 10rem;
+	@media only screen and (max-width: 600px){
+
+		.eachdiv   {
+			opacity: 0;
+			transition: opacity 0.55s ease-in-out;
 		}
+		.eachdiv.show {
+			opacity:1;
+		}
+		
+
 		.innerdiv
 		{
 			display: flex; 
 			flex-direction: column;
 			transform: scale(1.2);
-			margin: 25rem 3rem 25rem 3rem;
+			margin: 40rem 3rem 25rem 3rem;
 			}
 		.attribution
 		{
@@ -291,3 +297,25 @@ $lapis-lazuli: #215B7Fff; */
       </div>
     </div>
   </div>
+
+
+
+<script>
+  // JavaScript code to handle element visibility based on scroll position
+  const elements = document.querySelectorAll('.eachdiv');
+
+  function checkVisibility() {
+    elements.forEach((element) => {
+      const elementPosition = element.getBoundingClientRect().top;
+      const screenHeight = window.innerHeight;
+
+      if (elementPosition < screenHeight * 0.75) {
+        element.classList.add('show');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkVisibility);
+  window.addEventListener('resize', checkVisibility);
+  checkVisibility(); // Initially check visibility on page load
+</script>
