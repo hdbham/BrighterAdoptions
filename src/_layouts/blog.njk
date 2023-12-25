@@ -44,15 +44,21 @@
 	    border-bottom: dotted 2px #f5bf42;
 
 }
+article {
+	margin: 8rem;
+}
 
 @media screen and (max-width: 767px) { /* Media query for phone screens */
-    .container {
-        flex-direction: column; /* Switch to column direction for smaller screens */
+	article {
+		margin: 1rem;
+	}
+	.container {
+		flex-direction: column; /* Switch to column direction for smaller screens */
         align-items: flex-start; /* Adjust alignment for better display */
     }
 
     .container div {
-        margin-right: 0; /* Remove margin for better layout on smaller screens */
+        margin: 0; /* Remove margin for better layout on smaller screens */
     }
 
     .image {
@@ -74,27 +80,48 @@
                             {% include "src/_components/header.njk" %}
 
 							<!-- Content -->
-							<button style="margin-top: 20px" onclick="history.back()">Go Back</button>
-								<article style="margin: 8rem;">
-
-									<div class="container">
-										<div>
-											<header class="main">
-												<h1>{{ title }}</h1>
-											</header>
-										</div>
-										<span class="image main">
-											<img src="{{ image }}" alt=""/>
-										</span>
-									</div>
-									
-									
-									
-									<div class="line"></div>
-									<div class="content"> {{content | safe}}</div>
+							<article>
 								
+								<div class="container">
+									<div>
+										<header class="main">
+											<h1>{{ title }}</h1>
+										</header>
+									</div>
+									<span class="image main">
+										<img src="{{ image }}" alt=""/>
+									</span>
+								</div>
+								
+								
+								
+								<div class="line"></div>
+								<div class="content"> {{content | safe}}</div>
+								
+								<button style="margin-bottom: 2rem;" onclick="history.back()">Go Back</button>
+								
+								<section>
+										<h2>Birth Mother Experiences</h2>
+										<div class="posts">
+											{% set count = 0 %}
+											{% for post in collections.blogPosts | reverse %}
+											{% if post.data.tags and "birth-mother" in post.data.tags %}
+											{% if count < 2 %}
+											<article>
+												<a href="{{ post.url }}" class="image"><img src="{{ post.data.image }}" alt="" /></a>
+												<h3>{{ post.data.title }}</h3>
+												<p>{{ post.data.excerpt }}</p>
+												<ul class="actions">
+													<li><a href="{{ post.url }}" class="button">More</a></li>
+												</ul>
+											</article>
+											{% set count = count + 1 %}
+											{% endif %}
+											{% endif %}
+											{% endfor %}
+										</div>
+									</section>
 								</article>
-
 						</div>
 					</div>
 

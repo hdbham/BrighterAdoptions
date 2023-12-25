@@ -41,15 +41,21 @@
 	    border-bottom: dotted 2px #f5bf42;
 
 }
+article {
+	margin: 8rem;
+}
 
 @media screen and (max-width: 767px) { /* Media query for phone screens */
-    .container {
-        flex-direction: column; /* Switch to column direction for smaller screens */
+	article {
+		margin: 1rem;
+	}
+	.container {
+		flex-direction: column; /* Switch to column direction for smaller screens */
         align-items: flex-start; /* Adjust alignment for better display */
     }
 
     .container div {
-        margin-right: 0; /* Remove margin for better layout on smaller screens */
+        margin: 0; /* Remove margin for better layout on smaller screens */
     }
 
     .image {
@@ -89,24 +95,23 @@
 								</header>
 
 							<!-- Content -->
-							<button style="margin-top: 20px" onclick="history.back()">Go Back</button>
-								<article style="margin: 8rem;">
-
-									<div class="container">
-										<div>
-											<header class="main">
-												<h1>What is Gentle Parenting?</h1>
-											</header>
-										</div>
-										<span class="image main">
-											<img src="/assets/images/pic03.jpg" alt=""/>
-										</span>
+							<article>
+								
+								<div class="container">
+									<div>
+										<header class="main">
+											<h1>What is Gentle Parenting?</h1>
+										</header>
 									</div>
-									
-									
-									
-									<div class="line"></div>
-									<div class="content"> <h4>Dear Reader,</h4>
+									<span class="image main">
+										<img src="/assets/images/pic03.jpg" alt=""/>
+									</span>
+								</div>
+								
+								
+								
+								<div class="line"></div>
+								<div class="content"> <h4>Dear Reader,</h4>
 <p>In the realm of parenting approaches, &quot;gentle parenting&quot; stands as a philosophy centered on fostering a nurturing, respectful, and empathetic relationship between parents and children. It prioritizes understanding, empathy, and connection in guiding children's behavior and fostering their overall development. Let's delve into what gentle parenting entails:</p>
 <h3>Emphasis on Connection:</h3>
 <p>Gentle parenting emphasizes building a strong emotional connection between parent and child. It focuses on nurturing a relationship based on trust, respect, and understanding, fostering a secure attachment that lays the foundation for healthy development.</p>
@@ -133,8 +138,56 @@
 <p>By nurturing strong connections and fostering a respectful and understanding relationship, gentle parenting aims to guide children through their formative years with empathy, patience, and support.</p>
 </div>
 								
+								<button style="margin-bottom: 2rem;" onclick="history.back()">Go Back</button>
+								
+								<section>
+										<h2>Birth Mother Experiences</h2>
+										<div class="posts">
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											<article>
+												<a href="/_posts/blog1 copy 2/" class="image"><img src="/assets/images/pic01.jpg" alt="" /></a>
+												<h3>Navigating Grief and Adoption: A Compassionate Journey of Love and Loss</h3>
+												<p>For birth parents, the decision to place a child for adoption often comes with a profound sense of loss and grief. It&#39;s a decision made out of love and selflessness, yet it&#39;s accompanied by the ache of separation and the longing for the child they&#39;ve nurtured within.</p>
+												<ul class="actions">
+													<li><a href="/_posts/blog1 copy 2/" class="button">More</a></li>
+												</ul>
+											</article>
+											
+											
+											
+											
+											
+											
+											
+											
+											<article>
+												<a href="/_posts/GentleParenting/" class="image"><img src="/assets/images/pic03.jpg" alt="" /></a>
+												<h3>What is Gentle Parenting?</h3>
+												<p>In the realm of parenting approaches, &quot;gentle parenting&quot; stands as a philosophy centered on fostering a nurturing, respectful, and empathetic relationship between parents and children.</p>
+												<ul class="actions">
+													<li><a href="/_posts/GentleParenting/" class="button">More</a></li>
+												</ul>
+											</article>
+											
+											
+											
+											
+										</div>
+									</section>
 								</article>
-
 						</div>
 					</div>
 

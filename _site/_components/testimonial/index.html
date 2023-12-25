@@ -161,6 +161,13 @@ $lapis-lazuli: #215B7Fff; */
 	
 	@media only screen and (max-width: 1300px)
 	{
+			.eachdiv   {
+			opacity: 0;
+			transition: opacity 0.55s ease-in-out;
+		}
+		.eachdiv.show {
+			opacity:1;
+		}
 		.innerdiv
 		{
 			display: flex; 
@@ -179,6 +186,14 @@ $lapis-lazuli: #215B7Fff; */
 	}
 	@media only screen and (max-width: 800px)
 	{
+		.eachdiv   {
+			opacity: 0;
+			transition: opacity 0.55s ease-in-out;
+		}
+		.eachdiv.show {
+			opacity:1;
+		}
+		
 		.innerdiv
 		{
 			display: flex; 
