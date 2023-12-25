@@ -8,6 +8,59 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="..." crossorigin="anonymous" />
 		<link rel="stylesheet" href="/main.css" />
+
+		<style> 
+	.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 20rem;
+    flex-direction: row; /* Default flex-direction */
+	/* margin-bottom: 15rem; */
+}
+
+.container div {
+    margin-right: 2%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.image {
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-width: 40%;
+}
+
+.line {
+		margin-top: 4rem;
+		margin-bottom: 2rem;
+
+	    border-bottom: dotted 2px #f5bf42;
+
+}
+
+@media screen and (max-width: 767px) { /* Media query for phone screens */
+    .container {
+        flex-direction: column; /* Switch to column direction for smaller screens */
+        align-items: flex-start; /* Adjust alignment for better display */
+    }
+
+    .container div {
+        margin-right: 0; /* Remove margin for better layout on smaller screens */
+    }
+
+    .image {
+        min-width: auto; /* Adjust width to fit the screen */
+    }
+}
+
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -21,20 +74,24 @@
                             {% include "src/_components/header.njk" %}
 
 							<!-- Content -->
-								<article>
+							<button style="margin-top: 20px" onclick="history.back()">Go Back</button>
+								<article style="margin: 8rem;">
 
-									<button style="margin-top: 20px" onclick="history.back()">Go Back</button>
-
-									<span class="image main">
-										<img src="{{ image }}" alt="" style="max-height: 20rem; margin-top: 20;"/>
-									</span>
-
-									<header class="main">
-										<br>
-										<h3>{{ title }}</h3 style="padding: 10%;">
-									</header>
-
-									<div> {{content | safe}}</div>
+									<div class="container">
+										<div>
+											<header class="main">
+												<h1>{{ title }}</h1>
+											</header>
+										</div>
+										<span class="image main">
+											<img src="{{ image }}" alt=""/>
+										</span>
+									</div>
+									
+									
+									
+									<div class="line"></div>
+									<div class="content"> {{content | safe}}</div>
 								
 								</article>
 

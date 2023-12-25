@@ -1,6 +1,6 @@
 ---
 title: "Navigating Grief and Adoption: A Compassionate Journey of Love and Loss"
-image: /assets/images/pic09.jpg
+image: /assets/images/pic01.jpg
 excerpt: For birth parents, the decision to place a child for adoption often comes with a profound sense of loss and grief. It's a decision made out of love and selflessness, yet it's accompanied by the ache of separation and the longing for the child they've nurtured within.
 layout: blog.njk
 tags: 
