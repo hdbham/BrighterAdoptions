@@ -6,7 +6,67 @@
 		<title> Brighter Adoptions</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="..." crossorigin="anonymous" />
 		<link rel="stylesheet" href="/main.css" />
+
+		<style> 
+	.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 20rem;
+    flex-direction: row; /* Default flex-direction */
+	/* margin-bottom: 15rem; */
+}
+
+.container div {
+    margin-right: 2%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.image {
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-width: 40%;
+}
+
+.line {
+		margin-top: 4rem;
+		margin-bottom: 2rem;
+
+	    border-bottom: dotted 2px #f5bf42;
+
+}
+article {
+	margin: 8rem;
+}
+
+@media screen and (max-width: 767px) { /* Media query for phone screens */
+	article {
+		margin: 1rem;
+	}
+	.container {
+		flex-direction: column; /* Switch to column direction for smaller screens */
+        align-items: flex-start; /* Adjust alignment for better display */
+    }
+
+    .container div {
+        margin: 0; /* Remove margin for better layout on smaller screens */
+    }
+
+    .image {
+        min-width: auto; /* Adjust width to fit the screen */
+    }
+}
+
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -20,19 +80,48 @@
                             {% include "src/_components/header.njk" %}
 
 							<!-- Content -->
-								<article>
-
-									<span class="image main">
-										<img src="{{ image }}" alt="" style="max-height: 20rem; margin-top: 4rem;"/>
-									</span>
-
-									<header class="main">
-										<h1>{{ post.data.title }}</h1>
-									</header>
-									<div> {{content | safe}}</div>
+							<article>
 								
+								<div class="container">
+									<div>
+										<header class="main">
+											<h1>{{ title }}</h1>
+										</header>
+									</div>
+									<span class="image main">
+										<img src="{{ image }}" alt=""/>
+									</span>
+								</div>
+								
+								
+								
+								<div class="line"></div>
+								<div class="content"> {{content | safe}}</div>
+								
+								<button style="margin-bottom: 2rem;" onclick="history.back()">Go Back</button>
+								
+								<section>
+										<h2>Birth Mother Experiences</h2>
+										<div class="posts">
+											{% set count = 0 %}
+											{% for post in collections.blogPosts | reverse %}
+											{% if post.data.tags and "birth-mother" in post.data.tags %}
+											{% if count < 2 %}
+											<article>
+												<a href="{{ post.url }}" class="image"><img src="{{ post.data.image }}" alt="" /></a>
+												<h3>{{ post.data.title }}</h3>
+												<p>{{ post.data.excerpt }}</p>
+												<ul class="actions">
+													<li><a href="{{ post.url }}" class="button">More</a></li>
+												</ul>
+											</article>
+											{% set count = count + 1 %}
+											{% endif %}
+											{% endif %}
+											{% endfor %}
+										</div>
+									</section>
 								</article>
-
 						</div>
 					</div>
 
@@ -41,11 +130,13 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			
+			<script src="/jquery.min.js"></script>
+			<script src="/browser.min.js"></script>
+			<script src="/breakpoints.min.js"></script>
+			<script src="/util.js"></script>
+			<script src="/main.js"></script>
+
 
 	</body>
 </html>

@@ -2,6 +2,8 @@
 title: "Did you know they were adopted? Famous Figures of adoption"
 image: /assets/images/pic07.jpg
 excerpt: In the realm of parenting approaches, "gentle parenting" stands as a philosophy centered on fostering a nurturing, respectful, and empathetic relationship between parents and children. 
+layout: blog.njk
+
 ---
 
 

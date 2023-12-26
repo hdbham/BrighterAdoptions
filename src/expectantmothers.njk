@@ -8,28 +8,28 @@
 	<head>
 		<img href=""> <title>Brighter Adoptions</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-		<link rel="stylesheet" href="/assets/css/main.css">	</head>
+	<link rel="stylesheet" href="/assets/css/main.css">	</head>
 	<body class="is-preload">
-
 		<!-- Wrapper -->
 			<div id="wrapper">
-
 				<!-- Main -->
 					<div id="main">
+						 <!--inner-->
 						<div class="inner">
 
 							{% include "./_components/header.njk" %}
 
+
 								<section>
-									<header class="main">
-										<h1>Elements</h1>
-									</header>
+									<h2 id="content">Sample Content</h2>
+									<p>Praesent ac adipiscing ullamcorper semper ut amet ac risus. Lorem sapien ut odio odio nunc. Ac adipiscing nibh porttitor erat risus justo adipiscing adipiscing amet placerat accumsan. Vis. Faucibus odio magna tempus adipiscing a non. In mi primis arcu ut non accumsan vivamus ac blandit adipiscing adipiscing arcu metus praesent turpis eu ac lacinia nunc ac commodo gravida adipiscing eget accumsan ac nunc adipiscing adipiscing lorem ipsum dolor sit amet nullam veroeros adipiscing.</p>
+
+									{% include "./_components/testimonial.html" %}
 
 									<!-- Content -->
-										<h2 id="content">Sample Content</h2>
-										<p>Praesent ac adipiscing ullamcorper semper ut amet ac risus. Lorem sapien ut odio odio nunc. Ac adipiscing nibh porttitor erat risus justo adipiscing adipiscing amet placerat accumsan. Vis. Faucibus odio magna tempus adipiscing a non. In mi primis arcu ut non accumsan vivamus ac blandit adipiscing adipiscing arcu metus praesent turpis eu ac lacinia nunc ac commodo gravida adipiscing eget accumsan ac nunc adipiscing adipiscing lorem ipsum dolor sit amet nullam veroeros adipiscing.</p>
+										<h3>heading</h3>
 										<div class="row">
 											<div class="col-6 col-12-small">
 												<h3>Sem turpis amet semper</h3>
@@ -53,23 +53,40 @@
 												<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
 											</div>
 										</div>
+								</section>
 
-									<hr class="major" />
-
+								<section>
 									<h2>Birth Mother Experiences</h2>
-									{% include "./_components/testimonial.njk" %}
-
+									<div class="posts">
+										{% set count = 0 %}
+										{% for post in collections.blogPosts | reverse %}
+											{% if post.data.tags and "birth-mother" in post.data.tags %}
+												{% if count < 2 %}
+													<article>
+														<a href="{{ post.url }}" class="image"><img src="{{ post.data.image }}" alt="" /></a>
+														<h3>{{ post.data.title }}</h3>
+														<p>{{ post.data.excerpt }}</p>
+														<ul class="actions">
+															<li><a href="{{ post.url }}" class="button">More</a></li>
+														</ul>
+													</article>
+													{% set count = count + 1 %}
+												{% endif %}
+											{% endif %}
+										{% endfor %}
+									</div>
+								</section>
 
 						</div>
 					</div>
 
-					{% include "./_components/sidebar.njk" %}
+				{% include "./_components/sidebar.njk" %}
 
 			</div>
+		<!-- Scripts -->
+		{% include "./javascript.njk" %}
 
-		<!-- Scripts -->					
-		
-		{% include "./_components/scripts.njk" %}
+
 
 
 	</body>
