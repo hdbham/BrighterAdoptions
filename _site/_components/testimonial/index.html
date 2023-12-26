@@ -1,18 +1,6 @@
 <style>@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
-	
-	
-	body{
 
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		font-family: 'Barlow Semi Condensed', sans-serif;
-	}
-	a:link,a:active,a:visited,a:hover{
-		color:#3f51b5;
-	}
-	
-	.outerdiv
+	.testimonial .outerdiv
 	{
 		margin-top: -2rem;
 		min-width: 100%;
@@ -20,7 +8,7 @@
 		align-items: center;
 		justify-content: center;
 	}
-	.innerdiv
+	.testimonial .innerdiv
 	{
 		/* transform: scale(1.); */
 		margin: 10rem 0rem;	
@@ -37,93 +25,93 @@ $pearl: #E1DDC5ff;
 $butterscotch: #D89B4Bff;
 $lapis-lazuli: #215B7Fff; */
 
-	.eachdiv
+	.testimonial .eachdiv
 	{
 		padding: 1rem 2rem;
 		border-radius: 0.8rem;
 		box-shadow: 5px 5px 20px #6d6b6b6b;
 		color: white;
 	}
-	.div1
+	.testimonial  .div1
 	{
 		background: #215B7Fff;
 		grid-column: 1/3;
 		grid-row: 1/2;
 		color: black;
 	}
-	.div2
+	.testimonial  .div2
 	{
 		background:#D89B4Bff;
 		grid-column: 3/4;
 		grid-row: 1/2;
 	}
-	.div3
+	.testimonial  .div3
 	{
 		background: #E1DDC5ff;
 		grid-column: 4/5;
 		grid-row: 1/3;
 		color: black;
 	}
-	.div4
+	.testimonial 	.div4
 	{
 		background: #A9BDA5ff;
 		grid-column: 1/2;
 		grid-row: 2/3;
 		color: black;
 	}
-	.div5
+	.testimonial .div5
 	{
 		background: #F3D364ff;
 		grid-column: 2/4;
 		grid-row: 2/3;
 		color: black;
 	}
-	.userdetails
+	.testimonial 	.userdetails
 	{
 		display: flex;
 	}
-	.imgbox
+	.testimonial 	.imgbox
 	{
 		margin-right: 1rem;
 	}
-	.imgbox img
+	.testimonial 	.imgbox img
 	{
 		border-radius: 50%;
 		width: 2rem;
 		border: 2px solid #cec5c5;
 	}
-	.detbox
+	.testimonial 	.detbox
 	{
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 	}
-	.detbox p
+	.testimonial 	.detbox p
 	{
 		margin: 0;
 	}
-	.detbox .name
+	.testimonial 	.detbox .name
 	{
 		color: hsl(0, 0%, 81%);
 		font-size: 0.9rem;
 		margin-bottom: 0.1rem;
 		font-weight: 600;
 	}
-	.detbox .name.dark
+	.testimonial 	.detbox .name.dark
 	{
 		color: #49505A;
 	}
-	.detbox .designation
+	.testimonial 	.detbox .designation
 	{
 		color: hsl(0, 0%, 81%);
 		opacity: 50%;
 		font-size: 0.8rem;
 	}
-	.detbox .designation.dark
+	.testimonial 	.detbox .designation.dark
 	{
 		color: #49505A;
 	}
-	.review h4
+	.testimonial 	.review h4
 	{
 		font-size: 1.4rem;
 		color: white;
@@ -161,24 +149,24 @@ $lapis-lazuli: #215B7Fff; */
 	
 	@media only screen and (max-width: 1300px)
 	{
-			.eachdiv   {
+		.testimonial 	.eachdiv   {
 			opacity: 0;
 			transition: opacity 0.55s ease-in-out;
 		}
 		.eachdiv.show {
 			opacity:1;
 		}
-		.innerdiv
+		.testimonial 	.innerdiv
 		{
 			display: flex; 
 			flex-direction: column;
 			transform: scale(1.1);
 			margin: 10rem 5rem 10rem 5rem;	
 			}	
-		.innerdiv > div {
+			.testimonial 	.innerdiv > div {
 			padding: 3rem;
 		}
-		.review > p {
+		.testimonial 	.review > p {
 		font-size: 14px;
 		}
 	}
@@ -186,15 +174,15 @@ $lapis-lazuli: #215B7Fff; */
 	}
 	@media only screen and (max-width: 800px)
 	{
-		.eachdiv   {
+		.testimonial 	.eachdiv   {
 			opacity: 0;
 			transition: opacity 0.55s ease-in-out;
 		}
-		.eachdiv.show {
+		.testimonial 	.eachdiv.show {
 			opacity:1;
 		}
 		
-		.innerdiv
+		.testimonial .innerdiv
 		{
 			display: flex; 
 			flex-direction: column;
@@ -203,23 +191,23 @@ $lapis-lazuli: #215B7Fff; */
 	}
 	@media only screen and (max-width: 600px){
 
-		.eachdiv   {
+		.testimonial 	.eachdiv   {
 			opacity: 0;
 			transition: opacity 0.55s ease-in-out;
 		}
-		.eachdiv.show {
+		.testimonial 	.eachdiv.show {
 			opacity:1;
 		}
 		
 
-		.innerdiv
+		.testimonial 	.innerdiv
 		{
 			display: flex; 
 			flex-direction: column;
 			transform: scale(1.2);
 			margin: 40rem 3rem 25rem 3rem;
 			}
-		.attribution
+			.testimonial 	.attribution
 		{
 			position: relative;
 		}
@@ -227,7 +215,7 @@ $lapis-lazuli: #215B7Fff; */
 	
 </style>
 
-
+<div class="testimonial">
 <div class="outerdiv">
     <div class="innerdiv">
       <!-- div1 -->
@@ -312,12 +300,13 @@ $lapis-lazuli: #215B7Fff; */
       </div>
     </div>
   </div>
+  </div>
 
 
 
 <script>
   // JavaScript code to handle element visibility based on scroll position
-  const elements = document.querySelectorAll('.eachdiv');
+  const elements = document.querySelectorAll('.testimonial .eachdiv');
 
   function checkVisibility() {
     elements.forEach((element) => {
