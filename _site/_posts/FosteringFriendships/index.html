@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="/main.css" />
 
 		<style> 
-	.container {
+.blogwrapper	.container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,17 +16,17 @@
 	/* margin-bottom: 15rem; */
 }
 
-.container div {
+.blogwrapper .container div {
     margin-right: 2%;
 }
 
-.main {
+.blogwrapper .main {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-.image {
+.blogwrapper .image {
     min-height: fit-content;
     display: flex;
     flex-direction: column;
@@ -34,31 +34,31 @@
     min-width: 40%;
 }
 
-.line {
+.blogwrapper .line {
 		margin-top: 4rem;
 		margin-bottom: 2rem;
 
 	    border-bottom: dotted 2px #f5bf42;
 
 }
-article {
+.blogwrapper article {
 	margin: 8rem;
 }
 
 @media screen and (max-width: 767px) { /* Media query for phone screens */
-	article {
+	.blogwrapper article {
 		margin: 1rem;
 	}
-	.container {
+	.blogwrapper	.container {
 		flex-direction: column; /* Switch to column direction for smaller screens */
         align-items: flex-start; /* Adjust alignment for better display */
     }
 
-    .container div {
+	.blogwrapper    .container div {
         margin: 0; /* Remove margin for better layout on smaller screens */
     }
 
-    .image {
+	.blogwrapper    .image {
         min-width: auto; /* Adjust width to fit the screen */
     }
 }
@@ -93,7 +93,7 @@ article {
 
 									</ul>
 								</header>
-
+							<div class="blog-wrapper">
 							<!-- Content -->
 							<article>
 								
@@ -181,6 +181,7 @@ Encouraging friendships among same-race adopted children involves creating oppor
 										</div>
 									</section>
 								</article>
+								</div>
 						</div>
 					</div>
 
@@ -227,6 +228,24 @@ Encouraging friendships among same-race adopted children involves creating oppor
 								</header>
 								<div class="mini-posts">
 									
+										<article>
+										  <a href="#" class="image"><img src="/assets/images/sandi.png" alt="" /></a>
+										  <p>Sandi Quick - Owner and Director </p>
+										</article>
+										
+									
+										<article>
+										  <a href="#" class="image"><img src="/assets/images/pic10.jpg" alt="" /></a>
+										  <p>Shaylee Budora - Licensed Counselor </p>
+										</article>
+										
+									
+										<article>
+										  <a href="#" class="image"><img src="/assets/images/pic10.jpg" alt="" /></a>
+										  <p>Taylor Palmer - Case Worker </p>
+										</article>
+										
+									
 								  </div>
 								<ul class="actions">
 									<li><a href="#" class="button">More</a></li>
@@ -262,11 +281,11 @@ Encouraging friendships among same-race adopted children involves creating oppor
 
 		<!-- Scripts -->
 			
-			<script src="/jquery.min.js"></script>
-			<script src="/browser.min.js"></script>
-			<script src="/breakpoints.min.js"></script>
-			<script src="/util.js"></script>
-			<script src="/main.js"></script>
+			<script src="jquery.min.js"></script>
+			<script src="browser.min.js"></script>
+			<script src="breakpoints.min.js"></script>
+			<script src="util.js"></script>
+			<script src="main.js"></script>
 
 
 	</body>

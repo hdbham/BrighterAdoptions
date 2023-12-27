@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="/main.css" />
 
 		<style> 
-	.container {
+.blogwrapper	.container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,17 +19,17 @@
 	/* margin-bottom: 15rem; */
 }
 
-.container div {
+.blogwrapper .container div {
     margin-right: 2%;
 }
 
-.main {
+.blogwrapper .main {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-.image {
+.blogwrapper .image {
     min-height: fit-content;
     display: flex;
     flex-direction: column;
@@ -37,31 +37,31 @@
     min-width: 40%;
 }
 
-.line {
+.blogwrapper .line {
 		margin-top: 4rem;
 		margin-bottom: 2rem;
 
 	    border-bottom: dotted 2px #f5bf42;
 
 }
-article {
+.blogwrapper article {
 	margin: 8rem;
 }
 
 @media screen and (max-width: 767px) { /* Media query for phone screens */
-	article {
+	.blogwrapper article {
 		margin: 1rem;
 	}
-	.container {
+	.blogwrapper	.container {
 		flex-direction: column; /* Switch to column direction for smaller screens */
         align-items: flex-start; /* Adjust alignment for better display */
     }
 
-    .container div {
+	.blogwrapper    .container div {
         margin: 0; /* Remove margin for better layout on smaller screens */
     }
 
-    .image {
+	.blogwrapper    .image {
         min-width: auto; /* Adjust width to fit the screen */
     }
 }
@@ -78,7 +78,7 @@ article {
 						<div class="inner">
 
                             {% include "src/_components/header.njk" %}
-
+							<div class="blog-wrapper">
 							<!-- Content -->
 							<article>
 								
@@ -122,6 +122,7 @@ article {
 										</div>
 									</section>
 								</article>
+								</div>
 						</div>
 					</div>
 
@@ -131,11 +132,11 @@ article {
 
 		<!-- Scripts -->
 			
-			<script src="/jquery.min.js"></script>
-			<script src="/browser.min.js"></script>
-			<script src="/breakpoints.min.js"></script>
-			<script src="/util.js"></script>
-			<script src="/main.js"></script>
+			<script src="jquery.min.js"></script>
+			<script src="browser.min.js"></script>
+			<script src="breakpoints.min.js"></script>
+			<script src="util.js"></script>
+			<script src="main.js"></script>
 
 
 	</body>
