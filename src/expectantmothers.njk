@@ -4,9 +4,9 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<img href=""> <title>Brighter Adoptions</title>
+		<img href=""> <title>Expectant Mothers</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
@@ -63,7 +63,7 @@
 											{% if post.data.tags and "birth-mother" in post.data.tags %}
 												{% if count < 2 %}
 													<article>
-														<img src="{{ post.data.image }}" alt="image of {{post.data.title}}" />
+														<a href="{{ post.url }}" class="image"><img src="{{ post.data.image }}" alt="image of {{post.data.title}}" /></a>
 														<h3>{{ post.data.title }}</h3>
 														<p>{{ post.data.excerpt }}</p>
 														<ul class="actions">
