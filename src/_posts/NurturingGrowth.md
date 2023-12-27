@@ -6,7 +6,7 @@ layout: blog.njk
 
 ---
 
-Dear Reader,
+**Dear Reader,**
 
 Parenting is a journey filled with love, challenges, and the profound responsibility of nurturing a child's growth and development. For adoptive parents, this journey encompasses unique dynamics that require understanding, patience, and unconditional support. Here's a comprehensive guide on nurturing the growth of your adopted child:
 

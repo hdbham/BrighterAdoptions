@@ -18,6 +18,7 @@ A Journey of Resilience: The decision to adopt often stems from a place of resil
 
 Building Forever Bonds: Adoption builds families - not just legally, but emotionally and spiritually. It's a process of creating forever bonds, where children and parents find solace, belonging, and a sense of completeness in each other's presence.
 
+
 Transforming Lives: Through adoption, lives are transformed. Children find stability, love, and the chance to flourish, while parents experience the joy of nurturing and guiding a young life, witnessing the beauty of growth and development.
 
 Healing Hearts and Creating Legacies: Adoption has the power to heal wounds and mend broken hearts, offering a fresh start and the opportunity to create legacies of love, kindness, and support.

@@ -24,6 +24,7 @@ Eleanor Roosevelt: Esteemed diplomat, humanitarian, and former First Lady of the
 
 John Lennon: The legendary musician and co-founder of The Beatles, John Lennon, was raised by his Aunt Mimi and her husband George Smith after his parents' separation. His artistic genius and impact on music continue to inspire generations worldwide.
 
+
 Jamie Foxx: The versatile actor and musician, Jamie Foxx, was adopted by his maternal grandparents when he was a baby. His journey from humble beginnings to winning an Academy Award showcases his talent and resilience.
 
 Colin Kaepernick: The former NFL quarterback and activist, Colin Kaepernick, was adopted into a multiracial family. He was raised by a white couple, Rick and Teresa Kaepernick, who provided him with a supportive upbringing. Kaepernick is known not only for his athletic prowess but also for his activism and advocacy for social justice issues.

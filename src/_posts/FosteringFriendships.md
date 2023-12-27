@@ -27,6 +27,7 @@ Navigating friendships is an essential part of childhood, offering opportunities
 
 **Support Their Choices:** Respect your child's preferences when it comes to friendships. While encouraging connections with peers of the same race is valuable, also support their friendships regardless of racial background. Their comfort and compatibility with friends matter most.
 
+
 **Lead by Example:** Model inclusivity and diversity in your own friendships and social circles. Show your child the value of embracing friendships based on shared interests, experiences, and respect, regardless of racial backgrounds.
 
 **Celebrate Shared Experiences:** Encourage activities that highlight shared experiences and traditions within their racial community. Celebrating holidays, cooking traditional dishes, or participating in cultural events can foster a sense of belonging.
@@ -40,4 +41,3 @@ Remember, while encouraging connections within their racial community is valuabl
 
 ---
 
-This blog post offers guidance on how to support and encourage friendships between same-race adopted children, emphasizing the importance of cultural connections, open communication, and creating environments conducive to meaningful connections and shared experiences.
