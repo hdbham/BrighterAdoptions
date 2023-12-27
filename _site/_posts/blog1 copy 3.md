@@ -1,7 +1,7 @@
 ---
 
 title: "Radiant Smiles and Bright Futures: Celebrating Happy Adopted Children"
-image: /assets/images/pic08.jpg
+image: /assets/images/pic08.png
 excerpt: "This blog post celebrates the sheer happiness and contagious smiles of adopted children, emphasizing the love, resilience, and joy they bring into their families and the world."
 layout: blog.njk
 

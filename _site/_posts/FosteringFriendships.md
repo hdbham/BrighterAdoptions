@@ -1,6 +1,6 @@
 ---
 title: "Fostering Friendships: Helping Your Different-Race Adopted Child Connect with Peers"
-image: /assets/images/pic02.jpg
+image: /assets/images/pic02.png
 excerpt: In the realm of parenting approaches, "gentle parenting" stands as a philosophy centered on fostering a nurturing, respectful, and empathetic relationship between parents and children. 
 layout: blog.njk
 

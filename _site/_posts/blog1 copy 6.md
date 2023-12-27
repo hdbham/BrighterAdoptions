@@ -1,6 +1,6 @@
 ---
 title: " Nurturing Academic Success: Supporting Your Adopted Child's Journey to Good Grades"
-image: /assets/images/pic04.jpg
+image: /assets/images/pic04.png
 excerpt: "As parents, fostering an environment that supports your child's academic success is a universal goal. For adopted children, this journey might require additional support, understanding, and tailored approaches to help them excel in their studies. Here's a guide on how to assist your adopted child in achieving good grades:"
 layout: blog.njk
 
