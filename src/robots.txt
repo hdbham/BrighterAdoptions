@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /cdn-cgi/
+
+Host: https://brighterweb.netlify.app/
+
+Sitemap: https://brighterweb.netlify.app/sitemap.xml
