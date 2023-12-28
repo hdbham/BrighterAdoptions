@@ -11,14 +11,9 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
 
-    // eleventyConfig.addPassthroughCopy('src/_posts/**/*.md');
-    // eleventyConfig.addPassthroughCopy('src/_layouts/**/*.njk');
-    // eleventyConfig.addPassthroughCopy('src/includes/**/*.njk');
-    // eleventyConfig.addPassthroughCopy("src/assets/images");
-    // eleventyConfig.addPassthroughCopy("src/assets/sass/");
+    eleventyConfig.addPassthroughCopy("src/assets/images");
 
-    // assets/css/fontawesome-all.min.css
-
+ß
     eleventyConfig.addDataExtension('json', (contents) => {
         return JSON.parse(contents);
       });
