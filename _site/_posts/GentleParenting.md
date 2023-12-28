@@ -1,7 +1,8 @@
 ---
 title: What is Gentle Parenting?
 image: /assets/images/pic03.png
-excerpt: In the realm of parenting approaches, "gentle parenting" stands as a philosophy centered on fostering a nurturing, respectful, and empathetic relationship between parents and children. 
+excerpt: "Gentle parenting prioritizes empathy, respect, and positive discipline; focuses on nurturing trust, respect, and understanding.
+ Recognizes and honors a child's emotions and autonomy. Teaches and guides with empathy, validates feelings and nurtures a safe environment."
 layout: blog.njk
 tags: 
     - birth-mother

@@ -1,7 +1,7 @@
 ---
 title: "Did you know they were adopted? Famous Figures of adoption"
 image: /assets/images/pic07.png
-excerpt: In the realm of parenting approaches, "gentle parenting" stands as a philosophy centered on fostering a nurturing, respectful, and empathetic relationship between parents and children. 
+excerpt: The former NFL quarterback and activist, Colin Kaepernick, was adopted into a multiracial family. He was raised by a white couple, Rick and Teresa Kaepernick, who provided him with a supportive upbringing. Kaepernick is known not only for his athletic prowess but also for his activism and advocacy for social justice issues.
 layout: blog.njk
 
 ---
@@ -13,7 +13,7 @@ Dear Reader,
 Adoption is a remarkable journey that transcends biological ties and creates families rooted in love, resilience, and the pursuit of dreams. Throughout history, numerous influential and celebrated individuals have been shaped by the experience of adoption. Let's explore the stories of some famous figures who were embraced by adoptive families:
 
 Steve Jobs: The visionary co-founder of Apple Inc., Steve Jobs, was adopted at birth by Paul and Clara Jobs. His journey from adoption to becoming a pioneer in technology is a testament to the power of determination, innovation, and the love of his adoptive parents.
-
+ß
 Nelson Mandela: Renowned anti-apartheid revolutionary and former President of South Africa, Nelson Mandela, experienced the loss of his father at a young age and was raised by a chief after his father's death. His journey of resilience and leadership continues to inspire millions globally.
 
 Marilyn Monroe: One of the most iconic figures in Hollywood history, Marilyn Monroe, faced a tumultuous childhood and spent much of her early life in foster care and orphanages before being adopted by a family friend, Grace McKee. Her journey to stardom was marked by challenges, but her legacy endures.

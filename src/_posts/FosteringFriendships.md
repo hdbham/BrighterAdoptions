@@ -1,13 +1,11 @@
 ---
-title: "Fostering Friendships: Helping Your Different-Race Adopted Child Connect with Peers"
+title: "Embracing Your Childs Heritage -- It Is Part Of Who They Are."
 image: /assets/images/pic02.png
-excerpt: In the realm of parenting approaches, "gentle parenting" stands as a philosophy centered on fostering a nurturing, respectful, and empathetic relationship between parents and children. 
+excerpt: Number 1 - Encourage Open Conversations; Have open discussions with your child about their racial identity and the importance of connecting with peers who share similar backgrounds. Encourage them to express their feelings and questions about their racial identity.
 layout: blog.njk
 
 
 ---
-
-Title: Fostering Friendships: Helping Your Same-Race Adopted Child Connect with Peers
 
 Dear Reader,
 
@@ -26,7 +24,6 @@ Navigating friendships is an essential part of childhood, offering opportunities
 **Encourage Open Conversations:** Have open discussions with your child about their racial identity and the importance of connecting with peers who share similar backgrounds. Encourage them to express their feelings and questions about their racial identity.
 
 **Support Their Choices:** Respect your child's preferences when it comes to friendships. While encouraging connections with peers of the same race is valuable, also support their friendships regardless of racial background. Their comfort and compatibility with friends matter most.
-
 
 **Lead by Example:** Model inclusivity and diversity in your own friendships and social circles. Show your child the value of embracing friendships based on shared interests, experiences, and respect, regardless of racial backgrounds.
 
