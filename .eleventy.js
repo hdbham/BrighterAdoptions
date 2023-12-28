@@ -13,7 +13,7 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy("src/assets/images");
 
-ß
+
     eleventyConfig.addDataExtension('json', (contents) => {
         return JSON.parse(contents);
       });
