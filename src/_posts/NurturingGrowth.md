@@ -1,6 +1,6 @@
 ---
 title: "Top 10 Parenting Hacks For Adopted Children"
-image: /assets/images/pic01.png
+image: /assets/images/pic01.jpg
 excerpt: In the realm of parenting approaches, "gentle parenting" stands as a philosophy centered on fostering a nurturing, respectful, and empathetic relationship between parents and children. 
 layout: blog.njk
 

@@ -1,6 +1,6 @@
 ---
 title: "I Didn't Realize There Was Grief Involved"
-image: /assets/images/pic01.png
+image: /assets/images/pic01.jpg
 excerpt: For birth parents, the decision to place a child for adoption often comes with a profound sense of loss and grief. It's a decision made out of love and selflessness, yet it's accompanied by the ache of separation and the longing for the child they've nurtured within. This is the truth about adoption.
 layout: blog.njk
 tags: 

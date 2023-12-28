@@ -1,6 +1,6 @@
 ---
 title: "Embracing Your Childs Heritage -- It Is Part Of Who They Are."
-image: /assets/images/pic02.png
+image: /assets/images/pic02.jpg
 excerpt: Number 1 - Encourage Open Conversations; Have open discussions with your child about their racial identity and the importance of connecting with peers who share similar backgrounds. Encourage them to express their feelings and questions about their racial identity.
 layout: blog.njk
 
