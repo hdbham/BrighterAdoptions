@@ -1,6 +1,6 @@
 ---
 layout: blog.njk
-title: 'Adoption for Hope: Embracing a Journey of Love and Promise'
+title: Adoption is really cool
 excerpt: >-
   The hope embedded within the heart of adoption nurtures dreams, heals wounds,
   and creates a world where every child finds solace and every family finds the
