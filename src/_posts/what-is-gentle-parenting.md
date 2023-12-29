@@ -1,13 +1,19 @@
 ---
-title: Why Gentle Parenting Isn't Weird.
-image: /assets/images/pic03.jpg
-excerpt: "Gentle parenting prioritizes empathy, respect, and positive discipline; focuses on nurturing trust, respect, and understanding.
- Recognizes and honors a child's emotions and autonomy. Teaches and guides with empathy, validates feelings and nurtures a safe environment."
 layout: blog.njk
-tags: 
-    - birth-mother
-    - child
-    - parenting
+imageAlt: father playing twister with kids
+date: '2023-12-29T00:00:00-07:00'
+title: Why Gentle Parenting Isn't Weird.
+excerpt: >-
+  Gentle parenting prioritizes empathy, respect, and positive discipline;
+  focuses on nurturing trust, respect, and understanding. Recognizes and honors
+  a child's emotions and autonomy. Teaches and guides with empathy, validates
+  feelings and nurtures a safe environment.
+thumbnail: /assets/images/pic06.jpg
+author: Hunter
+tags:
+  - birth-mother
+  - child
+  - parenting
 ---
 
 
