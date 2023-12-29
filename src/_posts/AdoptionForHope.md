@@ -1,8 +1,7 @@
 ---
 layout: blog.njk
 title: Adoption is really cool
-excerpt: >-
-  The hope embedded within the heart of adoption nurtures dreams, heals wounds,
+excerpt: The hope embedded within the heart of adoption nurtures dreams, heals wounds,
   and creates a world where every child finds solace and every family finds the
   boundless joy of unconditional love.
 author: Hunter

@@ -88,7 +88,7 @@
   <div class="posts">
 {% for post in collections.blogPosts | reverse %}
       <article>
-        <a href="{{ post.url }}" class="image"><img src="{{ post.data.image }}" aria-label="read article titled {{post.data.title}}">/></a>
+        <a href="{{ post.url }}" class="image"><img src="{{ post.data.thumbnail }}" aria-label="read article titled {{post.data.title}}"></a>
         <h3>{{ post.data.title }}</h3>
         <p>{{ post.data.excerpt }}</p>
         <ul class="actions">
