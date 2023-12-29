@@ -1,10 +1,19 @@
 ---
-title: "Embracing Your Childs Heritage -- It Is Part Of Who They Are."
-image: /assets/images/pic02.jpg
-excerpt: Number 1 - Encourage Open Conversations; Have open discussions with your child about their racial identity and the importance of connecting with peers who share similar backgrounds. Encourage them to express their feelings and questions about their racial identity.
 layout: blog.njk
-
-
+title: Embracing Your Childs Heritage -- It Is Part Of Who They Are.
+excerpt: >-
+  Number 1 - Encourage Open Conversations; Have open discussions with your child
+  about their racial identity and the importance of connecting with peers who
+  share similar backgrounds. Encourage them to express their feelings and
+  questions about their racial identity.
+author: Hunter
+date: '2023-12-29T00:00:00-07:00'
+tags:
+  - Culture
+  - adoption
+  - birthmom
+thumbnail: /assets/images/pic09.jpg
+imageAlt: children roller blading with father
 ---
 
 Dear Reader,
