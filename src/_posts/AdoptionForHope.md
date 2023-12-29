@@ -1,15 +1,16 @@
 ---
 layout: blog.njk
+imageAlt: Adoption and Unconditional Love
+date: '2023-12-28T00:00:00-07:00'
 title: Adoption is really cool
-excerpt: The hope embedded within the heart of adoption nurtures dreams, heals wounds,
+excerpt: >-
+  The hope embedded within the heart of adoption nurtures dreams, heals wounds,
   and creates a world where every child finds solace and every family finds the
   boundless joy of unconditional love.
+thumbnail: /assets/images/pic02.jpg
 author: Hunter
-date: '2023-12-28T00:00:00-07:00'
 tags:
   - post
-thumbnail: /assets/images/pic02.jpg
-imageAlt: kids playing with dog
 ---
 Dear Reader,
 
