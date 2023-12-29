@@ -1,10 +1,23 @@
 ---
-
-title: "Radiant Smiles and Bright Futures: Celebrating Happy Adopted Children"
-image: /assets/images/pic08.jpg
-excerpt: "This blog post celebrates the sheer happiness and contagious smiles of adopted children, emphasizing the love, resilience, and joy they bring into their families and the world."
 layout: blog.njk
-
+title: 'Radiant Smiles and Bright Futures: Celebrating Happy Adopted Children'
+excerpt: >-
+  This blog post celebrates the sheer happiness and contagious smiles of adopted
+  children, emphasizing the love, resilience, and joy they bring into their
+  families and the world.
+author: Hunter
+date: '2023-12-29T00:00:00-07:00'
+tags:
+  - adoption
+  - emotions
+  - grief
+  - happiness
+  - joy
+  - birthmom
+thumbnail: /assets/images/pic08.jpg
+imageAlt: >-
+  young girl holi festival chalk of different colors on each finger holding to
+  camera
 ---
 
 **Dear Reader,**
