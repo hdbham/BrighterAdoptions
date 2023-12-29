@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
-media_folder: "/assets/images" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/assets/images"
+media_folder: "src/assets/images" # Media files will be stored in the repo under static/images/uploads
+public_folder: "_site/assets/images"
 
 collections:
   - name: "posts"
@@ -12,11 +12,11 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Image caption", name: "imageAlt", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Excerpt", name: "excerpt", widget: "string"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Image caption", name: "imageAlt", widget: "string"}
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Tags", name: "tags", widget: "list", default: ["post"]}
       - {label: "Body", name: "body", widget: "markdown"}
