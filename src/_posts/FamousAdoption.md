@@ -1,9 +1,18 @@
 ---
-title: "Did you know they were adopted? Famous Figures of adoption"
-image: /assets/images/pic07.jpg
-excerpt: The former NFL quarterback and activist, Colin Kaepernick, was adopted into a multiracial family. He was raised by a white couple, Rick and Teresa Kaepernick, who provided him with a supportive upbringing. Kaepernick is known not only for his athletic prowess but also for his activism and advocacy for social justice issues.
 layout: blog.njk
-
+title: Did you know they were adopted? Famous Figures of adoption
+excerpt: >-
+  The former NFL quarterback and activist, Colin Kaepernick, was adopted into a
+  multiracial family. He was raised by a white couple, Rick and Teresa
+  Kaepernick, who provided him with a supportive upbringing. Kaepernick is known
+  not only for his athletic prowess but also for his activism and advocacy for
+  social justice issues.
+author: Hunter
+date: '2023-12-29T00:00:00-07:00'
+tags:
+  - adoption
+thumbnail: /assets/images/pic03.jpg
+imageAlt: father holding child smiling
 ---
 
 
