@@ -1,6 +1,6 @@
 ---
-    name: "Taylor Palmer"
+    name: "taylorProf Palmer"
     title: "Case Worker"
-    image: "/assets/images/Taylor.jpg"
+    image: "/assets/images/taylorProf.jpg"
 ---
 
