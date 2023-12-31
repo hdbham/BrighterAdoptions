@@ -1,0 +1,452 @@
+<style>
+
+.elementor-element { 
+    --flex-direction: initial; 
+    --flex-wrap: initial; 
+    --justify-content: initial; 
+    --align-items: initial; 
+    --align-content: initial; 
+    --gap: initial; 
+    --flex-basis: initial; 
+    --flex-grow: initial; 
+    --flex-shrink: initial; 
+    --order: initial; 
+    --align-self: initial; 
+    flex-basis: var(--flex-basis); 
+    flex-grow: var(--flex-grow); 
+    flex-shrink: var(--flex-shrink); 
+    order: var(--order); 
+    align-self: var(--align-self);
+} 
+
+.elementor-container  { 
+    display: flex; 
+    margin-right: auto; 
+    margin-left: auto; 
+    position: relative;
+} 
+
+* , .elementor ::after, .elementor ::before { 
+    box-sizing: border-box;
+} 
+
+.elementor *, .elementor ::after, .elementor ::before { 
+    box-sizing: border-box;
+} 
+
+.elementor-column { 
+    position: relative; 
+    min-height: 1px; 
+    display: flex;
+} 
+
+@media (min-width: 768px){ 
+  .elementor-column.elementor-col-33 { 
+    width: 33.333%;
+  } 
+}     
+
+.elementor-widget-wrap { 
+    position: relative; 
+    width: 100%; 
+    flex-wrap: wrap; 
+    align-content: flex-start;
+} 
+
+.elementor:not(.elementor-bc-flex-widget) .elementor-widget-wrap  { 
+    display: flex;
+} 
+
+.elementor-column-gap-default > .elementor-column > .elementor-element-populated  { 
+    padding: 10px;
+} 
+
+.elementor-element:where(.e-con-full, .elementor-widget) { 
+    flex-direction: var(--flex-direction); 
+    flex-wrap: var(--flex-wrap); 
+    justify-content: var(--justify-content); 
+    align-items: var(--align-items); 
+    align-content: var(--align-content); 
+    gap: var(--gap);
+} 
+
+.elementor-widget { 
+    position: relative;
+} 
+
+.animated { 
+    animation-duration: 1.25s;
+} 
+
+.elementor-widget-image { 
+    text-align: center;
+} 
+
+.rotateIn { 
+    animation-name: rotateIn;
+} 
+
+.elementor-widget-wrap > .elementor-element  { 
+    width: 100%;
+} 
+
+.elementor-widget:not(:last-child) { 
+    margin-bottom: 20px;
+} 
+
+.animated.animated-fast { 
+    animation-duration: .75s;
+} 
+
+.elementor-element.elementor-element-56ba83c  { 
+    text-align: center;
+} 
+
+.elementor-element.elementor-element-bc01fe2  { 
+    text-align: center;
+} 
+
+.elementor-element.elementor-element-3014201  { 
+    text-align: center;
+} 
+
+.elementor-element.elementor-element-5cd3cfa  { 
+    text-align: center;
+} 
+
+.elementor-align-center { 
+    text-align: center;
+} 
+
+.elementor-element.elementor-element-8f63cb5  { 
+    text-align: center;
+} 
+
+.elementor-element.elementor-element-5c86124  { 
+    text-align: center;
+} 
+
+.elementor-element.elementor-element-e742d45  { 
+    text-align: center;
+} 
+
+.elementor-element.elementor-element-37b7f2f  { 
+    text-align: center;
+} 
+
+.elementor-element.elementor-element-9d0f6ec  { 
+    text-align: center;
+} 
+
+.elementor-element.elementor-element-d6c77a5  { 
+    text-align: center;
+} 
+
+.elementor-element.elementor-element-c8bea1a  { 
+    text-align: center;
+} 
+
+.elementor-element.elementor-element-3c7c089  { 
+    text-align: center;
+} 
+
+.elementor-element .elementor-widget-container  { 
+    transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,transform var(--e-transform-transition-duration,.4s);
+} 
+
+.elementor-element.elementor-element-5cd3cfa > .elementor-widget-container  { 
+    padding: 0% 3% 0% 3%;
+} 
+
+.elementor-element.elementor-element-37b7f2f > .elementor-widget-container  { 
+    padding: 0% 3% 0% 3%;
+} 
+
+.elementor-element.elementor-element-3c7c089 > .elementor-widget-container  { 
+    padding: 0% 3% 0% 3%;
+} 
+
+.elementor a { 
+    box-shadow: none; 
+    text-decoration: none;
+} 
+
+.elementor-widget-image a  { 
+    display: inline-block;
+} 
+
+.elementor-heading-title { 
+    padding: 0; 
+    margin: 0; 
+    line-height: 1;
+} 
+
+.elementor-kit-127 h2 { 
+    font-family: "Shadows Into Light", Sans-serif;
+} 
+
+.elementor img { 
+    height: auto; 
+    max-width: 100%; 
+    border: none; 
+    border-radius: 0; 
+    box-shadow: none;
+} 
+
+.elementor-widget-image img  { 
+    vertical-align: middle; 
+    display: inline-block;
+} 
+
+.elementor-button { 
+    display: inline-block; 
+    line-height: 1; 
+    background-color: #69727d; 
+    font-size: 15px; 
+    padding: 12px 24px; 
+    border-radius: 3px; 
+    color: #fff; 
+    fill: #fff; 
+    text-align: center; 
+    transition: all .3s;
+} 
+
+.elementor-align-center .elementor-button  { 
+    width: auto;
+} 
+
+.elementor-button.elementor-size-md { 
+    font-size: 16px; 
+    padding: 15px 30px; 
+    border-radius: 4px;
+} 
+
+.elementor-element.elementor-global-335 .elementor-button  { 
+    font-family: "Shadows Into Light", Sans-serif; 
+    font-weight: 600; 
+    fill: var( --e-global-color-text ); 
+    color: var( --e-global-color-text ); 
+    background-color: #E8D161; 
+    border-style: solid; 
+    border-width: 3px 3px 3px 3px; 
+    border-color: #F3E8B0; 
+    border-radius: 20px 20px 20px 20px;
+} 
+
+.elementor-button:hover { 
+    color: #fff;
+} 
+
+.elementor-16 .elementor-element.elementor-global-335 .elementor-button:hover { 
+    background-color: #E6B236;
+} 
+
+.elementor-button:visited { 
+    color: #fff;
+} 
+
+.elementor-element.elementor-global-338 .elementor-button  { 
+    font-family: "Shadows Into Light", Sans-serif; 
+    font-weight: 600; 
+    fill: var( --e-global-color-primary ); 
+    color: var( --e-global-color-primary ); 
+    background-color: #B2D6E6; 
+    border-style: solid; 
+    border-color: #D8EAF2; 
+    border-radius: 20px 20px 20px 20px;
+} 
+
+.elementor-button:hover,.elementor-button:visited { 
+    color: #fff;
+} 
+
+.elementor-16 .elementor-element.elementor-global-338 .elementor-button:hover { 
+    background-color: #338ACF;
+} 
+
+.elementor-element.elementor-element-4ae1df1 .elementor-button  { 
+    font-family: "Shadows Into Light", Sans-serif; 
+    font-weight: 600; 
+    fill: var( --e-global-color-primary ); 
+    color: var( --e-global-color-primary ); 
+    background-color: #8DB16B; 
+    border-style: solid; 
+    border-color: #C6D8B5; 
+    border-radius: 20px 20px 20px 20px;
+} 
+
+.elementor-16 .elementor-element.elementor-element-4ae1df1 .elementor-button:hover { 
+    background-color: #628047;
+} 
+
+.elementor-button-content-wrapper { 
+    display: flex; 
+    justify-content: center;
+} 
+
+.elementor-button span  { 
+    text-decoration: inherit;
+} 
+
+.elementor-button-text { 
+    flex-grow: 1; 
+    order: 10; 
+    display: inline-block;
+} 
+
+
+@keyframes rotateIn { 
+  0% {  
+      transform-origin: center; 
+      transform: rotate3d(0,0,1,-200deg); 
+      opacity: 0; 
+      transform-origin: center center; 
+      transform: rotate3d(0, 0, 1, -200deg); 
+      opacity: 0; 
+  }  
+  100% {  
+      transform-origin: center; 
+      transform: none; 
+      opacity: 1; 
+      transform-origin: center center; 
+      transform: none; 
+      opacity: 1; 
+  }  
+
+} 
+
+</style>
+
+
+<div class="elementor-container elementor-column-gap-default snipcss-3NoNo">
+    <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-baab768 snipcss0-0-0-1 tether-abutted tether-abutted-top tether-element-attached-top tether-element-attached-center tether-target-attached-top tether-target-attached-center" data-id="baab768" data-element_type="column">
+      <div class="elementor-widget-wrap elementor-element-populated snipcss0-1-1-2">
+        <div class="elementor-element elementor-element-56ba83c animated-fast elementor-widget elementor-widget-image animated rotateIn snipcss0-2-2-3" data-id="56ba83c" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;rotateIn&quot;}" data-widget_type="image.default">
+          <div class="elementor-widget-container snipcss0-3-3-4">
+            <a href="/expectant-mothers" class="snipcss0-4-4-5">
+              <img fetchpriority="high" decoding="async" width="340" height="340" src="https://brighteradoption.com/wp-content/uploads/Expectant-340.png" class="attachment-full size-full wp-image-1439 snipcss0-5-5-6" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="elementor-element elementor-element-bc01fe2 elementor-widget elementor-widget-heading snipcss0-2-2-7" data-id="bc01fe2" data-element_type="widget" data-widget_type="heading.default">
+          <div class="elementor-widget-container snipcss0-3-7-8">
+            <h2 class="elementor-heading-title elementor-size-default snipcss0-4-8-9">
+              Expectant Mothers
+            </h2>
+          </div>
+        </div>
+        <div class="elementor-element elementor-element-3014201 elementor-widget elementor-widget-image snipcss0-2-2-10" data-id="3014201" data-element_type="widget" data-widget_type="image.default">
+          <div class="elementor-widget-container snipcss0-3-10-11">
+            <img decoding="async" width="227" height="16" src="https://brighteradoption.com/wp-content/uploads/YellowWave.png" class="attachment-full size-full wp-image-330 snipcss0-4-11-12" alt="">
+          </div>
+        </div>
+        <div class="elementor-element elementor-element-5cd3cfa elementor-widget elementor-widget-text-editor snipcss0-2-2-13" data-id="5cd3cfa" data-element_type="widget" data-widget_type="text-editor.default">
+          <div class="elementor-widget-container snipcss0-3-13-14">
+            <p class="snipcss0-4-14-15">
+              We strive to cater to our expectant mothers and to make this extremely difficult experience as bright as possible.
+            </p>
+          </div>
+        </div>
+        <div class="elementor-element elementor-element-8247399 elementor-align-center elementor-widget elementor-widget-global elementor-global-335 elementor-widget-button snipcss0-2-2-16" data-id="8247399" data-element_type="widget" data-widget_type="button.default">
+          <div class="elementor-widget-container snipcss0-3-16-17">
+            <div class="elementor-button-wrapper snipcss0-4-17-18">
+              <a class="elementor-button elementor-button-link elementor-size-md snipcss0-5-18-19" href="/expectant-mothers">
+                <span class="elementor-button-content-wrapper snipcss0-6-19-20">
+                  <span class="elementor-button-text snipcss0-7-20-21">
+                    Learn More
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-44b9b5f" data-id="44b9b5f" data-element_type="column">
+      <div class="elementor-widget-wrap elementor-element-populated">
+        <div class="elementor-element elementor-element-8f63cb5 animated-fast elementor-widget elementor-widget-image animated rotateIn" data-id="8f63cb5" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;rotateIn&quot;}" data-widget_type="image.default">
+          <div class="elementor-widget-container">
+            <a href="/housing/">
+              <img loading="lazy" decoding="async" width="340" height="340" src="https://brighteradoption.com/wp-content/uploads/Housing-340.png" class="attachment-full size-full wp-image-1440" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="elementor-element elementor-element-5c86124 elementor-widget elementor-widget-heading" data-id="5c86124" data-element_type="widget" data-widget_type="heading.default">
+          <div class="elementor-widget-container">
+            <h2 class="elementor-heading-title elementor-size-default">
+              Housing Program
+            </h2>
+          </div>
+        </div>
+        <div class="elementor-element elementor-element-e742d45 elementor-widget elementor-widget-image" data-id="e742d45" data-element_type="widget" data-widget_type="image.default">
+          <div class="elementor-widget-container">
+            <img loading="lazy" decoding="async" width="227" height="16" src="https://brighteradoption.com/wp-content/uploads/BlueWave.png" class="attachment-full size-full wp-image-327" alt="">
+          </div>
+        </div>
+        <div class="elementor-element elementor-element-37b7f2f elementor-widget elementor-widget-text-editor" data-id="37b7f2f" data-element_type="widget" data-widget_type="text-editor.default">
+          <div class="elementor-widget-container">
+            <p>
+              We have multiple one-bedroom and two-bedroom apartment units available for our expectant mothers to stay in
+            </p>
+          </div>
+        </div>
+        <div class="elementor-element elementor-element-ccbe6bf elementor-align-center elementor-widget elementor-widget-global elementor-global-338 elementor-widget-button" data-id="ccbe6bf" data-element_type="widget" data-widget_type="button.default">
+          <div class="elementor-widget-container">
+            <div class="elementor-button-wrapper">
+              <a class="elementor-button elementor-button-link elementor-size-sm" href="/housing/">
+                <span class="elementor-button-content-wrapper">
+                  <span class="elementor-button-text">
+                    Learn More
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f2423a1" data-id="f2423a1" data-element_type="column">
+      <div class="elementor-widget-wrap elementor-element-populated">
+        <div class="elementor-element elementor-element-9d0f6ec animated-fast elementor-widget elementor-widget-image animated rotateIn" data-id="9d0f6ec" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;rotateIn&quot;}" data-widget_type="image.default">
+          <div class="elementor-widget-container">
+            <a href="/adopt-a-baby/">
+              <img loading="lazy" decoding="async" width="340" height="340" src="https://brighteradoption.com/wp-content/uploads/Adopting-340.png" class="attachment-full size-full wp-image-1438" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="elementor-element elementor-element-d6c77a5 elementor-widget elementor-widget-heading" data-id="d6c77a5" data-element_type="widget" data-widget_type="heading.default">
+          <div class="elementor-widget-container">
+            <h2 class="elementor-heading-title elementor-size-default">
+              Adopting Families
+            </h2>
+          </div>
+        </div>
+        <div class="elementor-element elementor-element-c8bea1a elementor-widget elementor-widget-image" data-id="c8bea1a" data-element_type="widget" data-widget_type="image.default">
+          <div class="elementor-widget-container">
+            <img loading="lazy" decoding="async" width="227" height="16" src="https://brighteradoption.com/wp-content/uploads/GreenWave.png" class="attachment-full size-full wp-image-328" alt="">
+          </div>
+        </div>
+        <div class="elementor-element elementor-element-3c7c089 elementor-widget elementor-widget-text-editor" data-id="3c7c089" data-element_type="widget" data-widget_type="text-editor.default">
+          <div class="elementor-widget-container">
+            <p>
+              While we don’t work directly with families wanting to adopt we can help point you in the right direction.
+            </p>
+          </div>
+        </div>
+        <div class="elementor-element elementor-element-4ae1df1 elementor-align-center elementor-widget elementor-widget-button" data-id="4ae1df1" data-element_type="widget" data-widget_type="button.default">
+          <div class="elementor-widget-container">
+            <div class="elementor-button-wrapper">
+              <a class="elementor-button elementor-button-link elementor-size-sm" href="/adopt-a-baby/">
+                <span class="elementor-button-content-wrapper">
+                  <span class="elementor-button-text">
+                    Learn More
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

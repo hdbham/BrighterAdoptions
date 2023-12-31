@@ -1,0 +1,11 @@
+<div class="mini-posts">
+    {% for post in collections.staffProfiles %}
+      <article class="profile-article">
+        <div class="profile-content">
+          <img src="{{ post.data.image }}" alt="photo of{{post.data.name}} - {{ post.data.title }}" class="profile-image" />
+          <p  class="profile-info"><strong>{{post.data.name}} </strong> </br> {{ post.data.title }}</p>
+        </div>
+      </article>
+      {% set count = count + 1 %}
+    {% endfor %}
+  </div>
