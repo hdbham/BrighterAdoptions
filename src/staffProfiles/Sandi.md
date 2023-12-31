@@ -1,7 +1,8 @@
 ---
-    name: "Sandi Quick"
-    title: "Owner and Director"
-    image: "/assets/images/sandiprof.png"
+imageAlt: /_site/assets/images/Sandiprof.png
+Name: Sandi Quick
+title: Owner and Director
+excerpt: Owner and Director
 ---
 
 
