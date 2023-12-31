@@ -23,6 +23,11 @@ module.exports = function(eleventyConfig) {
         return collectionApi.getFilteredByGlob('src/_posts/*.md');
     });
 
+    eleventyConfig.addCollection('faq', function (collectionApi) {
+        return collectionApi.getFilteredByGlob('src/faq/*.md');
+    });
+
+
     eleventyConfig.addCollection('staffProfiles', function (collectionApi) {
         return collectionApi.getFilteredByGlob('src/staffProfiles/*.md');
     });
