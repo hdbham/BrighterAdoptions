@@ -147,38 +147,7 @@
 			</div>
 
 		{% include "./javascript.njk" %}
-		<script>
-			$(document).ready(function() {
-			  var slideIndex = 0;
-			  var slides = $('.carousel-inner .profile-article');
-			  var dotCount = slides.length;
-		  
-			  function showSlide(index) {
-				$('.carousel-inner').slick('slickGoTo', index);
-				$('.pagination-dot').removeClass('active');
-				$('.pagination-dot').eq(index).addClass('active');
-			  }
-		  
-			  function nextSlide() {
-				slideIndex = (slideIndex + 1) % dotCount;
-				showSlide(slideIndex);
-			  }
-		  
-			  var interval = setInterval(nextSlide, 2000);
-		  
-			  $('.pagination-dot').click(function() {
-				var index = $(this).index();
-				showSlide(index);
-				clearInterval(interval);
-				interval = setInterval(nextSlide, 2000);
-			  });
-		  
-			  $('.carousel-inner').on('swipe', function() {
-				clearInterval(interval);
-				interval = setInterval(nextSlide, 2000);
-			  });
-			});
-		  </script>
+		
 		{# <script src= "/jquery.min.js"></script>
 		<script src= "/breakpoints.min.js"></script>
 		<script src= "/browser.min.js"></script>
