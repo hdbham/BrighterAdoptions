@@ -240,7 +240,8 @@
       margin-top: 40px;
       margin-bottom: 10px;
     }
-   
+
+
     /* Media query for smaller screens */
     @media screen and (max-width: 767px) {
       .box {
@@ -249,22 +250,36 @@
         align-items: center;
         text-align: left;
       }
-
-    
-
+  
       .box img {
-        max-width: 8rem; /* Adjust image size for smaller screens */
+        max-width: 7rem; /* Adjust image size for smaller screens */
         margin-bottom: 0;
         margin-right: 20px;
       }
+
+      .specific-container .box {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start; /* Adjust alignment */
+        }
+
+        .content-div {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        }
+
+        .content-div h2 {
+        align-self: center;
+        }
     }
 
-   .box div .blackbutton {
-    align-self:flex-end;
+/* Styling for black buttons inside specific container */
+.specific-container .blackbutton {
     padding: 0.9em 2em;
     border: none;
     outline: none;
-    color: white; /* Changing text color to white */
+    color: white;
     background: #111;
     cursor: pointer;
     position: relative;
@@ -273,42 +288,43 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-  }
-/* CSS */
-
+}
   </style>
   
-  <!-- HTML !-->
-  
-  <div class="container">
+  <!-- HTML -->
+  <div class="container specific-container">
     <!-- Box 1 -->
     <div class="box">
       <img src="https://brighteradoption.com/wp-content/uploads/Expectant-340.png" alt="Expectant Mothers" width="340" class="spinonscroll">
-      <div>
+      <div class="content-div">
         <h2>Expectant Mothers</h2>
         <p>We strive to cater to our expectant mothers and to make this extremely difficult experience as bright as possible.</p>
-        <a href="/expectant-mothers" class="blackbutton">Learn More</a>
-      </div>
+        <div>
+            <a href="/adopt-a-baby/" class="blackbutton">Learn More</a>
+        </div>      </div>
     </div>
   
     <!-- Box 2 -->
     <div class="box">
       <img src="https://brighteradoption.com/wp-content/uploads/Housing-340.png" alt="Housing Program" width="340">
-      <div style="margin-bottom: 4rem;">
+      <div class="content-div">
         <h2>Housing Program</h2>
         <p>We have multiple one-bedroom and two-bedroom apartment units available for our expectant mothers to stay in.</p>
-        
-        <a href="/housing" class="blackbutton">Learn More</a>
-    </div>
+        <div>
+            <a href="/adopt-a-baby/" class="blackbutton">Learn More</a>
+        </div>
+          </div>
     </div>
   
     <!-- Box 3 -->
     <div class="box">
       <img src="https://brighteradoption.com/wp-content/uploads/Adopting-340.png" alt="Adopting Families" width="340">
-      <div>
+      <div class="content-div">
         <h2>Adopting Families</h2>
         <p>While we don’t work directly with families wanting to adopt, we can help point you in the right direction.</p>
-        <a href="/adopt-a-baby/" class="blackbutton">Learn More</a>
+        <div>
+            <a href="/adopt-a-baby/" class="blackbutton">Learn More</a>
+        </div>
       </div>
     </div>
   </div>
