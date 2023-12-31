@@ -20,3 +20,15 @@ collections:
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Tags", name: "tags", widget: "list", default: ["post"]}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "staffProfiles"
+    label: "profiles"
+    folder: "src/staffProfiles"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Image", name: "imageAlt", widget: "string"}
+      - {label: "Name", name: "Name", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Excerpt", name: "excerpt", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
