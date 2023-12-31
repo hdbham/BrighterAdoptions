@@ -35,8 +35,6 @@
   animation: spinAnimation 2s infinite linear; /* Define the spinning animation */
 }
 
-
-
 /* Keyframes for the spinning animation */
 @keyframes spinAnimation {
   from {
@@ -46,6 +44,91 @@
     transform: rotate(360deg);
   }
 }
+
+/* CSS */
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.blackbutton {
+	min-width: 100%;
+	margin-top:12rem;
+    padding: 0.9em 2em;
+    border: none;
+    outline: none;
+    color: white; /* Changing text color to white */
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
 
 </style>
 <body class="is-preload">
@@ -58,7 +141,24 @@
 						<div class="inner">
 
 							<script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<style>
+/* CSS */
+.button {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 
+</style>
 									<header id="header">
 									<img src="/assets/images/Logo.png" alt="logo heart with rays" style="max-height: 4rem; max-width: 10rem;"><a href="index.html" class="logo"><strong></strong></a>
 									<ul class="icons">
@@ -102,7 +202,9 @@
 										<p>Brighter Adoptions has served hundreds of clients. We feel a great sense of responsibility to help the women who come to us have the best experience possible and find the perfect family for their unborn child.
 										<br> <br> We are ready to help. </p>
 										<ul class="actions">
-											<li><a href="tel:%E2%80%8B%E2%80%8B8019896386" class="button  large">Call Us</a></li>
+											<li><a href="tel:%E2%80%8B%E2%80%8B8019896386" class="button-85">Call Us</a></li>
+											
+
 										</ul>
 									</div>
 									<span class="image object">
@@ -122,7 +224,7 @@
   
     .box {
       width: calc(33.33% - 20px); /* 33.33% width for each box with spacing */
-      background-color: #99d0a127;
+      background-color: #86dc9c12;
       padding: 20px;
       border-radius: 20px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.386);
@@ -135,6 +237,7 @@
     .box img {
       max-width: 40%;
       height: auto;
+      margin-top: 40px;
       margin-bottom: 10px;
     }
    
@@ -150,32 +253,53 @@
     
 
       .box img {
-        max-width: 80px; /* Adjust image size for smaller screens */
+        max-width: 8rem; /* Adjust image size for smaller screens */
         margin-bottom: 0;
         margin-right: 20px;
       }
     }
+
+   .box div .blackbutton {
+    align-self:flex-end;
+    padding: 0.9em 2em;
+    border: none;
+    outline: none;
+    color: white; /* Changing text color to white */
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+/* CSS */
+
   </style>
+  
+  <!-- HTML !-->
   
   <div class="container">
     <!-- Box 1 -->
     <div class="box">
-      <img src="https://brighteradoption.com/wp-content/uploads/Expectant-340.png" alt="Expectant Mothers" width="340">
+      <img src="https://brighteradoption.com/wp-content/uploads/Expectant-340.png" alt="Expectant Mothers" width="340" class="spinonscroll">
       <div>
         <h2>Expectant Mothers</h2>
         <p>We strive to cater to our expectant mothers and to make this extremely difficult experience as bright as possible.</p>
-        <a href="/expectant-mothers" class="button">Learn More</a>
+        <a href="/expectant-mothers" class="blackbutton">Learn More</a>
       </div>
     </div>
   
     <!-- Box 2 -->
     <div class="box">
       <img src="https://brighteradoption.com/wp-content/uploads/Housing-340.png" alt="Housing Program" width="340">
-      <div>
+      <div style="margin-bottom: 4rem;">
         <h2>Housing Program</h2>
         <p>We have multiple one-bedroom and two-bedroom apartment units available for our expectant mothers to stay in.</p>
-        <a href="/housing/" class="button">Learn More</a>
-      </div>
+        
+        <a href="/housing" class="blackbutton">Learn More</a>
+    </div>
     </div>
   
     <!-- Box 3 -->
@@ -184,7 +308,7 @@
       <div>
         <h2>Adopting Families</h2>
         <p>While we don’t work directly with families wanting to adopt, we can help point you in the right direction.</p>
-        <a href="/adopt-a-baby/" class="button">Learn More</a>
+        <a href="/adopt-a-baby/" class="blackbutton">Learn More</a>
       </div>
     </div>
   </div>
@@ -240,7 +364,7 @@
         <h3>Why Gentle Parenting Isn&#39;t Weird.</h3>
         <p>Gentle parenting prioritizes empathy, respect, and positive discipline; focuses on nurturing trust, respect, and understanding. Recognizes and honors a child&#39;s emotions and autonomy. Teaches and guides with empathy, validates feelings and nurtures a safe environment.</p>
         <ul class="actions">
-          <li><a href="/_posts/what-is-gentle-parenting/" aria-label="Read More" class="button">Read</a></li>
+          <li><a href="/_posts/what-is-gentle-parenting/" aria-label="Read More" class="blackbutton">Read</a></li>
         </ul>
       </article>
     
@@ -249,7 +373,7 @@
         <h3>Top 10 Parenting Hacks For Adopted Children</h3>
         <p>In the realm of parenting approaches, &quot;gentle parenting&quot; stands as a philosophy centered on fostering a nurturing, respectful, and empathetic relationship between parents and children.</p>
         <ul class="actions">
-          <li><a href="/_posts/NurturingGrowth/" aria-label="Read More" class="button">Read</a></li>
+          <li><a href="/_posts/NurturingGrowth/" aria-label="Read More" class="blackbutton">Read</a></li>
         </ul>
       </article>
     
@@ -258,7 +382,7 @@
         <h3> Nurturing Academic Success: Supporting Your Adopted Child&#39;s Journey to Good Grades</h3>
         <p>As parents, fostering an environment that supports your child&#39;s academic success is a universal goal. For adopted children, this journey might require additional support, understanding, and tailored approaches to help them excel in their studies. Here&#39;s a guide on how to assist your adopted child in achieving good grades:</p>
         <ul class="actions">
-          <li><a href="/_posts/NurturingAcademicSuccess/" aria-label="Read More" class="button">Read</a></li>
+          <li><a href="/_posts/NurturingAcademicSuccess/" aria-label="Read More" class="blackbutton">Read</a></li>
         </ul>
       </article>
     
@@ -267,7 +391,7 @@
         <h3>I Didn&#39;t Realize There Was Grief Involved</h3>
         <p>For birth parents, the decision to place a child for adoption often comes with a profound sense of loss and grief. It&#39;s a decision made out of love and selflessness, yet it&#39;s accompanied by the ache of separation and the longing for the child they&#39;ve nurtured within. This is the truth about adoption.</p>
         <ul class="actions">
-          <li><a href="/_posts/NavigatingGrief/" aria-label="Read More" class="button">Read</a></li>
+          <li><a href="/_posts/NavigatingGrief/" aria-label="Read More" class="blackbutton">Read</a></li>
         </ul>
       </article>
     
@@ -276,7 +400,7 @@
         <h3>Radiant Smiles and Bright Futures: Celebrating Happy Adopted Children</h3>
         <p>This blog post celebrates the sheer happiness and contagious smiles of adopted children, emphasizing the love, resilience, and joy they bring into their families and the world.</p>
         <ul class="actions">
-          <li><a href="/_posts/HappyAdoptedChildren/" aria-label="Read More" class="button">Read</a></li>
+          <li><a href="/_posts/HappyAdoptedChildren/" aria-label="Read More" class="blackbutton">Read</a></li>
         </ul>
       </article>
     
@@ -285,7 +409,7 @@
         <h3>Embracing Your Childs Heritage -- It Is Part Of Who They Are.</h3>
         <p>Number 1 - Encourage Open Conversations; Have open discussions with your child about their racial identity and the importance of connecting with peers who share similar backgrounds. Encourage them to express their feelings and questions about their racial identity.</p>
         <ul class="actions">
-          <li><a href="/_posts/FosteringFriendships/" aria-label="Read More" class="button">Read</a></li>
+          <li><a href="/_posts/FosteringFriendships/" aria-label="Read More" class="blackbutton">Read</a></li>
         </ul>
       </article>
     
@@ -294,7 +418,7 @@
         <h3>Did you know they were adopted? Famous Figures of adoption</h3>
         <p>The former NFL quarterback and activist, Colin Kaepernick, was adopted into a multiracial family. He was raised by a white couple, Rick and Teresa Kaepernick, who provided him with a supportive upbringing. Kaepernick is known not only for his athletic prowess but also for his activism and advocacy for social justice issues.</p>
         <ul class="actions">
-          <li><a href="/_posts/FamousAdoption/" aria-label="Read More" class="button">Read</a></li>
+          <li><a href="/_posts/FamousAdoption/" aria-label="Read More" class="blackbutton">Read</a></li>
         </ul>
       </article>
     
@@ -303,7 +427,7 @@
         <h3>Adoption is really cool</h3>
         <p>The hope embedded within the heart of adoption nurtures dreams, heals wounds, and creates a world where every child finds solace and every family finds the boundless joy of unconditional love.</p>
         <ul class="actions">
-          <li><a href="/_posts/AdoptionForHope/" aria-label="Read More" class="button">Read</a></li>
+          <li><a href="/_posts/AdoptionForHope/" aria-label="Read More" class="blackbutton">Read</a></li>
         </ul>
       </article>
     
@@ -346,6 +470,24 @@
   white-space: nowrap;
 }
 
+
+.blackbutton {
+	min-width: 100%;
+	margin-top:12rem;
+    padding: 0.9em 2em;
+    border: none;
+    outline: none;
+    color: white; /* Changing text color to white */
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
 </style>
 
 					<div id="sidebar">
@@ -383,160 +525,163 @@
 									<li><a href="/services">More Services</a></li>
 
 							</nav>
-
-<style>
-	.carousel {
-	  position: relative;
-	  max-width: 800px; /* Adjust max-width as needed */
-	  margin: 0 auto;
-	}
-  
-	.carousel-inner {
-	  display: flex;
-	  overflow: hidden;
-	}
-  
-	.profile-article {
-	  flex: 0 0 auto;
-	  width: 100%; /* Adjust width as needed */
-	  padding: 0 10px; /* Adjust padding as needed */
-	  box-sizing: border-box;
-	}
-  
-	/* Pagination indicators */
-	.pagination {
-	  text-align: center;
-	  margin-top: 10px;
-	}
-  
-	.pagination-dot {
-	  display: inline-block;
-	  width: 10px;
-	  height: 10px;
-	  border-radius: 50%;
-	  background-color: #bbb;
-	  margin: 0 5px;
-	  cursor: pointer;
-	}
-  
-	.pagination-dot.active {
-	  background-color: #333;
-	}
-  </style>
-  
-  <section>
-	<header class="major">
-	  <h2>Who We Are</h2>
-	</header>
-	<div class="carousel">
-	  <div class="carousel-inner">
-		
-		<div class="profile-article">
-		  <div class="profile-content">
-			<img src="/assets/images/sandiprof.png" alt="photo of Sandi Quick - Owner and Director" class="profile-image" />
-			<p class="profile-info"><strong>Sandi Quick</strong></br>Owner and Director</p>
-		  </div>
-		</div>
-		
-		
-		<div class="profile-article">
-		  <div class="profile-content">
-			<img src="/assets/images/shayleeprof.png" alt="photo of Shaylee - Counselor" class="profile-image" />
-			<p class="profile-info"><strong>Shaylee</strong></br>Counselor</p>
-		  </div>
-		</div>
-		
-		
-		<div class="profile-article">
-		  <div class="profile-content">
-			<img src="/assets/images/taylorprof.png" alt="photo of Taylor - Case Worker" class="profile-image" />
-			<p class="profile-info"><strong>Taylor</strong></br>Case Worker</p>
-		  </div>
-		</div>
-		
-		
-		<div class="profile-article">
-		  <div class="profile-content">
-			<img src="/assets/images/whitneyprof.png" alt="photo of Whitney - Caseworker" class="profile-image" />
-			<p class="profile-info"><strong>Whitney</strong></br>Caseworker</p>
-		  </div>
-		</div>
-		
-		
-		<div class="profile-article">
-		  <div class="profile-content">
-			<img src="/assets/images/robinprof.png" alt="photo of Robin - Counselor" class="profile-image" />
-			<p class="profile-info"><strong>Robin</strong></br>Counselor</p>
-		  </div>
-		</div>
-		
-		
-		<div class="profile-article">
-		  <div class="profile-content">
-			<img src="/assets/images/maryjaneprof.png" alt="photo of Mary Jane - Caseworker" class="profile-image" />
-			<p class="profile-info"><strong>Mary Jane</strong></br>Caseworker</p>
-		  </div>
-		</div>
-		
-		
-	  </div>
-	  <div class="pagination"></div>
-	</div>
-	<ul class="actions">
-	  <li><a href="#" class="button">More</a></li>
-	</ul>
-  </section>
-  
-  <script>
-	document.addEventListener('DOMContentLoaded', function() {
-	  var slideIndex = 0;
-	  var slides = document.querySelectorAll('.carousel-inner .profile-article');
-	  var dotCount = slides.length;
-	  var interval;
-  
-	  function showSlide(index) {
-		for (var i = 0; i < slides.length; i++) {
-		  slides[i].style.display = 'none';
-		}
-		slides[index].style.display = 'block';
-  
-		var dots = document.querySelectorAll('.pagination-dot');
-		for (var i = 0; i < dots.length; i++) {
-		  dots[i].classList.remove('active');
-		}
-		dots[index].classList.add('active');
-	  }
-  
-	  function nextSlide() {
-		slideIndex = (slideIndex + 1) % dotCount;
-		showSlide(slideIndex);
-	  }
-  
-	  function startCarousel() {
-		interval = setInterval(nextSlide, 2000);
-	  }
-  
-	  startCarousel();
-  
-	  var paginationDots = document.querySelector('.pagination');
-	  for (var i = 0; i < dotCount; i++) {
-		var dot = document.createElement('span');
-		dot.classList.add('pagination-dot');
-		paginationDots.appendChild(dot);
-	  }
-  
-	  var dots = document.querySelectorAll('.pagination-dot');
-	  dots.forEach(function(dot, index) {
-		dot.addEventListener('click', function() {
-		  slideIndex = index;
-		  showSlide(slideIndex);
-		  clearInterval(interval);
-		  startCarousel();
-		});
-	  });
-	});
-  </script>
-  
+														
+							
+							<style>
+								.carousel {
+								position: relative;
+								max-width: 800px; /* Adjust max-width as needed */
+								margin: 0 auto;
+								}
+							
+								.carousel-inner {
+								display: flex;
+								overflow: hidden;
+								}
+							
+								.profile-article {
+								flex: 0 0 auto;
+								width: 100%; /* Adjust width as needed */
+								padding: 0 10px; /* Adjust padding as needed */
+								box-sizing: border-box;
+								}
+							
+								/* Pagination indicators */
+								.pagination {
+								text-align: center;
+								margin-top: 10px;
+								}
+							
+								.pagination-dot {
+								display: inline-block;
+								width: 10px;
+								height: 10px;
+								border-radius: 50%;
+								background-color: #bbb;
+								margin: 0 5px;
+								cursor: pointer;
+								margin-bottom: 7rem;
+								}
+							
+								.pagination-dot.active {
+								background-color: #333;
+								}
+							</style>
+							
+							<section>
+								<header class="major">
+								<h2>Who We Are</h2>
+								</header>
+								<div class="carousel">
+								<div class="carousel-inner">
+									
+									<div class="profile-article">
+									<div class="profile-content">
+										<img src="/assets/images/sandiprof.png" alt="photo of Sandi Quick - Owner and Director" class="profile-image" />
+										<p class="profile-info"><strong>Sandi Quick</strong></br>Owner and Director</p>
+									</div>
+									</div>
+									
+									
+									<div class="profile-article">
+									<div class="profile-content">
+										<img src="/assets/images/shayleeprof.png" alt="photo of Shaylee - Counselor" class="profile-image" />
+										<p class="profile-info"><strong>Shaylee</strong></br>Counselor</p>
+									</div>
+									</div>
+									
+									
+									<div class="profile-article">
+									<div class="profile-content">
+										<img src="/assets/images/taylorprof.png" alt="photo of Taylor - Case Worker" class="profile-image" />
+										<p class="profile-info"><strong>Taylor</strong></br>Case Worker</p>
+									</div>
+									</div>
+									
+									
+									<div class="profile-article">
+									<div class="profile-content">
+										<img src="/assets/images/whitneyprof.png" alt="photo of Whitney - Caseworker" class="profile-image" />
+										<p class="profile-info"><strong>Whitney</strong></br>Caseworker</p>
+									</div>
+									</div>
+									
+									
+									<div class="profile-article">
+									<div class="profile-content">
+										<img src="/assets/images/robinprof.png" alt="photo of Robin - Counselor" class="profile-image" />
+										<p class="profile-info"><strong>Robin</strong></br>Counselor</p>
+									</div>
+									</div>
+									
+									
+									<div class="profile-article">
+									<div class="profile-content">
+										<img src="/assets/images/maryjaneprof.png" alt="photo of Mary Jane - Caseworker" class="profile-image" />
+										<p class="profile-info"><strong>Mary Jane</strong></br>Caseworker</p>
+									</div>
+									</div>
+									
+									
+								</div>
+								<div class="pagination"></div>
+								</div>
+								<ul class="actions">
+									<br>
+								<li><a href="#" class="blackbutton">More</a></li>
+								</ul>
+							</section>
+							
+							<script>
+								document.addEventListener('DOMContentLoaded', function() {
+								var slideIndex = 0;
+								var slides = document.querySelectorAll('.carousel-inner .profile-article');
+								var dotCount = slides.length;
+								var interval;
+							
+								function showSlide(index) {
+									for (var i = 0; i < slides.length; i++) {
+									slides[i].style.display = 'none';
+									}
+									slides[index].style.display = 'block';
+							
+									var dots = document.querySelectorAll('.pagination-dot');
+									for (var i = 0; i < dots.length; i++) {
+									dots[i].classList.remove('active');
+									}
+									dots[index].classList.add('active');
+								}
+							
+								function nextSlide() {
+									slideIndex = (slideIndex + 1) % dotCount;
+									showSlide(slideIndex);
+								}
+							
+								function startCarousel() {
+									interval = setInterval(nextSlide, 2000);
+								}
+							
+								startCarousel();
+							
+								var paginationDots = document.querySelector('.pagination');
+								for (var i = 0; i < dotCount; i++) {
+									var dot = document.createElement('span');
+									dot.classList.add('pagination-dot');
+									paginationDots.appendChild(dot);
+								}
+							
+								var dots = document.querySelectorAll('.pagination-dot');
+								dots.forEach(function(dot, index) {
+									dot.addEventListener('click', function() {
+									slideIndex = index;
+									showSlide(slideIndex);
+									clearInterval(interval);
+									startCarousel();
+									});
+								});
+								});
+							</script>
+							
 
   
   

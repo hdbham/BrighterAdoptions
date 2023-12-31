@@ -10,7 +10,7 @@
   
     .box {
       width: calc(33.33% - 20px); /* 33.33% width for each box with spacing */
-      background-color: #99d0a127;
+      background-color: #86dc9c12;
       padding: 20px;
       border-radius: 20px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.386);
@@ -23,6 +23,7 @@
     .box img {
       max-width: 40%;
       height: auto;
+      margin-top: 40px;
       margin-bottom: 10px;
     }
    
@@ -38,32 +39,53 @@
     
 
       .box img {
-        max-width: 80px; /* Adjust image size for smaller screens */
+        max-width: 8rem; /* Adjust image size for smaller screens */
         margin-bottom: 0;
         margin-right: 20px;
       }
     }
+
+   .box div .blackbutton {
+    align-self:flex-end;
+    padding: 0.9em 2em;
+    border: none;
+    outline: none;
+    color: white; /* Changing text color to white */
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+/* CSS */
+
   </style>
+  
+  <!-- HTML !-->
   
   <div class="container">
     <!-- Box 1 -->
     <div class="box">
-      <img src="https://brighteradoption.com/wp-content/uploads/Expectant-340.png" alt="Expectant Mothers" width="340">
+      <img src="https://brighteradoption.com/wp-content/uploads/Expectant-340.png" alt="Expectant Mothers" width="340" class="spinonscroll">
       <div>
         <h2>Expectant Mothers</h2>
         <p>We strive to cater to our expectant mothers and to make this extremely difficult experience as bright as possible.</p>
-        <a href="/expectant-mothers" class="button">Learn More</a>
+        <a href="/expectant-mothers" class="blackbutton">Learn More</a>
       </div>
     </div>
   
     <!-- Box 2 -->
     <div class="box">
       <img src="https://brighteradoption.com/wp-content/uploads/Housing-340.png" alt="Housing Program" width="340">
-      <div>
+      <div style="margin-bottom: 4rem;">
         <h2>Housing Program</h2>
         <p>We have multiple one-bedroom and two-bedroom apartment units available for our expectant mothers to stay in.</p>
-        <a href="/housing/" class="button">Learn More</a>
-      </div>
+        {# <button class="button-45" role="button">Button 45</button> #}
+        <a href="/housing" class="blackbutton">Learn More</a>
+    </div>
     </div>
   
     <!-- Box 3 -->
@@ -72,7 +94,7 @@
       <div>
         <h2>Adopting Families</h2>
         <p>While we don’t work directly with families wanting to adopt, we can help point you in the right direction.</p>
-        <a href="/adopt-a-baby/" class="button">Learn More</a>
+        <a href="/adopt-a-baby/" class="blackbutton">Learn More</a>
       </div>
     </div>
   </div>

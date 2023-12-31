@@ -22,7 +22,24 @@
 						<div class="inner">
 
 							<script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<style>
+/* CSS */
+.button {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 
+</style>
 									<header id="header">
 									<img src="/assets/images/Logo.png" alt="logo heart with rays" style="max-height: 4rem; max-width: 10rem;"><a href="index.html" class="logo"><strong></strong></a>
 									<ul class="icons">
@@ -497,6 +514,24 @@ $lapis-lazuli: #215B7Fff; */
   white-space: nowrap;
 }
 
+
+.blackbutton {
+	min-width: 100%;
+	margin-top:12rem;
+    padding: 0.9em 2em;
+    border: none;
+    outline: none;
+    color: white; /* Changing text color to white */
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
 </style>
 
 					<div id="sidebar">
@@ -534,160 +569,163 @@ $lapis-lazuli: #215B7Fff; */
 									<li><a href="/services">More Services</a></li>
 
 							</nav>
-
-<style>
-	.carousel {
-	  position: relative;
-	  max-width: 800px; /* Adjust max-width as needed */
-	  margin: 0 auto;
-	}
-  
-	.carousel-inner {
-	  display: flex;
-	  overflow: hidden;
-	}
-  
-	.profile-article {
-	  flex: 0 0 auto;
-	  width: 100%; /* Adjust width as needed */
-	  padding: 0 10px; /* Adjust padding as needed */
-	  box-sizing: border-box;
-	}
-  
-	/* Pagination indicators */
-	.pagination {
-	  text-align: center;
-	  margin-top: 10px;
-	}
-  
-	.pagination-dot {
-	  display: inline-block;
-	  width: 10px;
-	  height: 10px;
-	  border-radius: 50%;
-	  background-color: #bbb;
-	  margin: 0 5px;
-	  cursor: pointer;
-	}
-  
-	.pagination-dot.active {
-	  background-color: #333;
-	}
-  </style>
-  
-  <section>
-	<header class="major">
-	  <h2>Who We Are</h2>
-	</header>
-	<div class="carousel">
-	  <div class="carousel-inner">
-		
-		<div class="profile-article">
-		  <div class="profile-content">
-			<img src="/assets/images/sandiprof.png" alt="photo of Sandi Quick - Owner and Director" class="profile-image" />
-			<p class="profile-info"><strong>Sandi Quick</strong></br>Owner and Director</p>
-		  </div>
-		</div>
-		
-		
-		<div class="profile-article">
-		  <div class="profile-content">
-			<img src="/assets/images/shayleeprof.png" alt="photo of Shaylee - Counselor" class="profile-image" />
-			<p class="profile-info"><strong>Shaylee</strong></br>Counselor</p>
-		  </div>
-		</div>
-		
-		
-		<div class="profile-article">
-		  <div class="profile-content">
-			<img src="/assets/images/taylorprof.png" alt="photo of Taylor - Case Worker" class="profile-image" />
-			<p class="profile-info"><strong>Taylor</strong></br>Case Worker</p>
-		  </div>
-		</div>
-		
-		
-		<div class="profile-article">
-		  <div class="profile-content">
-			<img src="/assets/images/whitneyprof.png" alt="photo of Whitney - Caseworker" class="profile-image" />
-			<p class="profile-info"><strong>Whitney</strong></br>Caseworker</p>
-		  </div>
-		</div>
-		
-		
-		<div class="profile-article">
-		  <div class="profile-content">
-			<img src="/assets/images/robinprof.png" alt="photo of Robin - Counselor" class="profile-image" />
-			<p class="profile-info"><strong>Robin</strong></br>Counselor</p>
-		  </div>
-		</div>
-		
-		
-		<div class="profile-article">
-		  <div class="profile-content">
-			<img src="/assets/images/maryjaneprof.png" alt="photo of Mary Jane - Caseworker" class="profile-image" />
-			<p class="profile-info"><strong>Mary Jane</strong></br>Caseworker</p>
-		  </div>
-		</div>
-		
-		
-	  </div>
-	  <div class="pagination"></div>
-	</div>
-	<ul class="actions">
-	  <li><a href="#" class="button">More</a></li>
-	</ul>
-  </section>
-  
-  <script>
-	document.addEventListener('DOMContentLoaded', function() {
-	  var slideIndex = 0;
-	  var slides = document.querySelectorAll('.carousel-inner .profile-article');
-	  var dotCount = slides.length;
-	  var interval;
-  
-	  function showSlide(index) {
-		for (var i = 0; i < slides.length; i++) {
-		  slides[i].style.display = 'none';
-		}
-		slides[index].style.display = 'block';
-  
-		var dots = document.querySelectorAll('.pagination-dot');
-		for (var i = 0; i < dots.length; i++) {
-		  dots[i].classList.remove('active');
-		}
-		dots[index].classList.add('active');
-	  }
-  
-	  function nextSlide() {
-		slideIndex = (slideIndex + 1) % dotCount;
-		showSlide(slideIndex);
-	  }
-  
-	  function startCarousel() {
-		interval = setInterval(nextSlide, 2000);
-	  }
-  
-	  startCarousel();
-  
-	  var paginationDots = document.querySelector('.pagination');
-	  for (var i = 0; i < dotCount; i++) {
-		var dot = document.createElement('span');
-		dot.classList.add('pagination-dot');
-		paginationDots.appendChild(dot);
-	  }
-  
-	  var dots = document.querySelectorAll('.pagination-dot');
-	  dots.forEach(function(dot, index) {
-		dot.addEventListener('click', function() {
-		  slideIndex = index;
-		  showSlide(slideIndex);
-		  clearInterval(interval);
-		  startCarousel();
-		});
-	  });
-	});
-  </script>
-  
+														
+							
+							<style>
+								.carousel {
+								position: relative;
+								max-width: 800px; /* Adjust max-width as needed */
+								margin: 0 auto;
+								}
+							
+								.carousel-inner {
+								display: flex;
+								overflow: hidden;
+								}
+							
+								.profile-article {
+								flex: 0 0 auto;
+								width: 100%; /* Adjust width as needed */
+								padding: 0 10px; /* Adjust padding as needed */
+								box-sizing: border-box;
+								}
+							
+								/* Pagination indicators */
+								.pagination {
+								text-align: center;
+								margin-top: 10px;
+								}
+							
+								.pagination-dot {
+								display: inline-block;
+								width: 10px;
+								height: 10px;
+								border-radius: 50%;
+								background-color: #bbb;
+								margin: 0 5px;
+								cursor: pointer;
+								margin-bottom: 7rem;
+								}
+							
+								.pagination-dot.active {
+								background-color: #333;
+								}
+							</style>
+							
+							<section>
+								<header class="major">
+								<h2>Who We Are</h2>
+								</header>
+								<div class="carousel">
+								<div class="carousel-inner">
+									
+									<div class="profile-article">
+									<div class="profile-content">
+										<img src="/assets/images/sandiprof.png" alt="photo of Sandi Quick - Owner and Director" class="profile-image" />
+										<p class="profile-info"><strong>Sandi Quick</strong></br>Owner and Director</p>
+									</div>
+									</div>
+									
+									
+									<div class="profile-article">
+									<div class="profile-content">
+										<img src="/assets/images/shayleeprof.png" alt="photo of Shaylee - Counselor" class="profile-image" />
+										<p class="profile-info"><strong>Shaylee</strong></br>Counselor</p>
+									</div>
+									</div>
+									
+									
+									<div class="profile-article">
+									<div class="profile-content">
+										<img src="/assets/images/taylorprof.png" alt="photo of Taylor - Case Worker" class="profile-image" />
+										<p class="profile-info"><strong>Taylor</strong></br>Case Worker</p>
+									</div>
+									</div>
+									
+									
+									<div class="profile-article">
+									<div class="profile-content">
+										<img src="/assets/images/whitneyprof.png" alt="photo of Whitney - Caseworker" class="profile-image" />
+										<p class="profile-info"><strong>Whitney</strong></br>Caseworker</p>
+									</div>
+									</div>
+									
+									
+									<div class="profile-article">
+									<div class="profile-content">
+										<img src="/assets/images/robinprof.png" alt="photo of Robin - Counselor" class="profile-image" />
+										<p class="profile-info"><strong>Robin</strong></br>Counselor</p>
+									</div>
+									</div>
+									
+									
+									<div class="profile-article">
+									<div class="profile-content">
+										<img src="/assets/images/maryjaneprof.png" alt="photo of Mary Jane - Caseworker" class="profile-image" />
+										<p class="profile-info"><strong>Mary Jane</strong></br>Caseworker</p>
+									</div>
+									</div>
+									
+									
+								</div>
+								<div class="pagination"></div>
+								</div>
+								<ul class="actions">
+									<br>
+								<li><a href="#" class="blackbutton">More</a></li>
+								</ul>
+							</section>
+							
+							<script>
+								document.addEventListener('DOMContentLoaded', function() {
+								var slideIndex = 0;
+								var slides = document.querySelectorAll('.carousel-inner .profile-article');
+								var dotCount = slides.length;
+								var interval;
+							
+								function showSlide(index) {
+									for (var i = 0; i < slides.length; i++) {
+									slides[i].style.display = 'none';
+									}
+									slides[index].style.display = 'block';
+							
+									var dots = document.querySelectorAll('.pagination-dot');
+									for (var i = 0; i < dots.length; i++) {
+									dots[i].classList.remove('active');
+									}
+									dots[index].classList.add('active');
+								}
+							
+								function nextSlide() {
+									slideIndex = (slideIndex + 1) % dotCount;
+									showSlide(slideIndex);
+								}
+							
+								function startCarousel() {
+									interval = setInterval(nextSlide, 2000);
+								}
+							
+								startCarousel();
+							
+								var paginationDots = document.querySelector('.pagination');
+								for (var i = 0; i < dotCount; i++) {
+									var dot = document.createElement('span');
+									dot.classList.add('pagination-dot');
+									paginationDots.appendChild(dot);
+								}
+							
+								var dots = document.querySelectorAll('.pagination-dot');
+								dots.forEach(function(dot, index) {
+									dot.addEventListener('click', function() {
+									slideIndex = index;
+									showSlide(slideIndex);
+									clearInterval(interval);
+									startCarousel();
+									});
+								});
+								});
+							</script>
+							
 
   
   
