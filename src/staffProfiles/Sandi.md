@@ -1,6 +1,6 @@
 ---
-    name: "sandiProf Quick"
+    name: "Sandi Quick"
     title: "Owner and Director"
-    image: "/assets/images/sandiProf.jpg"
+    image: "/assets/images/sandiprof.png"
 ---
 

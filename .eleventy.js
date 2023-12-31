@@ -11,7 +11,7 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
 
-    eleventyConfig.addPassthroughCopy("src/assets/images");
+    eleventyConfig.addPassthroughCopy({"src/assets/images": '/assets/images'});
 
     eleventyConfig.addPassthroughCopy("src/admin/");
 

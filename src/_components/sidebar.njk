@@ -1,11 +1,36 @@
 
 				<!-- Sidebar -->
 
-				<style>
-					#sidebar .image {
-						max-width: 50%;						
-					}
-				</style>
+<style>
+#sidebar .image {
+	max-width: 50%;						
+}
+.profile-article {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  width: 50%; /* Adjust image size as needed */
+  height: auto;
+  margin-right: 15px; /* Adjust spacing between image and text */
+}
+
+.profile-info {
+  margin: 0; /* Remove default margin */
+  max-width: 200px; /* Set the maximum width for the paragraph */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+</style>
 
 					<div id="sidebar">
 						<div class="inner">
@@ -42,27 +67,123 @@
 									<li><a href="/services">More Services</a></li>
 
 							</nav>
+{#  #}
+<style>
+	.carousel {
+	  position: relative;
+	  max-width: 800px; /* Adjust max-width as needed */
+	  margin: 0 auto;
+	}
+  
+	.carousel-inner {
+	  display: flex;
+	  overflow: hidden;
+	}
+  
+	.profile-article {
+	  flex: 0 0 auto;
+	  width: 100%; /* Adjust width as needed */
+	  padding: 0 10px; /* Adjust padding as needed */
+	  box-sizing: border-box;
+	}
+  
+	/* Pagination indicators */
+	.pagination {
+	  text-align: center;
+	  margin-top: 10px;
+	}
+  
+	.pagination-dot {
+	  display: inline-block;
+	  width: 10px;
+	  height: 10px;
+	  border-radius: 50%;
+	  background-color: #bbb;
+	  margin: 0 5px;
+	  cursor: pointer;
+	}
+  
+	.pagination-dot.active {
+	  background-color: #333;
+	}
+  </style>
+  
+  <section>
+	<header class="major">
+	  <h2>Who We Are</h2>
+	</header>
+	<div class="carousel">
+	  <div class="carousel-inner">
+		{% for post in collections.staffProfiles %}
+		<div class="profile-article">
+		  <div class="profile-content">
+			<img src="{{ post.data.image }}" alt="photo of {{post.data.name}} - {{ post.data.title }}" class="profile-image" />
+			<p class="profile-info"><strong>{{post.data.name}}</strong></br>{{ post.data.title }}</p>
+		  </div>
+		</div>
+		{% set count = count + 1 %}
+		{% endfor %}
+	  </div>
+	  <div class="pagination"></div>
+	</div>
+	<ul class="actions">
+	  <li><a href="#" class="button">More</a></li>
+	</ul>
+  </section>
+  
+  <script>
+	document.addEventListener('DOMContentLoaded', function() {
+	  var slideIndex = 0;
+	  var slides = document.querySelectorAll('.carousel-inner .profile-article');
+	  var dotCount = slides.length;
+	  var interval;
+  
+	  function showSlide(index) {
+		for (var i = 0; i < slides.length; i++) {
+		  slides[i].style.display = 'none';
+		}
+		slides[index].style.display = 'block';
+  
+		var dots = document.querySelectorAll('.pagination-dot');
+		for (var i = 0; i < dots.length; i++) {
+		  dots[i].classList.remove('active');
+		}
+		dots[index].classList.add('active');
+	  }
+  
+	  function nextSlide() {
+		slideIndex = (slideIndex + 1) % dotCount;
+		showSlide(slideIndex);
+	  }
+  
+	  function startCarousel() {
+		interval = setInterval(nextSlide, 2000);
+	  }
+  
+	  startCarousel();
+  
+	  var paginationDots = document.querySelector('.pagination');
+	  for (var i = 0; i < dotCount; i++) {
+		var dot = document.createElement('span');
+		dot.classList.add('pagination-dot');
+		paginationDots.appendChild(dot);
+	  }
+  
+	  var dots = document.querySelectorAll('.pagination-dot');
+	  dots.forEach(function(dot, index) {
+		dot.addEventListener('click', function() {
+		  slideIndex = index;
+		  showSlide(slideIndex);
+		  clearInterval(interval);
+		  startCarousel();
+		});
+	  });
+	});
+  </script>
+  
 
-						<!-- Section -->
-							<section>
-								<header class="major">
-									<h2>Who We Are</h2>
-								</header>
-								<div class="mini-posts">
-									{% for post in collections.staffProfiles %}
-										<article>
-										  <a href="/about" class="image"><img src="{{ post.data.image }}" alt="photo of{{post.data.name}} - {{ post.data.title }}"/></a>
-										  <p>{{post.data.name}} - {{ post.data.title }} </p>
-										</article>
-										{% set count = count + 1 %}
-									{% endfor %}
-								  </div>
-								<ul class="actions">
-									<li><a href="#" class="button">More</a></li>
-								</ul>
-							</section>
-
-						<!-- Section -->
+  {#  #}
+  
 							<section>
 								<header class="major">
 									<h2>Get in touch</h2>

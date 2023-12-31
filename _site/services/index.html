@@ -465,11 +465,36 @@ print 'It took ' + i + ' iterations to sort the deck.';
 									
 				<!-- Sidebar -->
 
-				<style>
-					#sidebar .image {
-						max-width: 50%;						
-					}
-				</style>
+<style>
+#sidebar .image {
+	max-width: 50%;						
+}
+.profile-article {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  width: 50%; /* Adjust image size as needed */
+  height: auto;
+  margin-right: 15px; /* Adjust spacing between image and text */
+}
+
+.profile-info {
+  margin: 0; /* Remove default margin */
+  max-width: 200px; /* Set the maximum width for the paragraph */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+</style>
 
 					<div id="sidebar">
 						<div class="inner">
@@ -507,45 +532,169 @@ print 'It took ' + i + ' iterations to sort the deck.';
 
 							</nav>
 
-						<!-- Section -->
-							<section>
-								<header class="major">
-									<h2>Who We Are</h2>
-								</header>
-								<div class="mini-posts">
-									
-										<article>
-										  <a href="/about" class="image"><img src="/assets/images/Sandi.jpg" alt="photo ofSandi Quick - Owner and Director"/></a>
-										  <p>Sandi Quick - Owner and Director </p>
-										</article>
-										
-									
-										<article>
-										  <a href="/about" class="image"><img src="/assets/images/Shaylee.jpg" alt="photo ofShaylee Budora - Licensed Counselor"/></a>
-										  <p>Shaylee Budora - Licensed Counselor </p>
-										</article>
-										
-									
-										<article>
-										  <a href="/about" class="image"><img src="/assets/images/Taylor.jpg" alt="photo ofTaylor Palmer - Case Worker"/></a>
-										  <p>Taylor Palmer - Case Worker </p>
-										</article>
-										
-									
-								  </div>
-								<ul class="actions">
-									<li><a href="#" class="button">More</a></li>
-								</ul>
-							</section>
+<style>
+	.carousel {
+	  position: relative;
+	  max-width: 800px; /* Adjust max-width as needed */
+	  margin: 0 auto;
+	}
+  
+	.carousel-inner {
+	  display: flex;
+	  overflow: hidden;
+	}
+  
+	.profile-article {
+	  flex: 0 0 auto;
+	  width: 100%; /* Adjust width as needed */
+	  padding: 0 10px; /* Adjust padding as needed */
+	  box-sizing: border-box;
+	}
+  
+	/* Pagination indicators */
+	.pagination {
+	  text-align: center;
+	  margin-top: 10px;
+	}
+  
+	.pagination-dot {
+	  display: inline-block;
+	  width: 10px;
+	  height: 10px;
+	  border-radius: 50%;
+	  background-color: #bbb;
+	  margin: 0 5px;
+	  cursor: pointer;
+	}
+  
+	.pagination-dot.active {
+	  background-color: #333;
+	}
+  </style>
+  
+  <section>
+	<header class="major">
+	  <h2>Who We Are</h2>
+	</header>
+	<div class="carousel">
+	  <div class="carousel-inner">
+		
+		<div class="profile-article">
+		  <div class="profile-content">
+			<img src="/assets/images/sandiprof.png" alt="photo of Sandi Quick - Owner and Director" class="profile-image" />
+			<p class="profile-info"><strong>Sandi Quick</strong></br>Owner and Director</p>
+		  </div>
+		</div>
+		
+		
+		<div class="profile-article">
+		  <div class="profile-content">
+			<img src="/assets/images/shayleeprof.png" alt="photo of shaylee Budora - Licensed Counselor" class="profile-image" />
+			<p class="profile-info"><strong>shaylee Budora</strong></br>Licensed Counselor</p>
+		  </div>
+		</div>
+		
+		
+		<div class="profile-article">
+		  <div class="profile-content">
+			<img src="/assets/images/taylorprof.png" alt="photo of Taylor Palmer - Case Worker" class="profile-image" />
+			<p class="profile-info"><strong>Taylor Palmer</strong></br>Case Worker</p>
+		  </div>
+		</div>
+		
+		
+		<div class="profile-article">
+		  <div class="profile-content">
+			<img src="/assets/images/whitneyprof.png" alt="photo of Whitney - " class="profile-image" />
+			<p class="profile-info"><strong>Whitney</strong></br></p>
+		  </div>
+		</div>
+		
+		
+		<div class="profile-article">
+		  <div class="profile-content">
+			<img src="/assets/images/robinprof.png" alt="photo of Robin - Owner and Director" class="profile-image" />
+			<p class="profile-info"><strong>Robin</strong></br>Owner and Director</p>
+		  </div>
+		</div>
+		
+		
+		<div class="profile-article">
+		  <div class="profile-content">
+			<img src="/assets/images/maryjaneprof.png" alt="photo of Mary Jane - Owner and Director" class="profile-image" />
+			<p class="profile-info"><strong>Mary Jane</strong></br>Owner and Director</p>
+		  </div>
+		</div>
+		
+		
+	  </div>
+	  <div class="pagination"></div>
+	</div>
+	<ul class="actions">
+	  <li><a href="#" class="button">More</a></li>
+	</ul>
+  </section>
+  
+  <script>
+	document.addEventListener('DOMContentLoaded', function() {
+	  var slideIndex = 0;
+	  var slides = document.querySelectorAll('.carousel-inner .profile-article');
+	  var dotCount = slides.length;
+	  var interval;
+  
+	  function showSlide(index) {
+		for (var i = 0; i < slides.length; i++) {
+		  slides[i].style.display = 'none';
+		}
+		slides[index].style.display = 'block';
+  
+		var dots = document.querySelectorAll('.pagination-dot');
+		for (var i = 0; i < dots.length; i++) {
+		  dots[i].classList.remove('active');
+		}
+		dots[index].classList.add('active');
+	  }
+  
+	  function nextSlide() {
+		slideIndex = (slideIndex + 1) % dotCount;
+		showSlide(slideIndex);
+	  }
+  
+	  function startCarousel() {
+		interval = setInterval(nextSlide, 2000);
+	  }
+  
+	  startCarousel();
+  
+	  var paginationDots = document.querySelector('.pagination');
+	  for (var i = 0; i < dotCount; i++) {
+		var dot = document.createElement('span');
+		dot.classList.add('pagination-dot');
+		paginationDots.appendChild(dot);
+	  }
+  
+	  var dots = document.querySelectorAll('.pagination-dot');
+	  dots.forEach(function(dot, index) {
+		dot.addEventListener('click', function() {
+		  slideIndex = index;
+		  showSlide(slideIndex);
+		  clearInterval(interval);
+		  startCarousel();
+		});
+	  });
+	});
+  </script>
+  
 
-						<!-- Section -->
+  
+  
 							<section>
 								<header class="major">
 									<h2>Get in touch</h2>
 								</header>
 								<p>if you have any questions, please don't hesitate to call us. with over 20 years of experience in the adoption business, we are committed to providing dedicated support. based in utah, we are here to help families grow with compassion. thank you!</p>
 								<ul class="contact">
-									<li class="icon solid fa-envelope"><a href="#">Sandi@brighteradoption.com</a></li>
+									<li class="icon solid fa-envelope"><a href="#">sandiProf@brighteradoption.com</a></li>
 									<li class="icon solid fa-phone">(801) 989-6386</li>
 									<li class="icon solid fa-home">952 S Main St #B-2<br />
 									Layton, UT 84403</li>
