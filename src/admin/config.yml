@@ -32,10 +32,9 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Excerpt", name: "excerpt", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-
-- name: "faq"
+  - name: "faq"
     label: "faq"
-    folder: "src/staffProfiles"
+    folder: "src/faq"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
