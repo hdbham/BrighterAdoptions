@@ -1,6 +1,6 @@
 ---
     name: "Whitney"
-    title: ""
+    title: "Caseworker"
     image: "/assets/images/whitneyprof.png"
 ---
 

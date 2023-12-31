@@ -1,6 +1,6 @@
 ---
-    name: "shaylee Budora"
-    title: "Licensed Counselor"
+    name: "Shaylee"
+    title: "Counselor"
     image: "/assets/images/shayleeprof.png"
 ---
 

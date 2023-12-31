@@ -1,6 +1,6 @@
 ---
     name: "Robin"
-    title: "Owner and Director"
-    image: "/assets/images/robinprof.jpg"
+    title: "Counselor"
+    image: "/assets/images/robinprof.png"
 ---
 
