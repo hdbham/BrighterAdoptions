@@ -27,9 +27,9 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Image", name: "imageAlt", widget: "string"}
+      - {label: "Image", name: "imageAlt", widget: "image"}
       - {label: "Name", name: "Name", widget: "string"}
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Name", name: "title", widget: "string"}
       - {label: "Excerpt", name: "excerpt", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "faq"
