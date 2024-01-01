@@ -1,6 +1,8 @@
 ---
     name: "Robin"
-    title: "Counselor"
+    job: "Counselor"
     image: "/assets/images/robinprof.png"
 ---
 
+
+body

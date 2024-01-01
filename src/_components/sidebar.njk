@@ -124,27 +124,43 @@
 								.pagination-dot.active {
 								background-color: #333;
 								}
+
+								/* Container for the button */
+.button-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+/* Example styles for the blackbutton class (adjust as needed) */
+
+
 							</style>
 							
 							<section>
-								<header class="major">
-								<h2>Who We Are</h2>
-								</header>
-								<div class="carousel">
-								<div class="carousel-inner">
-									{% for post in collections.staffProfiles %}
-									<div class="profile-article">
-									<div class="profile-content">
-										<img src="{{ post.data.image }}" alt="photo of {{post.data.name}} - {{ post.data.title }}" class="profile-image" />
-										<p class="profile-info"><strong>{{post.data.name}}</strong></br>{{ post.data.title }}</p>
+								<section>
+									<header class="major">
+									  <h2>Who We Are</h2>
+									</header>
+									<div class="carousel">
+									  <div class="carousel-inner">
+										{% for post in collections.staffProfiles %}
+										<div class="profile-article">
+										  <div class="profile-content">
+											<img src="{{ post.data.image }}" alt="photo of {{post.data.name}} - {{ post.data.job }}" class="profile-image" />
+											<p class="profile-info"><strong>{{post.data.name}}</strong></br>{{ post.data.job }}</p>
+										  </div>
+										</div>
+										{% set count = count + 1 %}
+										{% endfor %}
+									  </div>
+									  <div class="pagination"></div>
 									</div>
-									</div>
-									{% set count = count + 1 %}
-									{% endfor %}
-								</div>
-								<div class="pagination"></div>
-								</div>
-								<a href="#" class="blackbutton">More</a></li>
+									{# <div class="button-container">
+									  <a href="#" class="blackbutton">More</a>
+									</div> #}
+								  </section>
+								  
 								
 							</section>
 							
