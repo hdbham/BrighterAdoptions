@@ -47,7 +47,8 @@
 
 /* CSS */
 .button-85 {
-  padding: .8rem 3rem;
+  padding: .5rem 3rem;
+  font-size: large;
   border: none;
   outline: none;
   color: rgb(255, 255, 255);
@@ -130,7 +131,6 @@
     touch-action: manipulation;
   }
 
-.content 
 </style>
 <body class="is-preload">
 
@@ -147,15 +147,14 @@
 							<!-- Banner -->
 								<section id="banner">
 									<div class="content">
-										<div>
-											<header>
+										<header>
 											<h1>We are excited to meet you.<br />
 											</h1>
 											<p>200+ placements, 20 years of experiences</p>
 										</header>
 										<p>Brighter Adoptions has served hundreds of clients. We feel a great sense of responsibility to help the women who come to us have the best experience possible and find the perfect family for their unborn child.
 										<br> <br> We are ready to help. </p>
-									</div>
+										<br>
 										<ul class="actions">
 											<li><a href="tel:%E2%80%8B%E2%80%8B8019896386" class="button-85">CALL US</a></li>
 											{# <button class="button-85" role="button">Button 85</button> #}
@@ -230,6 +229,7 @@
   </div>
 </section>
 
+{% include "./_components/contactus.njk" %}
 
 						</div>
 					</div>
