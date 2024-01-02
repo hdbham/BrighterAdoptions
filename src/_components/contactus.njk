@@ -42,93 +42,81 @@
             color: #222;
             cursor: pointer;
         }
-
-        .map-container {
-            margin-top: 20px;
-            position: relative;
-            overflow: hidden;
-            padding-bottom: 56.25%; /* Aspect ratio 16:9 */
-            height: 0;
-        }
-
-        .map-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
         .due-date {
             display: none;
         }
     </style>
 </head>
 <body>
-    <form name="contact" netlify>
-        <h2>Let's talk!</h2>
-
-        <form action="#" method="post">
+    <div class="contact-container">
+        <form name="contact" netlify>
+            <h2>Let's talk!</h2>
             <label for="name">Hi, Sandi! my name is</label>
             <input type="text" id="name" name="name" placeholder="Type here" oninput="updateGreeting()">
             <label for="client-type">I am a</label>
             <select id="client-type" name="client-type">
                 <option value=""></option>
-                <option value="mom">Expectant Mother</option>
-                <option value="family">Parent looking to adopt</option>
+                <option value="expectant mother">Expectant Mother</option>
+                <option value="parent looking to adopt">Parent looking to adopt</option>
             </select>
             <div class="due-date">
-                <label for="due-date">my expected Due Date is around</label>
+                <label for="due-date">My expected Due Date is around</label>
                 <input type="date" id="due-date" name="due-date">
             </div>
             <label for="looking">and I have questions about</label>
             <input type="looking" id="looking" name="looking" placeholder="Ask us anything!">
-
             <label for="contact">Get in touch with me at:</label>
             <input type="contact" id="contact" name="contact" placeholder="Your phone or email here">
-
-            <label> Thank you! <br> <span id="greetingName">-</span></label>
-
-            {# <input type="checkbox" id="newsletter" name="newsletter">
-            <label for="newsletter">Subscribe to newsletter</label> #}
+            <label> Thank you! <br> <span id="greetingName"></span></label>
             <br>
-            <input type="submit" value="Send message!">
+            <input type="submit" value="Send message!" id="submitBtn">
+            <p id="adoptingFamiliesMsg" style="display: none;">Thank you for your interest! Click below to learn more about adopting families.</p>
+            <a href="/adoptivefamilies" id="adoptingFamiliesLink" style="display: none;"><button>Learn More</button></a>
         </form>
     </div>
 
     <script>
-        
-           document.getElementById('client-type').addEventListener('change', function() {
-            var dueDateField = document.querySelector('.due-date');
-            if (this.value === 'mom') {
-                dueDateField.style.display = 'block';
-            } else {
-                dueDateField.style.display = 'none';
-            }
-        });
-        // Update greeting with the name input
-        function updateGreeting() {
-            var nameInput = document.getElementById('name');
-            var greeting = document.getElementById('greetingName');
-            greeting.textContent = nameInput.value;
+   function updateGreeting() {
+        var nameInput = document.getElementById('name');
+        var greeting = document.getElementById('greetingName');
+        greeting.textContent = "- " + nameInput.value;
+    }
+
+    document.getElementById('client-type').addEventListener('change', function() {
+        var clientType = this.value;
+        var dueDateField = document.querySelector('.due-date');
+        var submitBtn = document.getElementById('submitBtn');
+        var adoptingFamiliesMsg = document.getElementById('adoptingFamiliesMsg');
+        var adoptingFamiliesLink = document.getElementById('adoptingFamiliesLink');
+        var lookingLabel = document.querySelector('label[for="looking"]');
+        var lookingInput = document.getElementById('looking');
+        var contactLabel = document.querySelector('label[for="contact"]');
+        var contactInput = document.getElementById('contact');
+
+        if (clientType === 'expectant mother') {
+            dueDateField.style.display = 'block';
+        } else {
+            dueDateField.style.display = 'none';
         }
 
-        // Automatically populate name input with stored name
-        window.onload = function() {
-            var storedName = localStorage.getItem('storedName');
-            var nameInput = document.getElementById('name');
-            if (storedName) {
-                nameInput.value = storedName;
-                updateGreeting(); // Update greeting if name is pre-filled
-            }
-        };
-
-        // Store the entered name locally
-        document.getElementById('name').addEventListener('input', function() {
-            var name = this.value;
-            localStorage.setItem('storedName', name);
-        });
+        if (clientType === 'parent looking to adopt') {
+            submitBtn.style.display = 'none';
+            adoptingFamiliesMsg.style.display = 'block';
+            adoptingFamiliesLink.style.display = 'block';
+            lookingLabel.style.display = 'none';
+            lookingInput.style.display = 'none';
+            contactLabel.style.display = 'none';
+            contactInput.style.display = 'none';
+        } else {
+            submitBtn.style.display = 'block';
+            adoptingFamiliesMsg.style.display = 'none';
+            adoptingFamiliesLink.style.display = 'none';
+            lookingLabel.style.display = 'block';
+            lookingInput.style.display = 'block';
+            contactLabel.style.display = 'block';
+            contactInput.style.display = 'block';
+        }
+    });
     </script>
 </body>
 </html>
