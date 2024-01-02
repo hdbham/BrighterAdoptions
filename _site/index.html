@@ -581,7 +581,7 @@
 <body>
     <div class="contact-container">
         <h2>Let's talk!</h2>
-    
+
         <form action="#" method="post">
             <label for="name">Hi, Sandi! my name is</label>
             <input type="text" id="name" name="name" placeholder="Type here" oninput="updateGreeting()">
@@ -610,11 +610,28 @@
     </div>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form[data-netlify="true"]');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                fetch('/', {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(() => {
+                    // Show success message or redirect to a thank you page
+                    alert('Thank you for your message! We will be in contact soon.');
+                    // window.location.href = 'thankyou.html'; // Uncomment to redirect to a thank you page
+                })
+                .catch(error => console.error('Error:', error));
+            });
+        });
+        
            document.getElementById('client-type').addEventListener('change', function() {
             var dueDateField = document.querySelector('.due-date');
             if (this.value === 'mom') {
                 dueDateField.style.display = 'block';
-            } {
+            } else {
                 dueDateField.style.display = 'none';
             }
         });
