@@ -10,6 +10,7 @@ excerpt: >-
 thumbnail: /assets/images/pic02.jpg
 author: Hunter
 tags:
+  - featured
   - post
 ---
 Dear Reader,

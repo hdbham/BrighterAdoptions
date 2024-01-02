@@ -209,26 +209,37 @@
 									</div>
 								</section>
 
-							<!-- Section -->
 								<section>
-  <header class="major">
-    <h2>Read our thoughts</h2>
-  </header>
-  <div class="posts">
-{% for post in collections.blogPosts | reverse %}
-      <article>
-        <a href="{{ post.url }}" class="image"><img src="{{ post.data.thumbnail }}" aria-label="read article titled {{post.data.title}}"></a>
-        <h3>{{ post.data.title }}</h3>
-        <p>{{ post.data.excerpt }}</p>
-        <ul class="actions">
-          <li><a href="{{ post.url }}" aria-label="Read More" class="blackbutton">Read</a></li>
-        </ul>
-      </article>
-    {% endfor %}
-  </div>
-</section>
 
-{% include "./_components/contactus.njk" %}
+									{% include "./_components/contactus.njk" %}
+								</section>
+
+									<!-- Section -->
+									<section>
+										<header class="major">
+										  <h2>Read our thoughts</h2>
+										</header>
+										<div class="posts">
+										  {% set count = 0 %}
+										  {% for post in collections.blogPosts | reverse %}
+											{% if count < 4 and post.data.tags.includes("featured")%}
+											  <article>
+												<a href="{{ post.url }}" class="image">
+												  <img src="{{ post.data.thumbnail }}" aria-label="read article titled {{post.data.title}}">
+												</a>
+												<h3>{{ post.data.title }}</h3>
+												<p>{{ post.data.excerpt }}</p>
+												<ul class="actions">
+												  <li><a href="{{ post.url }}" aria-label="Read More" class="blackbutton">Read</a></li>
+												</ul>
+											  </article>
+											  {% set count = count + 1 %}
+											{% endif %}
+										  {% endfor %}
+										</div>
+									  </section>
+									  
+
 
 						</div>
 					</div>

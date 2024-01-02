@@ -12,6 +12,7 @@ tags:
   - Culture
   - adoption
   - birthmom
+  - featured
 thumbnail: /assets/images/pic09.jpg
 imageAlt: children roller blading with father
 ---

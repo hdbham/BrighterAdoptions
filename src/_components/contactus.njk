@@ -4,19 +4,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Us</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-
+     
         .contact-container {
-            max-width: 500px;
+            font-family:  cursive;
+
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+            max-width: 420px;
             margin: 0 auto;
             padding: 20px;
-            font-family: 'Indie Flower', cursive; /* Applying the signature font */
+            border-radius: 12px;
+            margin-top: 50px;
         }
 
         .contact-container h2 {
             font-size: 2.5em;
             margin-bottom: 20px;
+            color: #555;
         }
 
         form {
@@ -27,21 +33,30 @@
         label {
             font-size: 1.2em;
             margin-bottom: 5px;
+            color: #777; /* Softer label color */
         }
 
         input, select {
-            padding: 10px;
+            padding: 12px;
             margin-bottom: 15px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
+            border-radius: 8px;
+            border: 1px solid #ddd; /* Softer border color */
             font-size: 1em;
         }
 
         input[type="submit"] {
-            background-color: #fff;
-            color: #222;
+            border: none !important;
+            color: black !important;
+            background-color: #f3e0e3; /* Light coral pink */
+            color: #fff;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
+
+        input[type="submit"]:hover {
+            background-color: #ff8c94; /* Slightly darker pink on hover */
+        }
+
         .due-date {
             display: none;
         }
@@ -49,9 +64,9 @@
 </head>
 <body>
     <div class="contact-container">
+        <h2>Let's talk!</h2>
         <form name="contact" netlify>
-            <h2>Let's talk!</h2>
-            <label for="name">Hi, Sandi! my name is</label>
+            <label for="name">Hi, Sandi! My name is</label>
             <input type="text" id="name" name="name" placeholder="Type here" oninput="updateGreeting()">
             <label for="client-type">I am a</label>
             <select id="client-type" name="client-type">
@@ -76,47 +91,47 @@
     </div>
 
     <script>
-   function updateGreeting() {
-        var nameInput = document.getElementById('name');
-        var greeting = document.getElementById('greetingName');
-        greeting.textContent = "- " + nameInput.value;
-    }
-
-    document.getElementById('client-type').addEventListener('change', function() {
-        var clientType = this.value;
-        var dueDateField = document.querySelector('.due-date');
-        var submitBtn = document.getElementById('submitBtn');
-        var adoptingFamiliesMsg = document.getElementById('adoptingFamiliesMsg');
-        var adoptingFamiliesLink = document.getElementById('adoptingFamiliesLink');
-        var lookingLabel = document.querySelector('label[for="looking"]');
-        var lookingInput = document.getElementById('looking');
-        var contactLabel = document.querySelector('label[for="contact"]');
-        var contactInput = document.getElementById('contact');
-
-        if (clientType === 'expectant mother') {
-            dueDateField.style.display = 'block';
-        } else {
-            dueDateField.style.display = 'none';
+        function updateGreeting() {
+            var nameInput = document.getElementById('name');
+            var greeting = document.getElementById('greetingName');
+            greeting.textContent = "- " + nameInput.value;
         }
 
-        if (clientType === 'parent looking to adopt') {
-            submitBtn.style.display = 'none';
-            adoptingFamiliesMsg.style.display = 'block';
-            adoptingFamiliesLink.style.display = 'block';
-            lookingLabel.style.display = 'none';
-            lookingInput.style.display = 'none';
-            contactLabel.style.display = 'none';
-            contactInput.style.display = 'none';
-        } else {
-            submitBtn.style.display = 'block';
-            adoptingFamiliesMsg.style.display = 'none';
-            adoptingFamiliesLink.style.display = 'none';
-            lookingLabel.style.display = 'block';
-            lookingInput.style.display = 'block';
-            contactLabel.style.display = 'block';
-            contactInput.style.display = 'block';
-        }
-    });
+        document.getElementById('client-type').addEventListener('change', function() {
+            var clientType = this.value;
+            var dueDateField = document.querySelector('.due-date');
+            var submitBtn = document.getElementById('submitBtn');
+            var adoptingFamiliesMsg = document.getElementById('adoptingFamiliesMsg');
+            var adoptingFamiliesLink = document.getElementById('adoptingFamiliesLink');
+            var lookingLabel = document.querySelector('label[for="looking"]');
+            var lookingInput = document.getElementById('looking');
+            var contactLabel = document.querySelector('label[for="contact"]');
+            var contactInput = document.getElementById('contact');
+
+            if (clientType === 'expectant mother') {
+                dueDateField.style.display = 'block';
+            } else {
+                dueDateField.style.display = 'none';
+            }
+
+            if (clientType === 'parent looking to adopt') {
+                submitBtn.style.display = 'none';
+                adoptingFamiliesMsg.style.display = 'block';
+                adoptingFamiliesLink.style.display = 'block';
+                lookingLabel.style.display = 'none';
+                lookingInput.style.display = 'none';
+                contactLabel.style.display = 'none';
+                contactInput.style.display = 'none';
+            } else {
+                submitBtn.style.display = 'block';
+                adoptingFamiliesMsg.style.display = 'none';
+                adoptingFamiliesLink.style.display = 'none';
+                lookingLabel.style.display = 'block';
+                lookingInput.style.display = 'block';
+                contactLabel.style.display = 'block';
+                contactInput.style.display = 'block';
+            }
+        });
     </script>
 </body>
 </html>
