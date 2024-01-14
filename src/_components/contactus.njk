@@ -4,134 +4,149 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <style>
      
-        .contact-container {
-            font-family:  cursive;
 
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
-            max-width: 420px;
-            margin: 0 auto;
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 50px;
-        }
+.contact-container {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #ffffffa8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.293), 0 2px 4px rgba(108, 184, 246, 0.465);
+    max-width: 420px;
+    padding: 60px;
+    border-radius: 12px;
+    margin: 20px auto;
+}
 
-        .contact-container h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #555;
-        }
+.contact-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #555;
+}
 
-        form {
-            display: flex;
-            flex-direction: column;
-        }
+form {
+    display: flex;
+    flex-direction: column;
+}
 
-        label {
-            font-size: 1.2em;
-            margin-bottom: 5px;
-            color: #777; /* Softer label color */
-        }
+label {
+    font-size: 1.2em; /* Adjust font size as needed */
+    margin-bottom: 5px;
+    color: #474141; /* Softer label color */
+}
 
-        input, select {
-            padding: 12px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            border: 1px solid #ddd; /* Softer border color */
-            font-size: 1em;
-        }
+input, select {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd; /* Softer border color */
+    font-size: 1.2rem;
+}
 
-        input[type="submit"] {
-            border: none !important;
-            color: black !important;
-            background-color: #f3e0e3; /* Light coral pink */
-            color: #fff;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+input[type="submit"] {
+    border: none !important;
+    color: black !important;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-        input[type="submit"]:hover {
-            background-color: #ff8c94; /* Slightly darker pink on hover */
-        }
+input[type="submit"]:hover {
+    background-color: #ffffff; /* Slightly darker pink on hover */
+}
 
-        .due-date {
-            display: none;
-        }
+input {
+font-size: 1rem;
+font-family: 'Quicksand' !important;
+}
+
+
     </style>
 </head>
 <body>
-    <div class="contact-container">
-        <h2>Let's talk!</h2>
-        <form name="contact" netlify>
-            <label for="name">Hi, Sandi! My name is</label>
-            <input type="text" id="name" name="name" placeholder="Type here" oninput="updateGreeting()">
-            <label for="client-type">I am a</label>
-            <select id="client-type" name="client-type">
-                <option value=""></option>
-                <option value="expectant mother">Expectant Mother</option>
-                <option value="parent looking to adopt">Parent looking to adopt</option>
-            </select>
-            <div class="due-date">
-                <label for="due-date">My expected Due Date is around</label>
-                <input type="date" id="due-date" name="due-date">
-            </div>
-            <label for="looking">and I have questions about</label>
-            <input type="looking" id="looking" name="looking" placeholder="Ask us anything!">
-            <label for="contact">Get in touch with me at:</label>
-            <input type="contact" id="contact" name="contact" placeholder="Your phone or email here">
-            <label> Thank you! <br> <span id="greetingName"></span></label>
-            <br>
-            <input type="submit" value="Send message!" id="submitBtn">
-            <p id="adoptingFamiliesMsg" style="display: none;">Thank you for your interest! Click below to learn more about adopting families.</p>
-            <a href="/adoptivefamilies" id="adoptingFamiliesLink" style="display: none;"><button>Learn More</button></a>
-        </form>
-    </div>
+    <div class="contact-background">
 
-    <script>
-        function updateGreeting() {
-            var nameInput = document.getElementById('name');
-            var greeting = document.getElementById('greetingName');
-            greeting.textContent = "- " + nameInput.value;
+        <div class="contact-container">
+            <h2>Let's talk!</h2>
+            <form name="contact" netlify>
+                <label for="name">Hi, Sandi! My name is</label>
+                <input type="text" id="name" name="name" placeholder="Type here" oninput="updateGreeting()">
+                <label for="client-type">I am a</label>
+                <select id="client-type" name="client-type">
+                    <option value=""></option>
+                    <option value="expectant mother">Expectant Mother</option>
+                    <option value="recent mother">Recent Mother</option>
+                    <option value="parent looking to adopt">Parent looking to adopt</option>
+                </select>
+                <div class="recent-birth-date" style="display: none;">
+                    <label for="birth-date">My child was born on</label>
+                    <input type="date" id="birth-date" name="birth-date">
+                </div>
+                <div class="due-date" style="display: none;">
+                    <label for="due-date">My expected Due Date is around</label>
+                    <input type="date" id="due-date" name="due-date">
+                </div>
+                <label for="looking">and I have questions about</label>
+                <input type="looking" id="looking" name="looking" placeholder="Ask us anything!">
+                <label for="contact">Please get in touch with me at:</label>
+                <input type="contact" id="contact" name="contact" placeholder="Your phone or email here">
+                <label> Thank you! <br> <span id="greetingName"></span></label>
+                <br>
+                <input type="submit" value="Send message!" id="submitBtn">
+                <p id="adoptingFamiliesMsg" style="display: none;">Thank you for your interest! Click below to learn more about adopting families.</p>
+                <a href="/adoptivefamilies" id="adoptingFamiliesLink" style="display: none;"><button>Learn More</button></a>
+            </form>
+        </div>
+    </div>
+        
+        <script>
+    function updateGreeting() {
+        var nameInput = document.getElementById('name');
+        var greeting = document.getElementById('greetingName');
+        greeting.textContent = "- " + nameInput.value;
+    }
+
+    document.getElementById('client-type').addEventListener('change', function() {
+        var clientType = this.value;
+        var dueDateField = document.querySelector('.due-date');
+        var recentBirthDateField = document.querySelector('.recent-birth-date'); // Added this line
+        var submitBtn = document.getElementById('submitBtn');
+        var adoptingFamiliesMsg = document.getElementById('adoptingFamiliesMsg');
+        var adoptingFamiliesLink = document.getElementById('adoptingFamiliesLink');
+        var lookingLabel = document.querySelector('label[for="looking"]');
+        var lookingInput = document.getElementById('looking');
+        var contactLabel = document.querySelector('label[for="contact"]');
+        var contactInput = document.getElementById('contact');
+
+        if (clientType === 'expectant mother') {
+            dueDateField.style.display = 'block';
+            recentBirthDateField.style.display = 'none'; // Added this line
+        } else if (clientType === 'recent mother') {
+            dueDateField.style.display = 'none';
+            recentBirthDateField.style.display = 'block'; // Added this line
+        } else {
+            dueDateField.style.display = 'none';
+            recentBirthDateField.style.display = 'none'; // Added this line
         }
 
-        document.getElementById('client-type').addEventListener('change', function() {
-            var clientType = this.value;
-            var dueDateField = document.querySelector('.due-date');
-            var submitBtn = document.getElementById('submitBtn');
-            var adoptingFamiliesMsg = document.getElementById('adoptingFamiliesMsg');
-            var adoptingFamiliesLink = document.getElementById('adoptingFamiliesLink');
-            var lookingLabel = document.querySelector('label[for="looking"]');
-            var lookingInput = document.getElementById('looking');
-            var contactLabel = document.querySelector('label[for="contact"]');
-            var contactInput = document.getElementById('contact');
-
-            if (clientType === 'expectant mother') {
-                dueDateField.style.display = 'block';
-            } else {
-                dueDateField.style.display = 'none';
-            }
-
-            if (clientType === 'parent looking to adopt') {
-                submitBtn.style.display = 'none';
-                adoptingFamiliesMsg.style.display = 'block';
-                adoptingFamiliesLink.style.display = 'block';
-                lookingLabel.style.display = 'none';
-                lookingInput.style.display = 'none';
-                contactLabel.style.display = 'none';
-                contactInput.style.display = 'none';
-            } else {
-                submitBtn.style.display = 'block';
-                adoptingFamiliesMsg.style.display = 'none';
-                adoptingFamiliesLink.style.display = 'none';
-                lookingLabel.style.display = 'block';
-                lookingInput.style.display = 'block';
-                contactLabel.style.display = 'block';
-                contactInput.style.display = 'block';
-            }
-        });
+        if (clientType === 'parent looking to adopt') {
+            submitBtn.style.display = 'none';
+            adoptingFamiliesMsg.style.display = 'block';
+            adoptingFamiliesLink.style.display = 'block';
+            lookingLabel.style.display = 'none';
+            lookingInput.style.display = 'none';
+            contactLabel.style.display = 'none';
+            contactInput.style.display = 'none';
+        } else {
+            submitBtn.style.display = 'block';
+            adoptingFamiliesMsg.style.display = 'none';
+            adoptingFamiliesLink.style.display = 'none';
+            lookingLabel.style.display = 'block';
+            lookingInput.style.display = 'block';
+            contactLabel.style.display = 'block';
+            contactInput.style.display = 'block';
+        }
+    });
     </script>
 </body>
 </html>

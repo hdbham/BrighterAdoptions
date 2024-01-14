@@ -15,120 +15,47 @@
 <style>
 
 .image-container {
-		display: flex;
+	display: flex;
 		justify-content: space-around;
-	}
+}
 
 .image-container img {
 	width: 70%;
 	height: auto;
 }
 
-.spin-image {
-  width: 100px; /* Adjust image size as needed */
-  height: auto;
-  transition: transform 0.5s ease; /* Smooth transition for the rotation */
-}
-
-.spin-on-scroll {
-  outline: none; /* Remove default focus outline */
-  animation: spinAnimation 2s infinite linear; /* Define the spinning animation */
-}
-
-/* Keyframes for the spinning animation */
-@keyframes spinAnimation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* CSS */
-.button-85 {
-	padding: 0.6em 2em;
-  border: none;
-  outline: none;
-  color: rgb(255, 255, 255);
-  background: #111;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-85:before {
-  content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(2px);
-  -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing-button-85 20s linear infinite;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 8px;
-}
-
-@keyframes glowing-button-85 {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
-.button-85:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #222;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-}
-
 .blackbutton {
-	min-width: 100%;
-	margin-top:12rem;
-    padding: 0.9em 2em;
-    border: none;
-    outline: none;
-    color: white; /* Changing text color to white */
-    background: #111;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+	
   }
+
+  .call-button {
+	width: 160px;
+    display: flex;
+    align-items: center;
+    padding: 1px 18px 0px;
+	border: 3px solid #F5BF50;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 5 rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.call-button i {
+    margin-right: 10px;
+}
+
+.call-button:hover {
+    background-color: #c9ffcb;
+    color: #fff;
+}
+
+#banner .content {
+	width: 100%
+}
 
 </style>
 <body class="is-preload">
@@ -144,34 +71,32 @@
 
 
 							<!-- Banner -->
-								<section id="banner">
+							<section id="banner">
+								<div class="content-container">
 									<div class="content">
 										<header>
-											<h1>We are excited to meet you.<br />
-											</h1>
+											<h1>We are excited to meet you.<br /></h1>
 											<p>200+ placements, 20 years of experiences</p>
 										</header>
-										<p>Brighter Adoptions has served hundreds of clients. We feel a great sense of responsibility to help the women who come to us have the best experience possible and find the perfect family for their unborn child.
-										<br> <br> We are ready to help. </p>
+										<p>Brighter Adoptions has served hundreds of clients. We feel a great sense of responsibility to help the women who come to us have the best experience possible and find the perfect family for their unborn child.<br><br>We are ready to help.</p>
 										<br>
-										<ul class="actions">
-											<li><a href="tel:%E2%80%8B%E2%80%8B8019896386" class="button-85">CALL US</a></li>
-											{# <button class="button-85" role="button">Button 85</button> #}
-
-										</ul>
+										<div class="actions">
+											<div class="call-button">
+												<i class="fas fa-phone-alt"></i>
+												Call Now
+											</div>
+										</div>
 									</div>
-									<span class="image object">
-										<img src="/assets/images/pic300.jpg" alt="two women holding a child" />
-									</span>
-								</section>
-								<section>
-									<header class="major">
-										<h2>At A Glance</h2>
-									</header>
-									{% include "./_components/spinninglogos.njk" %}
+								</div>
+								<span class="image object">
+									<img src="/assets/images/pic300.jpg" alt="two women holding a child" />
+								</span>
+							</section>
 
-									  
-								</section>
+							<section>
+								{% include "./_components/contactus.njk" %}
+
+							</section>
 							<!-- Section -->
 								<section>
 									<header class="major">

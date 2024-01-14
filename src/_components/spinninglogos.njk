@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Us</title>
     <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
         .container {
             display: flex;
             flex-wrap: wrap;
@@ -30,6 +35,8 @@
             margin-top: 20px;
             margin-bottom: 10px;
             border-radius: 8px;
+            margin-left: auto; /* Center the image on mobile screens */
+            margin-right: auto; /* Center the image on mobile screens */
         }
 
         /* Media query for smaller screens */
@@ -42,7 +49,7 @@
             .box img {
                 max-width: 7rem;
                 margin-bottom: 0;
-                margin-right: 20px;
+                margin-right: 50; /* Ensure no additional margin on mobile */
             }
 
             .specific-container .box {
@@ -72,6 +79,7 @@
             -webkit-user-select: none;
             touch-action: manipulation;
             text-decoration: none;
+            margin-top: 10px; /* Adjusted margin-top */
         }
     </style>
 </head>
@@ -84,7 +92,7 @@
                 <h2>Expectant Mothers</h2>
                 <p>We strive to cater to our expectant mothers and to make this extremely difficult experience as bright as possible.</p>
                 <div>
-                    <a href="/adopt-a-baby/" class="blackbutton">Learn More</a>
+                    <a href="/expectant-mothers/" class="blackbutton">Learn More</a>
                 </div>
             </div>
         </div>
@@ -96,7 +104,7 @@
                 <h2>Housing Program</h2>
                 <p>We have multiple one-bedroom and two-bedroom apartment units available for our expectant mothers to stay in.</p>
                 <div>
-                    <a href="/adopt-a-baby/" class="blackbutton">Learn More</a>
+                    <a href="/housing-program/" class="blackbutton">Learn More</a>
                 </div>
             </div>
         </div>
@@ -108,7 +116,7 @@
                 <h2>Adopting Families</h2>
                 <p>While we don’t work directly with families wanting to adopt, we can help point you in the right direction.</p>
                 <div>
-                    <a href="/adopt-a-baby/" class="blackbutton">Learn More</a>
+                    <a href="/adopting-families/" class="blackbutton">Learn More</a>
                 </div>
             </div>
         </div>

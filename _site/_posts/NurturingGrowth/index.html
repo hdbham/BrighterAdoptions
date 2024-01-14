@@ -78,20 +78,6 @@
                             <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <style>
 /* CSS */
-.button {
-  padding: 0.6em 2em;
-  border: none;
-  outline: none;
-  color: rgb(255, 255, 255);
-  background: #111;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
 
 </style>
 									<header id="header">
@@ -418,53 +404,62 @@ Nurturing the growth and development of your adopted child involves creating a n
 							</section>
 							
 							<script>
-								document.addEventListener('DOMContentLoaded', function() {
-								var slideIndex = 0;
-								var slides = document.querySelectorAll('.carousel-inner .profile-article');
-								var dotCount = slides.length;
-								var interval;
-							
-								function showSlide(index) {
-									for (var i = 0; i < slides.length; i++) {
-									slides[i].style.display = 'none';
-									}
-									slides[index].style.display = 'block';
-							
-									var dots = document.querySelectorAll('.pagination-dot');
-									for (var i = 0; i < dots.length; i++) {
-									dots[i].classList.remove('active');
-									}
-									dots[index].classList.add('active');
-								}
-							
-								function nextSlide() {
-									slideIndex = (slideIndex + 1) % dotCount;
-									showSlide(slideIndex);
-								}
-							
-								function startCarousel() {
-									interval = setInterval(nextSlide, 2000);
-								}
-							
-								startCarousel();
-							
-								var paginationDots = document.querySelector('.pagination');
-								for (var i = 0; i < dotCount; i++) {
-									var dot = document.createElement('span');
-									dot.classList.add('pagination-dot');
-									paginationDots.appendChild(dot);
-								}
-							
-								var dots = document.querySelectorAll('.pagination-dot');
-								dots.forEach(function(dot, index) {
-									dot.addEventListener('click', function() {
-									slideIndex = index;
-									showSlide(slideIndex);
-									clearInterval(interval);
-									startCarousel();
-									});
-								});
-								});
+								document.addEventListener('DOMContentLoaded', function () {
+    var slideIndex = 0;
+    var slides = document.querySelectorAll('.carousel-inner .profile-article');
+    var dotCount = slides.length;
+    var interval;
+
+    function showSlide(index) {
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+        slides[index].style.display = 'block';
+
+        var dots = document.querySelectorAll('.pagination-dot');
+        for (var i = 0; i < dots.length; i++) {
+            dots[i].classList.remove('active');
+        }
+        dots[index].classList.add('active');
+    }
+
+    function preloadImages() {
+        slides.forEach(function (slide) {
+            var image = new Image();
+            image.src = slide.querySelector('.profile-image').src;
+        });
+    }
+
+    function nextSlide() {
+        slideIndex = (slideIndex + 1) % dotCount;
+        showSlide(slideIndex);
+    }
+
+    function startCarousel() {
+        preloadImages(); // Preload images before starting the carousel
+        interval = setInterval(nextSlide, 2000);
+    }
+
+    startCarousel();
+
+    var paginationDots = document.querySelector('.pagination');
+    for (var i = 0; i < dotCount; i++) {
+        var dot = document.createElement('span');
+        dot.classList.add('pagination-dot');
+        paginationDots.appendChild(dot);
+    }
+
+    var dots = document.querySelectorAll('.pagination-dot');
+    dots.forEach(function (dot, index) {
+        dot.addEventListener('click', function () {
+            slideIndex = index;
+            showSlide(slideIndex);
+            clearInterval(interval);
+            startCarousel();
+        });
+    });
+});
+
 							</script>
 							
 
