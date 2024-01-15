@@ -1,0 +1,222 @@
+<style>
+  .hero-heading-center {
+  border-bottom: 1px solid #e4ebf3;
+  padding: 80px 30px;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centered-heading {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.centered-heading.margin-bottom-32px, .centered-heading.margin-bottom-32px-copy {
+  margin-bottom: 32px;
+}
+
+.where {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 134px;
+  display: flex;
+}
+
+.hero-split {
+  max-width: 46%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+
+.margin-bottom-24px {
+  text-align: center;
+  margin-top: 51px;
+  margin-bottom: 24px;
+  padding-left: 39px;
+  padding-right: 37px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.button-primary {
+  color: #fff;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: #1a1b1f;
+  padding: 12px 25px;
+  font-size: 12px;
+  line-height: 20px;
+  transition: all .2s;
+}
+
+.button-primary:hover {
+  color: #fff;
+  background-color: #32343a;
+}
+
+.button-primary:active {
+  background-color: #43464d;
+}
+
+.shadow-two {
+  box-shadow: 0 4px 24px rgba(150, 163, 181, .08);
+}
+
+.image {
+  height: auto;
+  max-width: 50%;
+  aspect-ratio: auto;
+  flex: 1;
+  line-height: 39px;
+  display: block;
+}
+
+.text-block {
+  text-align: justify;
+  margin-top: 28px;
+  padding-top: 1px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+.text-span-2 {
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.bold-text {
+  text-align: right;
+}
+
+.quick-stack {
+  max-width: 80%;
+}
+
+.grid {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "Area";
+  margin: 30px 56px 20px;
+}
+
+.heading {
+  text-align: center;
+}
+
+.div-block {
+  order: -1;
+  align-self: center;
+}
+
+.heading-2 {
+  text-align: center;
+}
+
+.div-block-2 {
+  display: flex;
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: 728px;
+  }
+
+  .where {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: -40px;
+  }
+
+  .hero-split {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-heading-center {
+    padding: 60px 15px;
+
+  .container {
+    max-width: none;
+  }
+
+  .centered-heading {
+    margin-bottom: 24px;
+  }
+
+  .image {
+    max-width: 100%;
+  }
+
+  .text-block {
+    margin-top: 57px;
+  }
+
+  .text-span {
+    text-decoration: underline;
+  }
+
+  .text-span-2 {
+    text-align: center;
+    border-radius: 0;
+    flex-flow: wrap;
+    align-items: baseline;
+    display: flex;
+    position: static;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .div-block-2 {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .image-2 {
+    display: block;
+  }
+}
+}
+
+</style>
+
+
+<section class="hero-heading-center">
+  <div class="container">
+    <h1 class="centered-heading margin-bottom-32px-copy"></h1>
+    <div class="div-block-2">
+      <div class="div-block">
+        <h1 class="heading-2">What is right for you?</h1>
+        <p class="margin-bottom-24px"> Adoption is not easy, but we hope to make it easier for you. We do not want anyone to make such a difficult decision on impulse and will never pressure you. Our counselors are there to ensure you make the best decision for you. We strongly believe counseling is the best way to ensure you have all the tools to make the most appropriate decision for yourself and your baby.<a href="#"><strong><br></strong></a><br><br><br></p>
+      </div>
+    </div>
+    <div class="where">
+      <div class="hero-split">
+        <h1 class="heading-2">Counseling &amp Grief Support</h1>
+
+        <p class="margin-bottom-24px">Brighter Adoptions offers counseling to all clients.  If you desire counseling through the adoption process, it is available to you.  Your counselor will assess your reasons for placement and will ensure you have been explained your rights as a parent, the alternatives to adoption, and difficulties surrounding adoption including feelings of grief and loss. <br><br><br><br></p>
+        <a href="#" class="button-primary w-button">Get Help Now</a>
+      </div>
+      <div class="hero-split"><img src="/assets/images/counseling.jpeg" style="max-width: 100%;"></div>
+    </div>
+  </div>
+</section>
+
