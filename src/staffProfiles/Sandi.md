@@ -5,4 +5,4 @@
 ---
 
 
-body
+    Sandi has been involved in adoptions for over twenty-two years. She loves birth moms and chooses to work exclusively with them. Sandi feels blessed to be involved in the journey and honored that so many women put their trust in her.

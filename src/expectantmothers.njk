@@ -13,13 +13,44 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
 	<link rel="stylesheet" href="/assets/css/main.css">	</head>
+
+	<style>
+		  ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+  }
+
+  li {
+    margin-bottom: 8px; /* Adjust spacing between items */
+	text-indent: -1.em; /* Adjust the value to match the space occupied by the bullet */
+
+  }
+
+  .row ul li::before {
+    content: '\2022'; /* Unicode character for a bullet point */
+    color: #007BFF; /* Change bullet color */
+    font-weight: bold; /* Change font weight */
+	font-size: 1.4rem;
+    margin-right: 1em; /* Adjust spacing between bullet and text */
+  }
+  @media screen and (max-width: 768px) {
+	
+  
+  .row ul li{
+    font-weight: bold; /* Change font weight */
+
+	font-size: 18px;
+    margin-right: 20px; /* Adjust spacing between bullet and text */
+  }
+}
+	</style>
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
 				<!-- Main -->
 					<div id="main">
 						 <!--inner-->
-						<div class="inner" style="margin: .5rem;">
+						<div class="inner" style="margin: 1rem;">
 
 							{% include "./_components/header.njk" %}
 		
@@ -29,47 +60,85 @@
 									<header class="minor">
 										<h2 id="">Placing a Child for Adoption?</h2>
 									</header>										
-										<div>
+								
 											<p>Let me introduce myself, my name is Sandi Quick. I am the director of Brighter Adoptions, Inc., a licensed child-placing agency in the State of Utah. I have been involved in adoptions for twenty-two years and have loved every minute of it. It is my passion to build families through adoptions and to provide loving service to expectant mothers desiring an adoption plan.</p>
 											<p>I can’t imagine being in the situation that you are. It must be terrifying to feel like the decision you are about to make involves complete and total strangers. Besides not knowing me personally, you haven’t yet met the family you will choose to adopt your child. All of these are huge things to be dealing with on top of an unplanned pregnancy and whatever else may be going on in your personal life. You may be wondering…</p>
-											<b>• How do I know who to trust?</b>
-											<br>
-											<b>• How will I know which family to choose?</b>
-											<br>
-											<b>• How will I know which agency to work with?</b>
-										</div>
+											<div class="row">
+											<ul>
+												<li>How do I know who to trust?</li>
+												<li>How will I know which family to choose?</li>
+												<li>How will I know which agency to work with?
+												</li>
+											</ul>
+											</div>
+
+										<header class="Major" style="">
+											<h2>Birth Mother Experiences</h2>
+										</header>										
+										<section>
+										
+											{% include "./_components/testimonial.html" %}
+										</section>
+
+										<header class="minor">
+											<h2 id="">Do you find yourself always questioning if you are even making the right decision?
+											</h2>
+										</header>										
+											<div>
+												<p>I can assure you that these feelings and questions are normal. But let me also assure you that if you choose to work with Brighter Adoptions, YOU will not be a stranger to me. I genuinely care about you and your comfort and needs. I will not ever disappear on you, or leave you feeling alone. I started this agency because I know that birth mothers need to feel understood and supported emotionally, not just financially.
+												</p>
+												<p>Do you ever feel the need to just talk to someone and to be reassured? Me too!! If you require relocation and housing from us, I will be there to welcome you and answer any and all questions you have about the program.
+
+												</p>
+											</div>
+
+										<section style="margin-top: 9rem;">
+											<div>
+
+											</div>
+											<div class="row">
+												<div class="col-6 col-12-small">
+													<header class="major">
+														<h2 id="">There are no accidents in adoption</h2>
+													</header>															<p>
+														We believe that every child goes to the family it was intended for. Adoption has personally touched my life. I hope to positively touch other’s lives by fulfilling my passion as an adoption worker and hope to spend a long time serving birth mothers through this agency. They are some of my favorite people.
+													</p>
+													<p>
+														If you are currently pregnant and desiring to make an adoption plan for your child, please contact me. I am here to support you and provide you the services you may need.
+
+
+													</p>
+												</div>
+												<div class="col-6 col-12-small">
+													<ul class=>
+														<li>You are not alone.</li>
+														<li>Help is available to you.</li>
+														<li>We have been involved in adoption services for over twenty-two years.</li>
+														<li>We are here to support you and assist you during this difficult time.</li>
+														<li>We have carefully screened families waiting to adopt that you may choose from.</li>
+														<li>A full-time staff is ready to assist and support you.</li>
+														<li>You have the opportunity to plan and select the kind of adoption you want.</li>
+														<li>We have a counselor to help you work through your feelings and enable you to make the best decisions possible.</li>
+														{# <li>We have housing available to you if needed.</li>
+														<li>We will provide you with medical care. We work with some of the best OB docs</li>
+														<li>We pay for your travel expenses.</li>
+														<li>And, offer financial assistance through your confinement period.</li> #}
+													  </ul>
+												</div>
+												</div>
+												<!-- Break -->
+												<header class="major">
+													<h2 id="">Why Choose Brighter Adoption</h2>
+												</header>		
+												
+												<p>I have worked with birth mothers for years and years and I honestly mean it when I say, they are some of my favorite people. I have never been more in awe of the character, strength, courage, bravery and grace that one human can possess. There is no greater act of love than to put that tiny one’s needs above your own desires.
+
+												</p> <p>I am an adoptive mother myself and simply cannot imagine my life or family without my children in it. The birth mother’s of my children are truly incredible people. I am in awe of their strength, wisdom, and grace. Because of these women’s selfless actions, I am privileged to have and raise these beautiful people and provide opportunities for them that their first mothers were not able to at the time of their births. I have a deep and loving respect for these women. We honor them and speak of them in loving and positive ways. None of my children feel they were, “abandoned” or “not wanted,” they feel they were CHOSEN.</p>
 									</section>
 
-									<section>
-										{% include "./_components/testimonial.html" %}
 									</section>
-
-									<header class="Major">
-										<h2>Birth Mother Experiences</h2>
-									</header>											<div class="row">
-											<div class="col-6 col-12-small">
-												<h3>Sem turpis amet semper</h3>
-												<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac. Semper adipiscing varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-											</div>
-											<div class="col-6 col-12-small">
-												<h3>Magna odio tempus commodo</h3>
-												<p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor. Ante commodo blandit adipiscing integer semper orci eget. Faucibus commodo adipiscing mi eu nullam accumsan morbi arcu ornare odio mi adipiscing nascetur lacus ac interdum morbi accumsan vis mi accumsan.</p>
-											</div>
-											<!-- Break -->
-											<div class="col-4 col-12-medium">
-												<h3>Interdum sapien gravida</h3>
-												<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
-											</div>
-											<div class="col-4 col-12-medium">
-												<h3>Faucibus consequat lorem</h3>
-												<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
-											</div>
-											<div class="col-4 col-12-medium">
-												<h3>Accumsan montes viverra</h3>
-												<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
-											</div>
-										</div>
-								</section>
+									
+									
 
 								{% include "./_components/faq.njk" %}
 

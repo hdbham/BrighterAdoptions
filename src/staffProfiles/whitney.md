@@ -1,8 +1,6 @@
 ---
     name: "Whitney"
-    job: "Caseworker"
+    job: "Case worker"
     image: "/assets/images/whitneyprof.png"
 ---
-
-
-body
+Whitney brings academic expertise and a patient, considerate, and empathetic nature to provide invaluable support to birth mothers on their adoption journey.

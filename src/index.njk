@@ -24,18 +24,14 @@
 	height: auto;
 }
 
-.blackbutton {
-	
-  }
-
   .call-button {
 	width: 160px;
     display: flex;
     align-items: center;
-    padding: 1px 18px 0px;
+    padding: 1px 12px 0px;
 	border: 3px solid #F5BF50;
     background-color: #ffffff;
-    color: #000000;
+    color: #4a4a4a;
     font-size: 18px;
     font-weight: bold;
     border-radius: 10px;
@@ -94,7 +90,7 @@
 							</section>
 
 							<section>
-								{% include "./_components/contactus.njk" %}
+								{% include "./_components/spinninglogos.njk" %}
 
 							</section>
 							<!-- Section -->
@@ -111,24 +107,24 @@
 											</div>
 										</article>
 										<article>
+											<span class="icon solid fa-wallet"></span>
+											<div class="content">
+												<h3>Financial Support</h3>
+												<p>We provide a monthly living expense to our mothers to ensure all your needs are met during your stay.</p>
+											</div>
+										</article>
+										<article>
 											<span class="icon solid fa-couch"></span>
 											<div class="content">
 												<h3>Housing Support</h3>
-												<p>We have dozens of apartments available so you can feel comfortable during your delivery</p>
+												<p>Avoid worrying about rental costs. We have dozens of apartments available so you and your family can feel comfortable during your stay.</p>
 											</div>
 										</article>
 										<article>
 											<span class="icon fa-solid fa-hospital"></span>
 											<div class="content">
 												<h3>Medical Expenses</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-star"></span>
-											<div class="content">
-												<h3>Friendship</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+												<p>We have an amazing network of doctors and physicians and provide world-class medical services at no cost to you.</p>
 											</div>
 										</article>
 									</div>
@@ -149,13 +145,14 @@
 										  {% for post in collections.blogPosts | reverse %}
 											{% if count < 4 and post.data.tags.includes("featured")%}
 											  <article>
-												<a href="{{ post.url }}" class="image">
-												  <img src="{{ post.data.thumbnail }}" aria-label="read article titled {{post.data.title}}">
+												<a href="{{ post.url }}" class="image" style="max-height: 40%;">
+												  <img src="{{ post.data.thumbnail }}" aria-label="{{post.data.title}}">
 												</a>
 												<h3>{{ post.data.title }}</h3>
 												<p>{{ post.data.excerpt }}</p>
 												<ul class="actions">
-												  <li><a href="{{ post.url }}" aria-label="Read More" class="blackbutton">Read</a></li>
+												
+												  <li><a href="{{ post.url }}" aria-label="Read article {{post.data.title}}" class="button ">Read Now</a></li>
 												</ul>
 											  </article>
 											  {% set count = count + 1 %}

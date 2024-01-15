@@ -1,611 +1,220 @@
 <style>
-    @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap'); 
-   @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light:400&display=swap'); 
-     body {  
-       font-family:"Montserrat", Sans-serif;
-     }  
-   body { 
-   /* CSS Variables that may have been missed get put on body */ 
-       --flex-direction:  initial;  
-       --flex-wrap:  initial;  
-       --justify-content:  initial;  
-       --align-items:  initial;  
-       --align-content:  initial;  
-       --gap:  initial;  
-       --flex-basis:  initial;  
-       --flex-grow:  initial;  
-       --flex-shrink:  initial;  
-       --order:  initial;  
-       --align-self:  initial;  
-   } 
-   
-   *  { 
-       box-sizing: border-box;
-   } 
-   
-   .elementor-element { 
-       --flex-direction: initial; 
-       --flex-wrap: initial; 
-       --justify-content: initial; 
-       --align-items: initial; 
-       --align-content: initial; 
-       --gap: initial; 
-       --flex-basis: initial; 
-       --flex-grow: initial; 
-       --flex-shrink: initial; 
-       --order: initial; 
-       --align-self: initial; 
-       flex-basis: var(--flex-basis); 
-       flex-grow: var(--flex-grow); 
-       flex-shrink: var(--flex-shrink); 
-       order: var(--order); 
-       align-self: var(--align-self);
-   } 
-   
-   .elementor-section { 
-       position: relative;
-   } 
-   
-   .elementor-section.elementor-section-stretched { 
-       position: relative; 
-       width: 100%;
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-d524f86  { 
-       transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s; 
-       margin-top: -8%; 
-       margin-bottom: 0%; 
-       z-index: 1;
-   } 
-   
-   * , .elementor ::after, .elementor ::before { 
-       box-sizing: border-box;
-   } 
-   
-   .elementor *, .elementor ::after, .elementor ::before { 
-       box-sizing: border-box;
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-520bc2d  { 
-       margin-top: 3%; 
-       margin-bottom: 3%;
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-89f3bcc  { 
-       transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s; 
-       padding: 9% 0% 3% 0%;
-   } 
-   
-   
-   .elementor-662 .elementor-element.elementor-element-94d436c  { 
-       margin-top: 3%; 
-       margin-bottom: 0%;
-   } 
-   
-   .elementor-section .elementor-container  { 
-       display: flex; 
-       margin-right: auto; 
-       margin-left: auto; 
-       position: relative;
-   } 
-   
-   .elementor-section.elementor-section-boxed > .elementor-container  { 
-       max-width: 1140px;
-   } 
-   
-   .elementor-section.elementor-section-items-middle > .elementor-container  { 
-       align-items: center;
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-d524f86 > .elementor-container { 
-       min-height: 549px;
-   } 
-   
-   .elementor-column { 
-       position: relative; 
-       min-height: 1px; 
-       display: flex;
-   } 
-   
-   @media (min-width: 768px){ 
-     .elementor-column.elementor-col-100 { 
-       width: 100%;
-     } 
-   
-     .elementor-662 .elementor-element.elementor-element-ab7ca82  { 
-       width: 100%;
-     } 
-   
-     .elementor-column.elementor-col-50 { 
-       width: 50%;
-     } 
-   
-     .elementor-column.elementor-col-33 { 
-       width: 33.333%;
-     } 
-   }     
-   
-   .elementor-widget-wrap { 
-       position: relative; 
-       width: 100%; 
-       flex-wrap: wrap; 
-       align-content: flex-start;
-   } 
-   
-   .elementor:not(.elementor-bc-flex-widget) .elementor-widget-wrap  { 
-       display: flex;
-   } 
-   
-   .elementor-column-gap-default > .elementor-column > .elementor-element-populated  { 
-       padding: 10px;
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-87a457a > .elementor-element-populated { 
-       padding: 3% 3% 3% 3%;
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-89f3bcc > .elementor-container > .elementor-column > .elementor-widget-wrap { 
-       align-content: center; 
-       align-items: center;
-   } 
-   
-   .elementor-element:where(.e-con-full, .elementor-widget) { 
-       flex-direction: var(--flex-direction); 
-       flex-wrap: var(--flex-wrap); 
-       justify-content: var(--justify-content); 
-       align-items: var(--align-items); 
-       align-content: var(--align-content); 
-       gap: var(--gap);
-   } 
-   
-   .elementor-widget { 
-       position: relative;
-   } 
-   
-   .elementor-widget-wrap > .elementor-element  { 
-       width: 100%;
-   } 
-   
-   .elementor-widget:not(:last-child) { 
-       margin-bottom: 20px;
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-b1b8d4b  { 
-       text-align: center; 
-       z-index: 5;
-   } 
-   
-   .elementor-widget-image { 
-       text-align: center;
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-bfe2cda  { 
-       z-index: 1;
-   } 
-   
-   .elementor-align-center { 
-       text-align: center;
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-0357790  { 
-       text-align: center;
-   } 
-   
-   .elementor-element .elementor-widget-container  { 
-       transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,transform var(--e-transform-transition-duration,.4s);
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-bfe2cda > .elementor-widget-container { 
-       margin: -2% 0% 0% 0%;
-   } 
-   
-   .elementor-widget-video .elementor-widget-container  { 
-       overflow: hidden; 
-       transform: translateZ(0);
-   } 
-   
-   .elementor-heading-title { 
-       padding: 0; 
-       margin: 0; 
-       line-height: 1;
-   } 
-   
-   .elementor-kit-127 h1 { 
-       font-family: "Shadows Into Light", Sans-serif;
-   } 
-   
-   .elementor-widget-heading .elementor-heading-title.elementor-size-xl  { 
-       font-size: 39px;
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-3e87aa8 .elementor-heading-title  { 
-       color: #FFFFFF; 
-       font-size: 9.6em; 
-       font-weight: 500;
-   } 
-   
-   .elementor-kit-127 h2 { 
-       font-family: "Shadows Into Light", Sans-serif;
-   } 
-   
-   .elementor-widget-heading .elementor-heading-title.elementor-size-xxl  { 
-       font-size: 59px;
-   } 
-   
-   .elementor img { 
-       height: auto; 
-       max-width: 100%; 
-       border: none; 
-       border-radius: 0; 
-       box-shadow: none;
-   } 
-   
-   .elementor-widget-image img  { 
-       vertical-align: middle; 
-       display: inline-block;
-   } 
-   
-   .elementor-widget-video .elementor-wrapper  { 
-       aspect-ratio: var(--video-aspect-ratio);
-   } 
-   
-   .elementor-button { 
-       display: inline-block; 
-       line-height: 1; 
-       background-color: #69727d; 
-       font-size: 15px; 
-       padding: 12px 24px; 
-       border-radius: 3px; 
-       color: #fff; 
-       fill: #fff; 
-       text-align: center; 
-       transition: all .3s;
-   } 
-   
-   .elementor a { 
-       box-shadow: none; 
-       text-decoration: none;
-   } 
-   
-   .elementor-align-center .elementor-button  { 
-       width: auto;
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-3ac0bf2 .elementor-button  { 
-       font-family: "Shadows Into Light", Sans-serif; 
-       font-size: 20px; 
-       font-weight: 600; 
-       fill: var( --e-global-color-text ); 
-       color: var( --e-global-color-text ); 
-       background-color: #E8D161; 
-       border-radius: 20px 20px 20px 20px;
-   } 
-   
-   .elementor-button:hover { 
-       color: #fff;
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-3ac0bf2 .elementor-button:hover { 
-       background-color: #E6B236;
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-9608eed > .elementor-element-populated { 
-       padding: 0% 6% 0% 6%;
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-6164822 > .elementor-container > .elementor-column > .elementor-widget-wrap { 
-       align-content: center; 
-       align-items: center;
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-34d7ed8 > .elementor-element-populated { 
-       padding: 6% 6% 6% 6%;
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-d028be9 .elementor-button  { 
-       font-family: "Shadows Into Light", Sans-serif; 
-       font-size: 20px; 
-       font-weight: 600; 
-       fill: var( --e-global-color-text ); 
-       color: var( --e-global-color-text ); 
-       background-color: #E8D161; 
-       border-radius: 20px 20px 20px 20px;
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-d028be9 .elementor-button:hover { 
-       background-color: #E6B236;
-   } 
-   
-   video  { 
-       max-width: 100%; 
-       width: 100%; 
-       margin: 0; 
-       line-height: 1; 
-       border: none;
-   } 
-   
-   .elementor-widget-video .elementor-wrapper video  { 
-       height: 100%; 
-       width: 100%; 
-       display: flex; 
-       border: none; 
-       background-color: #000;
-   } 
-   
-   .elementor-widget-video .e-hosted-video .elementor-video  { 
-       -o-object-fit: cover; 
-       object-fit: cover;
-   } 
-   
-   .elementor-button-content-wrapper { 
-       display: flex; 
-       justify-content: center;
-   } 
-   
-   .elementor-button span  { 
-       text-decoration: inherit;
-   } 
-   
-   .elementor-align-left { 
-       text-align: left;
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-83a3419  { 
-       text-align: left;
-   } 
-   
-   .elementor-button-text { 
-       flex-grow: 1; 
-       order: 10; 
-       display: inline-block;
-   } 
-   
-   span.ge { 
-       font-family: montserrat; 
-       font-size: 10px!important;
-   } 
-   
-   .elementor-align-left .elementor-button  { 
-       width: auto;
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-26a2bf4 .elementor-button  { 
-       font-family: "Shadows Into Light", Sans-serif; 
-       font-weight: 600; 
-       fill: var( --e-global-color-primary ); 
-       color: var( --e-global-color-primary ); 
-       background-color: #B2D6E6; 
-       border-style: solid; 
-       border-color: #D8EAF2; 
-       border-radius: 20px 20px 20px 20px;
-   } 
-   
-   .elementor-662 .elementor-element.elementor-element-26a2bf4 .elementor-button:hover { 
-       background-color: #338ACF;
-   } 
-   
-   
-   /* These were inline style tags. Uses id+class to override almost everything */
-   #style-4gzT2.style-4gzT2 {  
-      width: 1527px;  
-       left: -7.99716px;  
-   }  
-   #style-3saPU.style-3saPU {  
-      width: 1527px;  
-       left: -7.99716px;  
-   }  
-   
-   </style>
-   
-   <div data-elementor-type="wp-page" data-elementor-id="662" class="elementor elementor-662 snipcss-KgbOB" data-elementor-post-type="page">
-       <section class="elementor-section elementor-top-section elementor-element elementor-element-520bc2d elementor-section-boxed elementor-section-height-default" data-id="520bc2d" data-element_type="section">
-         <div class="elementor-container elementor-column-gap-default">
-           <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-bc11510" data-id="bc11510" data-element_type="column">
-             <div class="elementor-widget-wrap elementor-element-populated">
-               <div class="elementor-element elementor-element-b1b8d4b elementor-widget elementor-widget-heading" data-id="b1b8d4b" data-element_type="widget" data-widget_type="heading.default">
-                 <div class="elementor-widget-container">
-                   <h2 class="elementor-heading-title elementor-size-xxl">
-                     Brighter Housing For Expectant Mothers
-                   </h2>
-                 </div>
-               </div>
-               <div class="elementor-element elementor-element-bfe2cda elementor-widget elementor-widget-image" data-id="bfe2cda" data-element_type="widget" data-widget_type="image.default">
-                 <div class="elementor-widget-container">
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </section>
-       <section class="elementor-section elementor-top-section elementor-element elementor-element-9514616 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="9514616" data-element_type="section">
-         <div class="elementor-container elementor-column-gap-default">
-           <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-985290e" data-id="985290e" data-element_type="column">
-             <div class="elementor-widget-wrap elementor-element-populated">
-               <div class="elementor-element elementor-element-f08995c elementor-widget elementor-widget-text-editor" data-id="f08995c" data-element_type="widget" data-widget_type="text-editor.default">
-                 <div class="elementor-widget-container">
-                   <p>
-                     At Brighter Adoptions we want to help our expectant mothers have a safe and comfortable place to live throughout the adoption process.&nbsp; Brighter Adoptions has multiple apartments available for those who need a safe and stable living environment. If you have children coming with you, you are able to enroll them in the local public schools during your stay.
-                   </p>
-                   <p>
-                     The housing units come fully furnished. You will be provided a weekly stipend to buy food, household items and money for Uber or Lyft to get around. You will have the freedom to do what you want with your time while here. Some clients enjoy the opportunity to relax and not worry about the stress of keeping the lights on or where the next meal is coming from. Other clients chose to get a job and save money while here in order to get ahead and some use this time to better their mental health with weekly counseling sessions.&nbsp; We respect that you are adults and want to make the best decisions for you and your family.
-                   </p>
-                 </div>
-               </div>
-             </div>
-           </div>
-           <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-8f2a630" data-id="8f2a630" data-element_type="column">
-             <div class="elementor-widget-wrap elementor-element-populated">
-               <div class="elementor-element elementor-element-b23f0b9 elementor-widget elementor-widget-text-editor" data-id="b23f0b9" data-element_type="widget" data-widget_type="text-editor.default">
-                 <div class="elementor-widget-container">
-                   <p>
-                     We do ask the mothers who are staying with us to abide by the following rules:
-                   </p>
-                   <ul>
-                     <li>
-                       Respond to our texts and calls.
-                     </li>
-                     <li>
-                       Attend your scheduled appointments.
-                     </li>
-                     <li>
-                       Comply with apartment rules (i.e., no overnight guests, no smoking, no illegal activity).
-                     </li>
-                     <li>
-                       Be respectful to our staff and management at the complex.
-                     </li>
-                   </ul>
-                   If you intend to place your child for adoption and need housing during your pregnancy, please call us for information today. We are happy to help guide and assist you in any way we can.						
-                 </div>
-               </div>
-               <div class="elementor-element elementor-element-3ac0bf2 elementor-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-id="3ac0bf2" data-element_type="widget" data-widget_type="button.default">
-                 <div class="elementor-widget-container">
-                   <div class="elementor-button-wrapper">
-                     <a class="elementor-button elementor-button-link elementor-size-sm" href="tel:+18018742094" target="_blank">
-                       <span class="elementor-button-content-wrapper">
-                         <span class="elementor-button-text">
-                           ​​801.874.2094
-                           <span class="ge">
-                             (call or text)
-                           </span>
-                         </span>
-                       </span>
-                     </a>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </section>
-       <section class="elementor-section elementor-top-section elementor-element elementor-element-89f3bcc elementor-section-full_width elementor-section-content-middle elementor-section-stretched elementor-section-height-default elementor-section-height-default style-3saPU" data-id="89f3bcc" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" id="style-3saPU">
-         <div class="elementor-container elementor-column-gap-no">
-           <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-87a457a" data-id="87a457a" data-element_type="column">
-             <div class="elementor-widget-wrap elementor-element-populated">
-               <section class="elementor-section elementor-inner-section elementor-element elementor-element-6164822 elementor-section-full_width elementor-section-content-middle elementor-section-height-default elementor-section-height-default" data-id="6164822" data-element_type="section">
-                 <div class="elementor-container elementor-column-gap-default">
-                   <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-9608eed" data-id="9608eed" data-element_type="column">
-                     <div class="elementor-widget-wrap elementor-element-populated">
-                       <div class="elementor-element elementor-element-8ef4457 elementor-widget elementor-widget-heading" data-id="8ef4457" data-element_type="widget" data-widget_type="heading.default">
-                         <div class="elementor-widget-container">
-                           <h2 class="elementor-heading-title elementor-size-xl">
-                             Where You’ll Be Staying 
-                           </h2>
-                         </div>
-                       </div>
-                       <div class="elementor-element elementor-element-9b91967 elementor-widget elementor-widget-text-editor" data-id="9b91967" data-element_type="widget" data-widget_type="text-editor.default">
-                         <div class="elementor-widget-container">
-                           <p>
-                             We have multiple one-bedroom and two-bedroom apartment units available for our clients to stay in. All our apartments are in the heart of Layton, Utah, a suburb 20 miles north of Salt Lake City. Our apartments are in a convenient area for our birth clients, with a shopping mall, Target, Dollar Tree, 7-11, and restaurants within walking distance. There are other grocery stores within a short drive from our apartments that the clients can visit. As you can see, our apartments are an ideal place to stay during this time.
-                           </p>
-                         </div>
-                       </div>
-                       <div class="elementor-element elementor-element-26a2bf4 elementor-align-left elementor-widget elementor-widget-button" data-id="26a2bf4" data-element_type="widget" data-widget_type="button.default">
-                         <div class="elementor-widget-container">
-                           <div class="elementor-button-wrapper">
-                             <a class="elementor-button elementor-button-link elementor-size-sm" href="/contact/">
-                               <span class="elementor-button-content-wrapper">
-                                 <span class="elementor-button-text">
-                                   Get Help Now
-                                 </span>
-                               </span>
-                             </a>
-                           </div>
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-34d7ed8" data-id="34d7ed8" data-element_type="column">
-                     <div class="elementor-widget-wrap elementor-element-populated">
-                       <div class="elementor-element elementor-element-83a3419 elementor-widget elementor-widget-image" data-id="83a3419" data-element_type="widget" data-widget_type="image.default">
-                         <div class="elementor-widget-container">
-                           <img fetchpriority="high" decoding="async" width="534" height="409" src="https://brighteradoption.com/wp-content/uploads/HousingImage.jpg" class="attachment-full size-full wp-image-876" alt="">
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-               </section>
-             </div>
-           </div>
-         </div>
-       </section>
-       <section class="elementor-section elementor-top-section elementor-element elementor-element-94d436c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="94d436c" data-element_type="section">
-         <div class="elementor-container elementor-column-gap-default">
-           <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-283ad6b" data-id="283ad6b" data-element_type="column">
-             <div class="elementor-widget-wrap elementor-element-populated">
-               <div class="elementor-element elementor-element-0357790 elementor-widget elementor-widget-heading" data-id="0357790" data-element_type="widget" data-widget_type="heading.default">
-                 <div class="elementor-widget-container">
-                   <h2 class="elementor-heading-title elementor-size-xxl">
-                     A Place to Call Your Own
-                   </h2>
-                 </div>
-               </div>
-               <div class="elementor-element elementor-element-d028be9 elementor-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-id="d028be9" data-element_type="widget" data-widget_type="button.default">
-                 <div class="elementor-widget-container">
-                   <div class="elementor-button-wrapper">
-                     <a class="elementor-button elementor-button-link elementor-size-sm" href="tel:+18018742094" target="_blank">
-                       <span class="elementor-button-content-wrapper">
-                         <span class="elementor-button-text">
-                           ​​801.874.2094
-                           <span class="ge">
-                             (call or text)
-                           </span>
-                         </span>
-                       </span>
-                     </a>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </section>
-       <section class="elementor-section elementor-top-section elementor-element elementor-element-b0183e8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b0183e8" data-element_type="section">
-         <div class="elementor-container elementor-column-gap-default">
-           <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-ee4950b" data-id="ee4950b" data-element_type="column">
-             <div class="elementor-widget-wrap elementor-element-populated">
-               <div class="elementor-element elementor-element-5f61119 elementor-widget elementor-widget-image" data-id="5f61119" data-element_type="widget" data-widget_type="image.default">
-                 <div class="elementor-widget-container">
-                   <img decoding="async" width="370" height="370" src="https://brighteradoption.com/wp-content/uploads/Livingroom.jpg" class="attachment-large size-large wp-image-685" alt="">
-                 </div>
-               </div>
-             </div>
-           </div>
-           <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-6f7aee6" data-id="6f7aee6" data-element_type="column">
-             <div class="elementor-widget-wrap elementor-element-populated">
-               <div class="elementor-element elementor-element-7bef133 elementor-widget elementor-widget-image" data-id="7bef133" data-element_type="widget" data-widget_type="image.default">
-                 <div class="elementor-widget-container">
-                   <img loading="lazy" decoding="async" width="370" height="370" src="https://brighteradoption.com/wp-content/uploads/Bedroom.jpg" class="attachment-large size-large wp-image-681" alt="">
-                 </div>
-               </div>
-             </div>
-           </div>
-           <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-fc5b54f" data-id="fc5b54f" data-element_type="column">
-             <div class="elementor-widget-wrap elementor-element-populated">
-               <div class="elementor-element elementor-element-fabf71b elementor-widget elementor-widget-image" data-id="fabf71b" data-element_type="widget" data-widget_type="image.default">
-                 <div class="elementor-widget-container">
-                   <img loading="lazy" decoding="async" width="370" height="370" src="https://brighteradoption.com/wp-content/uploads/Kitchen.jpg" class="attachment-large size-large wp-image-684" alt="">
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </section>
-       <section class="elementor-section elementor-top-section elementor-element elementor-element-bab8e9c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="bab8e9c" data-element_type="section">
-         <div class="elementor-container elementor-column-gap-default">
-           <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-748e102" data-id="748e102" data-element_type="column">
-             <div class="elementor-widget-wrap elementor-element-populated">
-               <div class="elementor-element elementor-element-8e1f8e8 elementor-widget elementor-widget-video" data-id="8e1f8e8" data-element_type="widget" data-settings="{&quot;video_type&quot;:&quot;hosted&quot;,&quot;loop&quot;:&quot;yes&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
-                 <div class="elementor-widget-container">
-                   <div class="e-hosted-video elementor-wrapper elementor-open-inline">
-                     <video class="elementor-video" src="http://brighteradoption.com/wp-content/uploads/video-output-70C560E9-44BA-4225-AD7E-494E628A58A0.mov" loop="" controls="" preload="metadata" controlslist="nodownload" poster="http://brighteradoption.com/wp-content/uploads/HousingVideo.jpg">
-                     </video>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </section>
-     </div>
-     
+  .hero-heading-center {
+  border-bottom: 1px solid #e4ebf3;
+  padding: 80px 30px;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centered-heading {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.centered-heading.margin-bottom-32px, .centered-heading.margin-bottom-32px-copy {
+  margin-bottom: 32px;
+}
+
+.where {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 134px;
+  display: flex;
+}
+
+.hero-split {
+  max-width: 46%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+
+.margin-bottom-24px {
+  text-align: center;
+  margin-top: 51px;
+  margin-bottom: 24px;
+  padding-left: 39px;
+  padding-right: 37px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.button-primary {
+  color: #fff;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: #1a1b1f;
+  padding: 12px 25px;
+  font-size: 12px;
+  line-height: 20px;
+  transition: all .2s;
+}
+
+.button-primary:hover {
+  color: #fff;
+  background-color: #32343a;
+}
+
+.button-primary:active {
+  background-color: #43464d;
+}
+
+.shadow-two {
+  box-shadow: 0 4px 24px rgba(150, 163, 181, .08);
+}
+
+.image {
+  height: auto;
+  max-width: 50%;
+  aspect-ratio: auto;
+  flex: 1;
+  line-height: 39px;
+  display: block;
+}
+
+.text-block {
+  text-align: justify;
+  margin-top: 28px;
+  padding-top: 1px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+.text-span-2 {
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.bold-text {
+  text-align: right;
+}
+
+.quick-stack {
+  max-width: 80%;
+}
+
+.grid {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "Area";
+  margin: 30px 56px 20px;
+}
+
+.heading {
+  text-align: center;
+}
+
+.div-block {
+  order: -1;
+  align-self: center;
+}
+
+.heading-2 {
+  text-align: center;
+}
+
+.div-block-2 {
+  display: flex;
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: 728px;
+  }
+
+  .where {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: -40px;
+  }
+
+  .hero-split {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-heading-center {
+    padding: 60px 15px;
+
+  .container {
+    max-width: none;
+  }
+
+  .centered-heading {
+    margin-bottom: 24px;
+  }
+
+  .image {
+    max-width: 100%;
+  }
+
+  .text-block {
+    margin-top: 57px;
+  }
+
+  .text-span {
+    text-decoration: underline;
+  }
+
+  .text-span-2 {
+    text-align: center;
+    border-radius: 0;
+    flex-flow: wrap;
+    align-items: baseline;
+    display: flex;
+    position: static;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .div-block-2 {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .image-2 {
+    display: block;
+  }
+}
+}
+
+</style>
+
+
+<section class="hero-heading-center">
+  <div class="container">
+    <h1 class="centered-heading margin-bottom-32px-copy">Brighter Housing for Expectant Mothers</h1>
+    <div class="where">
+      <div class="hero-split">
+        <p class="margin-bottom-24px">At Brighter Adoptions we want to help our expectant mothers have a safe and comfortable place to live throughout the adoption process.  Brighter Adoptions has multiple apartments available for those who need a safe and stable living environment. If you have children coming with you, you are able to enroll them in the local public schools during your stay.<br><br><br><br></p>
+        <a href="#" class="button-primary w-button">Get Help Now</a>
+      </div>
+      <div class="hero-split"><img src="/assets/images/pool.png" style="max-width: 100%;"></div>
+    </div>
+  </div>
+  <div class="div-block-2">
+    <div class="div-block">
+      <h1 class="heading-2">A Place To Call Your Own</h1>
+      <p class="margin-bottom-24px">We have multiple one-bedroom and two-bedroom apartment units available for our clients to stay in. All our apartments are in the heart of Layton, Utah, a suburb 20 miles north of Salt Lake City. <br><br>Our apartments are in a convenient area for our birth clients, with a shopping mall, Target, Dollar Tree, 7-11, and restaurants within walking distance. There are other grocery stores within a short drive from our apartments that the clients can visit. As you can see, our apartments are an ideal place to stay during this time.<a href="http://localhost:6269/contact/"><strong><br></strong></a><br><br><br></p>
+    </div>
+  </div>
+</section>
+

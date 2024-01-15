@@ -24,18 +24,14 @@
 	height: auto;
 }
 
-.blackbutton {
-	
-  }
-
   .call-button {
 	width: 160px;
     display: flex;
     align-items: center;
-    padding: 1px 18px 0px;
+    padding: 1px 12px 0px;
 	border: 3px solid #F5BF50;
     background-color: #ffffff;
-    color: #000000;
+    color: #4a4a4a;
     font-size: 18px;
     font-weight: bold;
     border-radius: 10px;
@@ -134,150 +130,127 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Us</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <style>
-     
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
 
-.contact-container {
-    font-family: 'Quicksand', sans-serif;
-    background-color: #ffffffa8;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.293), 0 2px 4px rgba(108, 184, 246, 0.465);
-    max-width: 420px;
-    padding: 60px;
-    border-radius: 12px;
-    margin: 20px auto;
-}
+        .button {
+            color: rgb(99, 98, 98) !important;
+        }
 
-.contact-container h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #555;
-}
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 20px 0;
+        }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
+        .box {
+            width: calc(33.33% - 20px);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-label {
-    font-size: 1.2em; /* Adjust font size as needed */
-    margin-bottom: 5px;
-    color: #474141; /* Softer label color */
-}
+        .box img {
+            max-width: 50%;
+            height: auto;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            margin-left: auto; /* Center the image on mobile screens */
+            margin-right: auto; /* Center the image on mobile screens */
+        }
 
-input, select {
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #ddd; /* Softer border color */
-    font-size: 1.2rem;
-}
+        /* Media query for smaller screens */
+        @media screen and (max-width: 767px) {
+            .box {
+                width: 100%;
+                text-align: left;
+            }
 
-input[type="submit"] {
-    border: none !important;
-    color: black !important;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
+            .box img {
+                max-width: 7rem;
+                margin-bottom: 0;
+                margin-right: 50; /* Ensure no additional margin on mobile */
+            }
 
-input[type="submit"]:hover {
-    background-color: #ffffff; /* Slightly darker pink on hover */
-}
+            .specific-container .box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                width: calc(100% - 20px);
+                margin-bottom: 20px;
+            }
 
-input {
-font-size: 1rem;
-font-family: 'Quicksand' !important;
-}
+            .specific-container .content-div {
+                width: 100%;
+                text-align: center;
+            }
+        }
 
-
+        .specific-container .blackbutton {
+            padding: 0.9em 2em;
+            border: none;
+            outline: none;
+            color: white;
+            background: #333; /* Dark gray button */
+            cursor: pointer;
+            border-radius: 10px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            text-decoration: none;
+            margin-top: 10px; /* Adjusted margin-top */
+        }
     </style>
 </head>
 <body>
-    <div class="contact-background">
+    <div class="container specific-container">
+        <!-- Box 1 -->
+        <div class="box">
+            <img src="/assets/images/expectantmothers.png" alt="Expectant Mothers" width="340" class="spinonscroll">
+            <div class="content-div">
+                <h2>Expectant Mothers</h2>
+                <p>We strive to cater to our expectant mothers and to make this extremely difficult experience as bright as possible.</p>
+                <div>
+                    <a href="/expectantmothers" class="button">See Details</a>
+                </div>
+            </div>
+        </div>
 
-        <div class="contact-container">
-            <h2>Let's talk!</h2>
-            <form name="contact" netlify>
-                <label for="name">Hi, Sandi! My name is</label>
-                <input type="text" id="name" name="name" placeholder="Type here" oninput="updateGreeting()">
-                <label for="client-type">I am a</label>
-                <select id="client-type" name="client-type">
-                    <option value=""></option>
-                    <option value="expectant mother">Expectant Mother</option>
-                    <option value="recent mother">Recent Mother</option>
-                    <option value="parent looking to adopt">Parent looking to adopt</option>
-                </select>
-                <div class="recent-birth-date" style="display: none;">
-                    <label for="birth-date">My child was born on</label>
-                    <input type="date" id="birth-date" name="birth-date">
+        <!-- Box 2 -->
+        <div class="box">
+            <img src="/assets/images/housingprogram.png" alt="Housing Program" width="340">
+            <div class="content-div">
+                <h2>Housing Program</h2>
+                <p>We have multiple one-bedroom and two-bedroom apartment units available for our expectant mothers to stay in.</p>
+                <div>
+                    <a href="/housing" class="button">See Details</a>
                 </div>
-                <div class="due-date" style="display: none;">
-                    <label for="due-date">My expected Due Date is around</label>
-                    <input type="date" id="due-date" name="due-date">
+            </div>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="box">
+            <img src="/assets/images/adoptingfamilies.png" alt="Adopting Families" width="340">
+            <div class="content-div">
+                <h2>Adopting Families</h2>
+                <p>While we don’t work directly with families wanting to adopt, we can help point you in the right direction.</p>
+                <div>
+                    <a href="/adoptivefamilies" class="button">See Details</a>
                 </div>
-                <label for="looking">and I have questions about</label>
-                <input type="looking" id="looking" name="looking" placeholder="Ask us anything!">
-                <label for="contact">Please get in touch with me at:</label>
-                <input type="contact" id="contact" name="contact" placeholder="Your phone or email here">
-                <label> Thank you! <br> <span id="greetingName"></span></label>
-                <br>
-                <input type="submit" value="Send message!" id="submitBtn">
-                <p id="adoptingFamiliesMsg" style="display: none;">Thank you for your interest! Click below to learn more about adopting families.</p>
-                <a href="/adoptivefamilies" id="adoptingFamiliesLink" style="display: none;"><button>Learn More</button></a>
-            </form>
+            </div>
         </div>
     </div>
-        
-        <script>
-    function updateGreeting() {
-        var nameInput = document.getElementById('name');
-        var greeting = document.getElementById('greetingName');
-        greeting.textContent = "- " + nameInput.value;
-    }
-
-    document.getElementById('client-type').addEventListener('change', function() {
-        var clientType = this.value;
-        var dueDateField = document.querySelector('.due-date');
-        var recentBirthDateField = document.querySelector('.recent-birth-date'); // Added this line
-        var submitBtn = document.getElementById('submitBtn');
-        var adoptingFamiliesMsg = document.getElementById('adoptingFamiliesMsg');
-        var adoptingFamiliesLink = document.getElementById('adoptingFamiliesLink');
-        var lookingLabel = document.querySelector('label[for="looking"]');
-        var lookingInput = document.getElementById('looking');
-        var contactLabel = document.querySelector('label[for="contact"]');
-        var contactInput = document.getElementById('contact');
-
-        if (clientType === 'expectant mother') {
-            dueDateField.style.display = 'block';
-            recentBirthDateField.style.display = 'none'; // Added this line
-        } else if (clientType === 'recent mother') {
-            dueDateField.style.display = 'none';
-            recentBirthDateField.style.display = 'block'; // Added this line
-        } else {
-            dueDateField.style.display = 'none';
-            recentBirthDateField.style.display = 'none'; // Added this line
-        }
-
-        if (clientType === 'parent looking to adopt') {
-            submitBtn.style.display = 'none';
-            adoptingFamiliesMsg.style.display = 'block';
-            adoptingFamiliesLink.style.display = 'block';
-            lookingLabel.style.display = 'none';
-            lookingInput.style.display = 'none';
-            contactLabel.style.display = 'none';
-            contactInput.style.display = 'none';
-        } else {
-            submitBtn.style.display = 'block';
-            adoptingFamiliesMsg.style.display = 'none';
-            adoptingFamiliesLink.style.display = 'none';
-            lookingLabel.style.display = 'block';
-            lookingInput.style.display = 'block';
-            contactLabel.style.display = 'block';
-            contactInput.style.display = 'block';
-        }
-    });
-    </script>
 </body>
 </html>
 
@@ -297,24 +270,24 @@ font-family: 'Quicksand' !important;
 											</div>
 										</article>
 										<article>
+											<span class="icon solid fa-wallet"></span>
+											<div class="content">
+												<h3>Financial Support</h3>
+												<p>We provide a monthly living expense to our mothers to ensure all your needs are met during your stay.</p>
+											</div>
+										</article>
+										<article>
 											<span class="icon solid fa-couch"></span>
 											<div class="content">
 												<h3>Housing Support</h3>
-												<p>We have dozens of apartments available so you can feel comfortable during your delivery</p>
+												<p>Avoid worrying about rental costs. We have dozens of apartments available so you and your family can feel comfortable during your stay.</p>
 											</div>
 										</article>
 										<article>
 											<span class="icon fa-solid fa-hospital"></span>
 											<div class="content">
 												<h3>Medical Expenses</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-star"></span>
-											<div class="content">
-												<h3>Friendship</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+												<p>We have an amazing network of doctors and physicians and provide world-class medical services at no cost to you.</p>
 											</div>
 										</article>
 									</div>
@@ -493,13 +466,14 @@ font-family: 'Quicksand' !important;
 										  
 											
 											  <article>
-												<a href="/_posts/NavigatingGrief/" class="image">
-												  <img src="/assets/images/pic07.jpg" aria-label="read article titled I Didn&#39;t Realize There Was Grief Involved">
+												<a href="/_posts/NavigatingGrief/" class="image" style="max-height: 40%;">
+												  <img src="/assets/images/pic07.jpg" aria-label="I Didn&#39;t Realize There Was Grief Involved">
 												</a>
 												<h3>I Didn&#39;t Realize There Was Grief Involved</h3>
 												<p>For birth parents, the decision to place a child for adoption often comes with a profound sense of loss and grief. It&#39;s a decision made out of love and selflessness, yet it&#39;s accompanied by the ache of separation and the longing for the child they&#39;ve nurtured within. This is the truth about adoption.</p>
 												<ul class="actions">
-												  <li><a href="/_posts/NavigatingGrief/" aria-label="Read More" class="blackbutton">Read</a></li>
+												
+												  <li><a href="/_posts/NavigatingGrief/" aria-label="Read article I Didn&#39;t Realize There Was Grief Involved" class="button ">Read Now</a></li>
 												</ul>
 											  </article>
 											  
@@ -509,13 +483,14 @@ font-family: 'Quicksand' !important;
 										  
 											
 											  <article>
-												<a href="/_posts/FosteringFriendships/" class="image">
-												  <img src="/assets/images/pic09.jpg" aria-label="read article titled Embracing Your Childs Heritage -- It Is Part Of Who They Are.">
+												<a href="/_posts/FosteringFriendships/" class="image" style="max-height: 40%;">
+												  <img src="/assets/images/pic09.jpg" aria-label="Embracing Your Childs Heritage -- It Is Part Of Who They Are.">
 												</a>
 												<h3>Embracing Your Childs Heritage -- It Is Part Of Who They Are.</h3>
 												<p>Number 1 - Encourage Open Conversations; Have open discussions with your child about their racial identity and the importance of connecting with peers who share similar backgrounds. Encourage them to express their feelings and questions about their racial identity.</p>
 												<ul class="actions">
-												  <li><a href="/_posts/FosteringFriendships/" aria-label="Read More" class="blackbutton">Read</a></li>
+												
+												  <li><a href="/_posts/FosteringFriendships/" aria-label="Read article Embracing Your Childs Heritage -- It Is Part Of Who They Are." class="button ">Read Now</a></li>
 												</ul>
 											  </article>
 											  
@@ -523,13 +498,14 @@ font-family: 'Quicksand' !important;
 										  
 											
 											  <article>
-												<a href="/_posts/FamousAdoption/" class="image">
-												  <img src="/assets/images/pic03.jpg" aria-label="read article titled Did you know they were adopted? Famous Figures of adoption">
+												<a href="/_posts/FamousAdoption/" class="image" style="max-height: 40%;">
+												  <img src="/assets/images/pic03.jpg" aria-label="Did you know they were adopted? Famous Figures of adoption">
 												</a>
 												<h3>Did you know they were adopted? Famous Figures of adoption</h3>
 												<p>The former NFL quarterback and activist, Colin Kaepernick, was adopted into a multiracial family. He was raised by a white couple, Rick and Teresa Kaepernick, who provided him with a supportive upbringing. Kaepernick is known not only for his athletic prowess but also for his activism and advocacy for social justice issues.</p>
 												<ul class="actions">
-												  <li><a href="/_posts/FamousAdoption/" aria-label="Read More" class="blackbutton">Read</a></li>
+												
+												  <li><a href="/_posts/FamousAdoption/" aria-label="Read article Did you know they were adopted? Famous Figures of adoption" class="button ">Read Now</a></li>
 												</ul>
 											  </article>
 											  
@@ -537,13 +513,14 @@ font-family: 'Quicksand' !important;
 										  
 											
 											  <article>
-												<a href="/_posts/AdoptionForHope/" class="image">
-												  <img src="/assets/images/pic02.jpg" aria-label="read article titled Adoption is really cool">
+												<a href="/_posts/AdoptionForHope/" class="image" style="max-height: 40%;">
+												  <img src="/assets/images/pic02.jpg" aria-label="Adoption is really cool">
 												</a>
 												<h3>Adoption is really cool</h3>
 												<p>The hope embedded within the heart of adoption nurtures dreams, heals wounds, and creates a world where every child finds solace and every family finds the boundless joy of unconditional love.</p>
 												<ul class="actions">
-												  <li><a href="/_posts/AdoptionForHope/" aria-label="Read More" class="blackbutton">Read</a></li>
+												
+												  <li><a href="/_posts/AdoptionForHope/" aria-label="Read article Adoption is really cool" class="button ">Read Now</a></li>
 												</ul>
 											  </article>
 											  
@@ -640,7 +617,6 @@ font-family: 'Quicksand' !important;
 											<li><a href="/medical">Medical</a></li>
 											<li><a href="/counseling">Counseling Services</a></li>
 									</ul>
-									<li><a href="/services">More Services</a></li>
 
 							</nav>
 														
@@ -722,24 +698,24 @@ font-family: 'Quicksand' !important;
 										
 										<div class="profile-article">
 										  <div class="profile-content">
-											<img src="/assets/images/whitneyprof.png" alt="photo of Whitney - Caseworker" class="profile-image" />
-											<p class="profile-info"><strong>Whitney</strong></br>Caseworker</p>
+											<img src="/assets/images/whitneyprof.png" alt="photo of Whitney - Case worker" class="profile-image" />
+											<p class="profile-info"><strong>Whitney</strong></br>Case worker</p>
 										  </div>
 										</div>
 										
 										
 										<div class="profile-article">
 										  <div class="profile-content">
-											<img src="/assets/images/robinprof.png" alt="photo of Robin - Counselor" class="profile-image" />
-											<p class="profile-info"><strong>Robin</strong></br>Counselor</p>
+											<img src="/assets/images/robinprof.png" alt="photo of Robin - Social Worker" class="profile-image" />
+											<p class="profile-info"><strong>Robin</strong></br>Social Worker</p>
 										  </div>
 										</div>
 										
 										
 										<div class="profile-article">
 										  <div class="profile-content">
-											<img src="/assets/images/maryjaneprof.png" alt="photo of Mary Jane - Caseworker" class="profile-image" />
-											<p class="profile-info"><strong>Mary Jane</strong></br>Caseworker</p>
+											<img src="/assets/images/maryjaneprof.png" alt="photo of Mary Jane - Case worker" class="profile-image" />
+											<p class="profile-info"><strong>Mary Jane</strong></br>Case worker</p>
 										  </div>
 										</div>
 										

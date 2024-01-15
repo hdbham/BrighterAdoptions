@@ -2,7 +2,8 @@
 
 	.testimonial .outerdiv
 	{
-		margin-top: -2rem;
+		margin-top: 4rem;
+		margin-bottom: 4rem;
 		min-width: 100%;
 		display: flex;
 		align-items: center;
@@ -31,7 +32,7 @@ $lapis-lazuli: #215B7Fff; */
 		padding: 1rem 2rem;
 		border-radius: 0.8rem;
 		box-shadow: 5px 5px 20px #6d6b6b6b;
-		color: white;
+		color: black;
 	}
 	.testimonial  .div1
 	{
@@ -78,7 +79,7 @@ $lapis-lazuli: #215B7Fff; */
 	.testimonial 	.imgbox img
 	{
 		border-radius: 50%;
-		width: 2rem;
+		width: 2.9em;
 		border: 2px solid #cec5c5;
 	}
 	.testimonial 	.detbox
@@ -89,7 +90,7 @@ $lapis-lazuli: #215B7Fff; */
 	}
 	.testimonial 	.detbox p
 	{
-		margin: 0;
+		margin: 10px;
 	}
 	.testimonial 	.detbox .name
 	{
@@ -100,13 +101,14 @@ $lapis-lazuli: #215B7Fff; */
 	}
 	.testimonial 	.detbox .name.dark
 	{
-		color: #49505A;
+		font-size: 1.4rem;
+		color: #1b1c1d;
 	}
 	.testimonial 	.detbox .designation
 	{
 		color: hsl(0, 0%, 81%);
 		opacity: 50%;
-		font-size: 0.8rem;
+		font-size: 0.2rem;
 	}
 	.testimonial 	.detbox .designation.dark
 	{
@@ -231,8 +233,8 @@ $lapis-lazuli: #215B7Fff; */
           </div>
         </div>
         <div class="review">
-          <h4>I had no idea what to expect, but even if I had known, I couldn't have imagined how perfect it would actually turn out to be.</h4>
-        <p>“They helped guide the development of the relationship I have with my son's adoptive parents- I love that they educate everyone they work with about open adoption arrangements. I get to chat with forever mom and see new pictures of my boy every week. sandi really tailors the process at Brighter to focus on us  bio moms- if I had to choose just one word to describe my experience it would be 'empowering' ”</p>
+          <h4>I couldn't have imagined how perfect it would actually turn out to be.</h4>
+        <p style="color: white;  opacity: 100;">“They helped guide the development of the relationship I have with my son's adoptive parents- I love that they educate everyone they work with about open adoption arrangements. I get to chat with forever mom and see new pictures of my boy every week. sandi really tailors the process at Brighter to focus on us  bio moms- if I had to choose just one word to describe my experience it would be 'empowering' ”</p>
         </div>
       </div>
       <!-- div2 -->
@@ -246,9 +248,9 @@ $lapis-lazuli: #215B7Fff; */
             <p class="designation dark">Birth Mom</p>
           </div>
         </div>
-        <div class="review">
-          <h4>sandi is truly a Mother of Mothers.</h4>
-        <p>“Housing, financial help, well-informed health care, a birthing plan and counseling was all included. You choose which family gets blessed with your sweet babe, and its with great respect and care that your choices are honored. ”</p>
+        <div class="review dark">
+          <h4>Sandi is truly a Mother of Mothers.</h4>
+        <p>“Housing, financial help, well-informed health care, a birthing plan and counseling was all included. ”</p>
         </div>
       </div>
       <!-- div3 -->
@@ -317,6 +319,9 @@ $lapis-lazuli: #215B7Fff; */
       if (elementPosition < screenHeight * 0.75) {
         element.classList.add('show');
       }
+	  else {
+		element.classList.remove('show');
+	  }
     });
   }
 
