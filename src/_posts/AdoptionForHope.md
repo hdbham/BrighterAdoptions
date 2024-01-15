@@ -1,13 +1,13 @@
 ---
 layout: blog.njk
-imageAlt: Adoption and Unconditional Love
 date: '2023-12-28T00:00:00-07:00'
-title: Adoption is really cool
+title: Adoption and Unconditional Love
 excerpt: >-
   The hope embedded within the heart of adoption nurtures dreams, heals wounds,
   and creates a world where every child finds solace and every family finds the
   boundless joy of unconditional love.
 thumbnail: /assets/images/pic02.jpg
+imageAlt: Adoption and Unconditional Love
 author: Hunter
 tags:
   - featured
@@ -22,8 +22,6 @@ A Beacon of Hope: For many children awaiting adoption, it represents a glimmer o
 Fostering Unconditional Love: Adoptive families open their hearts to children in need, offering the purest form of love - one that knows no bounds and transcends biological ties. It's a testament to the belief that love can create bonds that are as strong as, if not stronger than, blood relationships.
 
 A Journey of Resilience: The decision to adopt often stems from a place of resilience and strength. It's a journey that requires patience, understanding, and an unwavering commitment to providing a nurturing environment for children who may have faced adversity.
-
-![](/assets/images/pic02.jpg)
 
 Building Forever Bonds: Adoption builds families - not just legally, but emotionally and spiritually. It's a process of creating forever bonds, where children and parents find solace, belonging, and a sense of completeness in each other's presence.
 
