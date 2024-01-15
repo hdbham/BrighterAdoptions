@@ -1,6 +1,6 @@
 ---
     name: "Taylor"
-    job: "Case Worker"
+    job: "Caseworker"
     image: "/assets/images/taylorprof.png"
 ---
 

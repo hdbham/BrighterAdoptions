@@ -1,6 +1,6 @@
 ---
     name: "Sandi Quick"
-    job: "Owner and Director"
+    job: "Director"
     image: "/assets/images/sandiprof.png"
 ---
 
