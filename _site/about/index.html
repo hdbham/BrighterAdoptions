@@ -400,7 +400,7 @@
 
 
   .mainVideo {
-    width: 300px;
+    width: 400px;
   }
 
   .allText.bottomText {
@@ -438,6 +438,23 @@
     margin-left: 0px;
   }
 }
+
+@media (max-width: 768px) {
+  .videoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0;
+  }
+
+  .mainVideo {
+    width: 100%;
+    height: auto;
+  }
+}
+
 
 @media (max-width: 768px) {
   .allText {
@@ -591,11 +608,11 @@
   }
 
   .mainVideo {
-    height: 260px;
+    /* height: 260px; */
   }
 
   .videoContainer {
-    height: 320px;
+    /* height: 320px; */
   }
 
   .responsive-container-block.Container.bottomContainer {
@@ -632,7 +649,15 @@
         </a>
       </div>
       <div class="videoContainer">
-    <iframe width="560" height="315" src="https://res.cloudinary.com/duji5kfeq/video/upload/c_crop,e_volume:0,f_auto/v1705361785/IMG_6659_krmehh.mov" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+        <iframe
+            src="https://res.cloudinary.com/duji5kfeq/video/upload/c_crop,e_volume:0,f_auto/v1705361785/IMG_6659_krmehh.mov"
+            width="360"
+            height="600"
+            style="height: 100%; width: auto; aspect-ratio: 360 / 640;"
+            allow="fullscreen; encrypted-media; picture-in-picture"
+            allowfullscreen
+            frameborder="0"
+            ></iframe>
         <img class="dotsImg image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/cw3.svg" style="z-index: -1;">
       </div>
     </div>
