@@ -3,10 +3,9 @@ layout: blog.njk
 date: '2023-12-29T00:00:00-07:00'
 title: Embracing Your Childs Heritage
 excerpt: >-
-  Number 1 - Encourage Open Conversations; Have open discussions with your child
-  about their racial identity and the importance of connecting with peers who
-  share similar backgrounds. Encourage them to express their feelings and
-  questions about their racial identity.
+  Have open discussions with your child about their racial identity and the
+  importance of connecting with peers who share similar backgrounds. Encourage
+  them to express their feelings and questions about their racial identity.
 thumbnail: /assets/images/pic09.jpg
 imageAlt: children roller blading with father
 author: Hunter
