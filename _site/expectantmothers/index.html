@@ -1059,7 +1059,7 @@ details[open] div{
     }
 
     #callButton, #textButton {
-     color: black; !important;
+     color: black; !very important;
     }
   </style>
 </head>
@@ -1077,6 +1077,7 @@ details[open] div{
       <p>Choose an option:</p>
       <button id="callButton" onclick="makeCall()">Make a Call</button>
       <button id="textButton" onclick="sendText()">Send a Text</button>
+      <div style="margin-top: 14px;"> 801-989-6386</div>
     </div>
   </div>
 
@@ -1088,6 +1089,14 @@ details[open] div{
     function closeModal() {
       document.getElementById('modal').style.display = 'none';
     }
+
+
+  function closeOnClickOutside(event) {
+    var modal = document.getElementById('modal');
+    if (modal.style.display === 'flex' && !modal.contains(event.target) && event.target !== document.getElementById('callOrText')) {
+      closeModal();
+    }
+  }
 
     function makeCall() {
       // Link to make a phone call

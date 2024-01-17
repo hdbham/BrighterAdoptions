@@ -114,7 +114,7 @@
 										</span> </p>
 										
 										<div class="actions">
-											<a class="call-button" href="tel:801-989-6386">
+											<a class="call-button" onclick="openModal()">
 												<i class="fas fa-phone-alt"></i>
 												Call or Text
 											</a>
@@ -856,7 +856,7 @@ font-family: 'Quicksand' !important;
     }
 
     #callButton, #textButton {
-     color: black; !important;
+     color: black; !very important;
     }
   </style>
 </head>
@@ -874,6 +874,7 @@ font-family: 'Quicksand' !important;
       <p>Choose an option:</p>
       <button id="callButton" onclick="makeCall()">Make a Call</button>
       <button id="textButton" onclick="sendText()">Send a Text</button>
+      <div style="margin-top: 14px;"> 801-989-6386</div>
     </div>
   </div>
 
@@ -885,6 +886,14 @@ font-family: 'Quicksand' !important;
     function closeModal() {
       document.getElementById('modal').style.display = 'none';
     }
+
+
+  function closeOnClickOutside(event) {
+    var modal = document.getElementById('modal');
+    if (modal.style.display === 'flex' && !modal.contains(event.target) && event.target !== document.getElementById('callOrText')) {
+      closeModal();
+    }
+  }
 
     function makeCall() {
       // Link to make a phone call
