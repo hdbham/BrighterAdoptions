@@ -1467,6 +1467,122 @@ small {
 
 						</div>
 					</div>
+					<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #floatingDiv {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.122);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #callOrText, #email {
+      flex-grow: 1;
+      text-align: center;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    #callOrText {
+      font-size: 16px;
+      background-color: #ffffff;
+      color: rgb(50, 84, 55);
+    }
+
+    #email {
+      background-color: hwb(0 89% 11%);
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+    }
+
+    #modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+    }
+
+    #modal-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    #callButton, #textButton {
+     color: black; !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Your main content goes here -->
+
+  <div id="floatingDiv">
+    <div id="callOrText" onclick="openModal()">Call or Text</div>
+    <div id="email" onclick="sendEmail()">Email</div>
+  </div>
+
+  <div id="modal">
+    <div id="modal-content">
+      <p>Choose an option:</p>
+      <button id="callButton" onclick="makeCall()">Make a Call</button>
+      <button id="textButton" onclick="sendText()">Send a Text</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById('modal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+
+    function makeCall() {
+      // Link to make a phone call
+      window.location.href = 'tel:+18019896386';
+      closeModal();
+    }
+
+    function sendText() {
+      // Link to open a text prepopulated with a message
+      var message = "Hi Sandi! My name is [Your Name], and I'd like to connect.";
+      window.location.href = 'sms:+18019896386?body=' + encodeURIComponent(message);
+      closeModal();
+    }
+
+    function sendEmail() {
+      // Implement your email functionality here
+      var subject = "I wanted to reach out";
+      var body = "Hi Sandi, my name is ";
+
+      window.location.href = 'mailto:sandi@brighteradoption.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    }
+  </script>
+</body>
+</html>
+
+
 
 			</div>
 

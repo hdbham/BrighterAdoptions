@@ -104,7 +104,10 @@
 
     function sendEmail() {
       // Implement your email functionality here
-      alert('Email functionality');
+      var subject = "I wanted to reach out";
+      var body = "Hi Sandi, my name is ";
+
+      window.location.href = 'mailto:sandi@brighteradoption.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     }
   </script>
 </body>
