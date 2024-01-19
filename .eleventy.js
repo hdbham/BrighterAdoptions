@@ -2,11 +2,11 @@ module.exports = function(eleventyConfig) {
 
 
     eleventyConfig.addPassthroughCopy({"src/assets/css/main.css": "main.css"});
-    eleventyConfig.addPassthroughCopy({"src/assets/js/breakpoints.min.js": "/breakpoints.min.js"});
-    eleventyConfig.addPassthroughCopy({"src/assets/js/browser.min.js": "/browser.min.js"});
-    eleventyConfig.addPassthroughCopy({"src/assets/js/jquery.min.js": "/jquery.min.js"});
-    eleventyConfig.addPassthroughCopy({"src/assets/js/main.js" : "/main.js"});
-    eleventyConfig.addPassthroughCopy({"src/assets/js/util.js" : "/util.js"});
+    eleventyConfig.addPassthroughCopy({"src/assets/js/breakpoints.min.js": "/assets/jsbreakpoints.min.js"});
+    eleventyConfig.addPassthroughCopy({"src/assets/js/browser.min.js": "/assets/js/browser.min.js"});
+    eleventyConfig.addPassthroughCopy({"src/assets/js/jquery.min.js": "/assets/js/jquery.min.js"});
+    eleventyConfig.addPassthroughCopy({"src/assets/js/main.js" : "/assets/js/main.js"});
+    eleventyConfig.addPassthroughCopy({"src/assets/js/util.js" : "/assets/js/util.js"});
     eleventyConfig.addPassthroughCopy({"assets/css/fontawesome-all.min.css": "all.min.css"});
 
     eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
