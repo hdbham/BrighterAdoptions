@@ -10,6 +10,25 @@
 		<meta name="description" content="Brighter Adoptions has served hundreds of clients. We feel a great sense of responsibility to help the women who come to us have the best experience possible and find the perfect family for their unborn child.">
 		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
 		<link rel="stylesheet" href="/assets/css/main.css">	</head>
+		<script type="application/ld+json">
+			{
+			  "@context": "https://schema.org",
+			  "@type": "FAQPage",
+			  "mainEntity": [
+				{% for post in collections.faq %}
+				{
+				  "@type": "Question",
+				  "name": {{ post.data.title | json }},
+				  "acceptedAnswer": {
+					"@type": "Answer",
+					"text": {{ post.content | json }}
+				  }
+				}{% unless loop.last %},{% endunless %}
+				{% endfor %}
+			  ]
+			}
+		  </script>
+		</head>
 <style>
 
 .image-container {
