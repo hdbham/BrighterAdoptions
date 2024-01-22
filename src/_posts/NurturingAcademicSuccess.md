@@ -1,8 +1,7 @@
 ---
 layout: blog.njk
-imageAlt: father reading reading with child
 date: '2023-12-29T00:00:00-07:00'
-title: ' Nurturing Academic Success: Supporting Your Adopted Child''s Journey to Good Grades'
+title: ' Nurturing Academic Success'
 excerpt: >-
   As parents, fostering an environment that supports your child's academic
   success is a universal goal. For adopted children, this journey might require
@@ -10,6 +9,7 @@ excerpt: >-
   in their studies. Here's a guide on how to assist your adopted child in
   achieving good grades:
 thumbnail: /assets/images/pic04.jpg
+imageAlt: father reading reading with child
 author: Hunter
 tags:
   - parenting
