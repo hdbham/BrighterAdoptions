@@ -304,7 +304,7 @@ a:hover {
     <div class="columns is-multiline">
       <div class="column is-8 mb-16">
         <div class="mb-10">
-          <a href="#">
+          <a href="{{post.url}}">
             <img class="image is-fullwidth is-cover is-rounded style-YMUm2" src="{{ post.data.thumbnail }}" aria-label="{{post.data.title}}" data-config-id="image1" id="style-YMUm2">
           </a>
         </div>
@@ -316,15 +316,18 @@ a:hover {
         </h2>
         <p class="mb-8 is-size-5 has-text-grey-dark" data-config-id="desc1">
           {{ post.data.excerpt }}        </p>
-        <a class="is-size-6" href="#" data-config-id="action">
-          Read more
-        </a>
+          <a class="is-size-6" href="{{post.url}}" data-config-id="action">
+            Read more
+          </a>
+  
       </div>
       {% else %}
       {# others like this but i need to exclude the newest because it is above#}
       <div class="column is-4 mb-16">
         <div class="mb-10">
+          <a href="{{post.url}}">
           <img class="image is-fullwidth is-cover is-rounded style-koYgp" src="{{ post.data.thumbnail }}" aria-label="{{post.data.title}}"data-config-id="image2" id="style-koYgp">
+            </a>
         </div>
         <span class="is-inline-block mb-4 has-text-grey-dark" data-config-id="date2">
           {{ post.data.date | customDateFormat("medium") }}
@@ -336,7 +339,7 @@ a:hover {
         <p class="mb-8 is-size-5 has-text-grey-dark" data-config-id="desc2">
           {{post.data.excerpt | truncate(140)}}
         </p>
-        <a class="is-size-6" href="#" data-config-id="action">
+        <a class="is-size-6" href="{{post.url}}" data-config-id="action">
           Read more
         </a>
       </div>
