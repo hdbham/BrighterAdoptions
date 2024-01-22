@@ -18,6 +18,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addDataExtension('json', (contents) => {
         return JSON.parse(contents);
       });
+
+      eleventyConfig.addFilter("customDateFormat", function(value, format) {
+        return new Date(value).toLocaleDateString(undefined, { dateStyle: format })});
     
     eleventyConfig.addCollection('blogPosts', function (collectionApi) {
         return collectionApi.getFilteredByGlob('src/_posts/*.md');

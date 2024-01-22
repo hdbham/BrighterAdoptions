@@ -1,9 +1,14 @@
 <style>
+  
   .hero-heading-center {
-  border-bottom: 1px solid #e4ebf3;
-  padding: 80px 30px;
-  position: relative;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #e4ebf3;
+    padding: 80px 30px;
+    position: relative;
+  }
 
 .youtube-container {
             display: flex;
@@ -13,9 +18,7 @@
             margin: 0;
         }
 
-        .centered-div {
-            text-align: center;
-        }
+      
 
         .youtube-embed {
             width: 300px; /* Adjust the width as needed */
@@ -28,7 +31,12 @@
   margin-left: auto;
   margin-right: auto;
 }
-
+.centered-div {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 8rem;
+     /* Set the maximum width for the centered div */
+  }
 .centered-heading {
   text-align: center;
   margin-bottom: 16px;
@@ -157,13 +165,17 @@
   display: flex;
 }
 
+.hero-split img {
+  border-radius: 2%;
+}
+
 @media screen and (max-width: 991px) {
   .container {
     max-width: 728px;
   }
 
   .where {
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: -40px;
@@ -217,37 +229,61 @@
     max-width: 100%;
   }
 
+  .div-block {
+    max-width: 100% !i
+  }
+
   .image-2 {
     display: block;
   }
 }
 }
 
+.fullscreen-video {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 1000;
+  }
+
+  .fullscreen-video video {
+    width: 100%;
+    height: 100%;
+  }
 </style>
 
-
 <section class="hero-heading-center">
-  <div class="container">
+  <div class="container" style="margin-bottom: 3rem;">
     <h1 class="centered-heading margin-bottom-32px-copy">Brighter Housing for Expectant Mothers</h1>
     <div class="where">
       <div class="hero-split">
-        <p class="margin-bottom-24px">At Brighter Adoptions we want to help our expectant mothers have a safe and comfortable place to live throughout the adoption process.  Brighter Adoptions has multiple apartments available for those who need a safe and stable living environment. If you have children coming with you, you are able to enroll them in the local public schools during your stay.<br><br><br><br></p>
-        <a  onclick="openModal()" class="button-primary w-button">Get Help Now</a>
+        <p>We have multiple one-bedroom, two-bedroom and three-bedroom apartment units available for our clients to stay in depending on your needs. All our apartments are in the heart of Layton, Utah, a suburb 20 miles north of Salt Lake City.
+
+          Our apartments are in a safe and convenient area for our clients; with a shopping mall, Target, Dollar Tree, 7-11, restaurants and public schools within walking distance. Free public transportation, and Lyft and Uber are available.<br></p>
+        <a onclick="showVideo()" style="margin-bottom"class="button-primary w-button">See a video tour</a>
       </div>
-      <div class="hero-split"><img src="/assets/images/pool.png" style="max-width: 100%;"></div>
+      <div class="hero-split"><img src="/assets/images/pool.png" style="max-width: 80%;"></div>
     </div>
   </div>
   <div class="div-block-2">
     <div class="div-block">
-      <h1 class="heading-2">A Place To Call Your Own</h1>
-      <p class="margin-bottom-12px">We have multiple one-bedroom, two-bedroom and three-bedroom apartment units available for our clients to stay in depending on your needs. All our apartments are in the heart of Layton, Utah, a suburb 20 miles north of Salt Lake City. <br><br>Our apartments are in a safe and convenient area for our clients; with a shopping mall, Target, Dollar Tree, 7-11, restaurants and public schools within walking distance. Free public transportation, and Lyft and Uber are available. <a href="http://localhost:6269/contact/"><strong><br></strong></a><br><br><br></p>
-      <div class="youtube-container">
-        <div class="centered-div">
-          <video loop autoplay controls="true" width='100%' height='100%' src='https://res.cloudinary.com/duji5kfeq/video/upload/c_crop,h_720,w_410/v1705360436/Brighter_Adoptions_Housing_mwytjd.mp4' type='video/mp4'></video>
-
-
-        </div>
+      <div class="centered-div" id="fullscreen-video" style="display: none;">
+        <video fullscreen loop controls="true" width="100%" height="100%" src="https://res.cloudinary.com/duji5kfeq/video/upload/c_crop,h_720,w_410/v1705360436/Brighter_Adoptions_Housing_mwytjd.mp4" type="video/mp4"></video>
+      </div>
     </div>
   </div>
 </section>
 
+<script>
+  function showVideo() {
+    var fullscreenVideo = document.getElementById("fullscreen-video");
+    fullscreenVideo.style.display = "flex"; // Show the full-screen video
+  
+    fullscreenVideo.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  }
+</script>

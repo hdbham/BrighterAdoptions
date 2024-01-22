@@ -3,14 +3,19 @@
 ---
 <html>
 	<head>
-		<title> Brighter Adoptions</title>
+		<title> {{ title }}</title>
 		<meta charset="utf-8" />
 		<meta name="description" content="{{excerpt}}">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="..." crossorigin="anonymous" />
 		<link rel="stylesheet" href="/main.css" />
 
-		<style> 
+<style> 
+
+.blogwrapper {
+	margin-top: 20rem;
+}
+
 .blogwrapper	.container {
     display: flex;
     align-items: center;
@@ -83,15 +88,17 @@
 							<!-- Content -->
 							<article>
 								
-								<div class="container">
+								<div class="container" style="margin-top:5rem;">
+									<span class="image main">
+										<img src="{{ thumbnail }}" alt="{{title}}" style="padding: 2%; border-radius: 10%;"/>
+									</span>
 									<div>
 										<header class="main">
 											<h1>{{ title }}</h1>
 										</header>
+										<span> {{date |  customDateFormat("medium")}} </span><br><br>
+
 									</div>
-									<span class="image main">
-										<img src="{{ thumbnail }}" alt="{{title}}"/>
-									</span>
 								</div>
 								
 								
@@ -101,27 +108,31 @@
 								
 								<button style="margin-bottom: 2rem;" onclick="history.back()">Go Back</button>
 								
-								<section>
-										<h2>Birth Mother Experiences</h2>
-										<div class="posts">
-											{% set count = 0 %}
-											{% for post in collections.blogPosts | reverse %}
-											{% if post.data.tags and "birth-mother" in post.data.tags %}
-											{% if count < 2 %}
-											<article>
-												<a href="{{ post.url }}" class="image"><img src="{{ post.data.thumbnail }}" alt="" /></a>
-												<h3>{{ post.data.title }}</h3>
-												<p>{{ post.data.excerpt }}</p>
-												<ul class="actions">
-													<li><a href="{{ post.url }}" class="button">Read Article</a></li>
-												</ul>
-											</article>
-											{% set count = count + 1 %}
-											{% endif %}
-											{% endif %}
-											{% endfor %}
-										</div>
-									</section>
+								<div class="posts">
+									{% set count = 0 %}
+									{% for post in collections.blogPosts | reverse %}
+									{% if count < 4 and post.data.tags.includes("adoption")%}
+									  <article>
+									  <a href="{{ post.url }}" class="image" style="max-height: 40%;">
+										<img src="{{ post.data.thumbnail }}" aria-label="{{post.data.title}}">
+									  </a>
+									  <span style="font-size: 16px; color:#4a4a4a67">
+										{{ post.data.date | customDateFormat("medium") }}
+									
+										</span>
+									  <h3 style="font-size: 22px;">{{ post.data.title }}</h3>
+									  <p>
+										{{post.data.excerpt | truncate(140)}}
+									  </p>
+									  <ul class="actions">
+									  
+										<li><a href="{{ post.url }}" aria-label="Read article {{post.data.title}}" style=" font-size: 16px; color: #FF4564">Read Now</a></li>
+									  </ul>
+									  </article>
+									  {% set count = count + 1 %}
+									{% endif %}
+									{% endfor %}
+								  </div>
 								</article>
 								</div>
 						</div>
