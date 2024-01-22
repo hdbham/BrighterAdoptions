@@ -1,6 +1,6 @@
 ---
 layout: blog.njk
-date: '2023-12-29T00:00:00-07:00'
+date: '2024-01-03T00:00:00-07:00'
 title: ' Nurturing Academic Success'
 excerpt: >-
   As parents, fostering an environment that supports your child's academic
