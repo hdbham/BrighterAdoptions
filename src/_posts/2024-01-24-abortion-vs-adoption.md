@@ -5,7 +5,7 @@ title: Abortion vs Adoption?
 excerpt: >-
   Finding out you are pregnant can be a difficult experience. If you are
   exploring your options, please consider placing a baby for adoption.
-thumbnail: /_site/assets/images/stressed-woman-by-alexei-maridashvili.jpg
+thumbnail: /_site/assets/images/pic11.jpg
 imageAlt: Stressed woman looking out window with reflection
 author: Hunter
 tags:
