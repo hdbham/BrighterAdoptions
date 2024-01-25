@@ -14,6 +14,22 @@
 </head>
 <style>
 
+#notification-container {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  background-color: #538f61; /* Red background color */
+  color: white;
+  padding: 15px;
+  text-align: center;
+  display: none;
+}
+
+#notification-message p {
+  margin: 0;
+}
+
 .image-container {
 	display: flex;
 		justify-content: space-around;
@@ -100,6 +116,36 @@
 									  });
 									}
 								  </script>
+
+<div id="notification-container">
+  <div id="notification-message">
+    <p>Sorry, that page moved when we changed our website! <br> Please contact us if you have any questions.</p>
+    </p>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  // Show the notification
+  showNotification();
+
+  // Set a timeout to hide the notification after 4 seconds
+  setTimeout(function () {
+    hideNotification();
+  }, 3500);
+});
+
+  function showNotification() {
+    var notificationContainer = document.getElementById('notification-container');
+    notificationContainer.style.display = 'block';
+  }
+
+  function hideNotification() {
+    var notificationContainer = document.getElementById('notification-container');
+    notificationContainer.style.display = 'none';
+  }
+
+</script>
 
 
 							<!-- Banner -->

@@ -1,0 +1,54 @@
+
+  <style>
+    #notification-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #f44336; /* Red background color */
+      color: white;
+      padding: 15px;
+      text-align: center;
+      display: none;
+    }
+
+    #notification-message p {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body class="is-preload">
+
+  <!-- Your page content -->
+
+  <div id="notification-container">
+    <div id="notification-message">
+      <p>Sorry, that page moved when we changed our website! Hopefully, you find what you need here.</p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Show the notification
+      showNotification();
+
+      // Set a timeout to hide the notification after 4 seconds
+      setTimeout(function () {
+        hideNotification();
+      }, 4000);
+    });
+
+    function showNotification() {
+      var notificationContainer = document.getElementById('notification-container');
+      notificationContainer.style.display = 'block';
+    }
+
+    function hideNotification() {
+      var notificationContainer = document.getElementById('notification-container');
+      notificationContainer.style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>
