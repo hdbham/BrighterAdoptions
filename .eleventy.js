@@ -35,6 +35,29 @@ module.exports = function(eleventyConfig) {
         return collectionApi.getFilteredByGlob('src/staffProfiles/*.md');
     });
 
+    eleventyConfig.addCollection('tags', function(collectionApi) {
+        const tagsSet = new Set();
+        collectionApi.getAll().forEach(item => {
+          if (item.data.tags) {
+            item.data.tags.forEach(tag => tagsSet.add(tag));
+          }
+        });
+        return Array.from(tagsSet);
+      });
+    
+      // Create filtered collections for each tag
+      eleventyConfig.addCollection('taggedPosts', function(collectionApi) {
+        const tags = collectionApi.getFilteredByTag('tags');
+        const posts = collectionApi.getFilteredByTag('blogPosts');
+    
+        return tags.map(tag => {
+          return {
+            tag: tag,
+            posts: posts.filter(post => post.data.tags && post.data.tags.includes(tag)),
+          };
+        });
+      });
+
     return {
         dir: {
             input: 'src',

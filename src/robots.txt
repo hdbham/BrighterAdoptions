@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
-Disallow: /cdn-cgi/
+Disallow: /cdn-cgi/, /_components/
 
-Host: https://brighterweb.netlify.app/
+Host: brighteradoption.com
 
 Sitemap: https://brighterweb.netlify.app/sitemap.xml

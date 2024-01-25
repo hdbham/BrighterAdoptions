@@ -158,7 +158,7 @@
 										{% set count = count + 1 %}
 										{% endfor %}
 									  </div>
-									  <div class="pagination"></div>
+									  <div class="paginationSidebar"></div>
 									</div>
 									{# <div class="button-container">
 									  <a href="#" class="blackbutton">More</a>
@@ -207,7 +207,7 @@
 
     startCarousel();
 
-    var paginationDots = document.querySelector('.pagination');
+    var paginationDots = document.querySelector('.paginationSidebar');
     for (var i = 0; i < dotCount; i++) {
         var dot = document.createElement('span');
         dot.classList.add('pagination-dot');

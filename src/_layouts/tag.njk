@@ -1,0 +1,75 @@
+<!-- tag.njk -->
+
+<html lang="en">
+<head>
+    <title>Tagged Posts</title>
+    <meta charset="utf-8" />
+    <meta name="robots" content="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="is-preload">
+
+  <div id="wrapper">
+
+    <div id="main">
+      <div class="inner">
+
+        {% include "./_components/header.njk" %}
+
+        <section data-section-id="1" data-share="" data-category="blog" data-component-id="2d4a0295_01_awz" class="is-relative section py-20 snipcss-kdSzP style-STMMY" id="style-STMMY">
+          <div class="container">
+
+            <div class="columns is-multiline">
+              {% for post in posts %}
+                <div class="column is-4 mb-16">
+                  <div class="mb-10">
+                    <a href="{{post.url}}">
+                      <img class="image is-fullwidth is-cover is-rounded style-koYgp" src="{{ post.data.thumbnail }}" aria-label="{{post.data.title}}" data-config-id="image2" id="style-koYgp">
+                    </a>
+                  </div>
+                  <span class="is-inline-block mb-4 has-text-grey-dark" data-config-id="date2">
+                    {{ post.data.date | customDateFormat("medium") }}
+                  </span>
+                  <h2 class="mb-4 title is-3" data-config-id="{{ post.data.title }}">
+                    {{ post.data.title }}   
+                  </h2>
+                  <p class="mb-8 is-size-5 has-text-grey-dark" data-config-id="desc2">
+                    {{post.data.excerpt | truncate(140)}}
+                  </p>
+                  <a class="is-size-6" href="{{post.url}}" data-config-id="action">
+                    Read more
+                  </a>
+                </div>
+              {% endfor %}
+            </div>
+
+            <div class="pagination">
+              {% if pagination.href.previous %}
+                <a href="{{ pagination.href.previous }}">Previous Page</a>
+              {% endif %}
+
+              Page {{ pagination.pageNumber }} of {{ pagination.totalPages }}
+
+              {% if pagination.href.next %}
+                <a href="{{ pagination.href.next }}">Next Page</a>
+              {% endif %}
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    {% include "./_components/sidebar.njk" %}
+    {% include "./_components/callnow.njk" %}
+
+  </div>
+
+  <!-- Scripts -->                    
+  {% include "./_components/rawscripts.njk" %}
+
+</body>
+</html>
