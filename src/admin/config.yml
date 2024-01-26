@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
-media_folder: "src/assets/images" # Media files will be stored in the repo under static/images/uploads
+media_folder: "/src/assets/images" # Media files will be stored in the repo under static/images/uploads
 collections:
   - name: "posts"
     label: "Posts"
