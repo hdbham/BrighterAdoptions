@@ -3,7 +3,7 @@ layout: blog
 date: '2024-08-21T11:02:10-06:00'
 title: 'Kind words '
 excerpt: 'Dear Sandi,'
-thumbnail: /assets/images/image000002.jpg
+thumbnail: /assets/images/image02.jpg
 imageAlt: Alyssa with her daughter
 author: Alyssa Nicole
 tags:
