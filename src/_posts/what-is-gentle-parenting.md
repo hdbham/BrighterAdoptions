@@ -1,5 +1,5 @@
 ---
-layout: blog.njk
+layout: blogPost.njk
 imageAlt: father playing twister with kids
 date: '2023-12-29T00:00:00-07:00'
 title: Why Gentle Parenting Isn't Weird.

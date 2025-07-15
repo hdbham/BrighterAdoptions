@@ -1,0 +1,145 @@
+---
+permalink: /sitemap-images.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage Images -->
+  <url>
+    <loc>https://brighteradoption.com/</loc>
+    <image:image>
+      <image:loc>https://brighteradoption.com/assets/images/Logo.jpg</image:loc>
+      <image:title>Brighter Adoptions Logo</image:title>
+      <image:caption>Professional adoption agency logo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://brighteradoption.com/assets/images/LogoHeart.jpg</image:loc>
+      <image:title>Brighter Adoptions Heart Logo</image:title>
+      <image:caption>Heart logo representing care and compassion</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://brighteradoption.com/assets/images/pic300.jpg</image:loc>
+      <image:title>Adoption Support Image</image:title>
+      <image:caption>Two women holding a child - representing adoption support</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- About Page Images -->
+  <url>
+    <loc>https://brighteradoption.com/about/</loc>
+    <image:image>
+      <image:loc>https://brighteradoption.com/assets/images/Logo.jpg</image:loc>
+      <image:title>About Brighter Adoptions</image:title>
+      <image:caption>Professional adoption services</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Staff Profile Images -->
+  <url>
+    <loc>https://brighteradoption.com/staffProfiles/maryjane/</loc>
+    <image:image>
+      <image:loc>https://brighteradoption.com/assets/images/Maryjaneprof.png</image:loc>
+      <image:title>Mary Jane - Adoption Specialist</image:title>
+      <image:caption>Professional headshot of Mary Jane</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://brighteradoption.com/staffProfiles/Sandi/</loc>
+    <image:image>
+      <image:loc>https://brighteradoption.com/assets/images/sandiprof.png</image:loc>
+      <image:title>Sandi - Adoption Specialist</image:title>
+      <image:caption>Professional headshot of Sandi</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://brighteradoption.com/staffProfiles/Shaylee/</loc>
+    <image:image>
+      <image:loc>https://brighteradoption.com/assets/images/Shayleeprof.png</image:loc>
+      <image:title>Shaylee - Adoption Specialist</image:title>
+      <image:caption>Professional headshot of Shaylee</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://brighteradoption.com/staffProfiles/Taylor/</loc>
+    <image:image>
+      <image:loc>https://brighteradoption.com/assets/images/Taylorprof.png</image:loc>
+      <image:title>Taylor - Adoption Specialist</image:title>
+      <image:caption>Professional headshot of Taylor</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://brighteradoption.com/staffProfiles/robin/</loc>
+    <image:image>
+      <image:loc>https://brighteradoption.com/assets/images/Robinprof.png</image:loc>
+      <image:title>Robin - Adoption Specialist</image:title>
+      <image:caption>Professional headshot of Robin</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://brighteradoption.com/staffProfiles/whitney/</loc>
+    <image:image>
+      <image:loc>https://brighteradoption.com/assets/images/Whitneyprof.png</image:loc>
+      <image:title>Whitney - Adoption Specialist</image:title>
+      <image:caption>Professional headshot of Whitney</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Service Page Images -->
+  <url>
+    <loc>https://brighteradoption.com/counseling/</loc>
+    <image:image>
+      <image:loc>https://brighteradoption.com/assets/images/counseling.jpeg</image:loc>
+      <image:title>Counseling Services</image:title>
+      <image:caption>Professional counseling support for birth mothers</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://brighteradoption.com/housing/</loc>
+    <image:image>
+      <image:loc>https://brighteradoption.com/assets/images/housingprogram.jpg</image:loc>
+      <image:title>Housing Program</image:title>
+      <image:caption>Free housing support for expectant mothers</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://brighteradoption.com/Expectantmothers/</loc>
+    <image:image>
+      <image:loc>https://brighteradoption.com/assets/images/expectantmothers.jpg</image:loc>
+      <image:title>Expectant Mothers Services</image:title>
+      <image:caption>Comprehensive support for pregnant women</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://brighteradoption.com/adoptivefamilies/</loc>
+    <image:image>
+      <image:loc>https://brighteradoption.com/assets/images/adoptingfamilies.jpg</image:loc>
+      <image:title>Adoptive Families</image:title>
+      <image:caption>Support for families looking to adopt</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Blog Post Images (if they have featured images) -->
+  {% for post in collections.blogPosts %}
+  {% if post.data.image %}
+  <url>
+    <loc>https://brighteradoption.com{{ post.url }}</loc>
+    <image:image>
+      <image:loc>https://brighteradoption.com{{ post.data.image }}</image:loc>
+      <image:title>{{ post.data.title }} - Featured Image</image:title>
+      <image:caption>{{ post.data.description or post.data.title }}</image:caption>
+    </image:image>
+  </url>
+  {% endif %}
+  {% endfor %}
+  
+</urlset> 

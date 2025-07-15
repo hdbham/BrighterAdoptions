@@ -1,7 +1,7 @@
 module.exports = function(eleventyConfig) {
 
 
-    eleventyConfig.addPassthroughCopy({"src/assets/css/main.css": "main.css"});
+    eleventyConfig.addPassthroughCopy({"src/assets/css/main.css": "assets/css/main.css"});
     eleventyConfig.addPassthroughCopy({"src/assets/js/breakpoints.min.js": "/assets/jsbreakpoints.min.js"});
     eleventyConfig.addPassthroughCopy({"src/assets/js/browser.min.js": "/assets/js/browser.min.js"});
     eleventyConfig.addPassthroughCopy({"src/assets/js/jquery.min.js": "/assets/js/jquery.min.js"});
@@ -21,6 +21,10 @@ module.exports = function(eleventyConfig) {
 
       eleventyConfig.addFilter("customDateFormat", function(value, format) {
         return new Date(value).toLocaleDateString(undefined, { dateStyle: format })});
+      
+      eleventyConfig.addFilter("dateIso", function(value) {
+        return new Date(value).toISOString().split('T')[0];
+      });
     
     eleventyConfig.addCollection('blogPosts', function (collectionApi) {
         return collectionApi.getFilteredByGlob('src/_posts/*.md');

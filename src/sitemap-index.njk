@@ -1,0 +1,20 @@
+---
+permalink: /sitemap-index.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Main Sitemap -->
+  <sitemap>
+    <loc>https://brighteradoption.com/sitemap.xml</loc>
+    <lastmod>{{ page.date | dateIso }}</lastmod>
+  </sitemap>
+  
+  <!-- Image Sitemap -->
+  <sitemap>
+    <loc>https://brighteradoption.com/sitemap-images.xml</loc>
+    <lastmod>{{ page.date | dateIso }}</lastmod>
+  </sitemap>
+  
+</sitemapindex> 

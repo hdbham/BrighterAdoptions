@@ -1,0 +1,9 @@
+# Security Policy for Brighter Adoptions
+# https://brighteradoption.com/.well-known/security.txt
+
+Contact: mailto:security@brighteradoption.com
+Expires: 2025-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://brighteradoption.com/.well-known/security.txt
+Policy: https://brighteradoption.com/security-policy
+Hiring: https://brighteradoption.com/careers 

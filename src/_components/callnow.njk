@@ -18,6 +18,7 @@
       color: #fff;
       display: flex;
       justify-content: space-between;
+      z-index: 999;
     }
 
     #callOrText, #email {
@@ -65,50 +66,52 @@
 </head>
 <body>
 
-  <!-- Your main content goes here -->
-
   <div id="floatingDiv">
-    <div id="callOrText" onclick="openModal()">Call or Text</div>
+    <div id="callOrText" onclick="openRibbonModal()">Call or Text</div>
     <div id="email" onclick="sendEmail()">Email</div>
   </div>
 
   <div id="modal">
     <div id="modal-content">
       <p>Choose an option:</p>
-      <button id="callButton" onclick="makeCall()">Make a Call</button>
-      <button id="textButton" onclick="sendText()">Send a Text</button>
+      <button id="callButton" onclick="makeRibbonCall()">Make a Call</button>
+      <button id="textButton" onclick="sendRibbonText()">Send a Text</button>
       <div style="margin-top: 14px;"> 801-989-6386</div>
     </div>
   </div>
 
   <script>
-    function openModal() {
+    function openRibbonModal() {
       document.getElementById('modal').style.display = 'flex';
+      // Add event listener for clicking outside modal
+      document.addEventListener('click', closeRibbonOnClickOutside);
     }
 
-    function closeModal() {
+    function closeRibbonModal() {
       document.getElementById('modal').style.display = 'none';
+      // Remove event listener when modal is closed
+      document.removeEventListener('click', closeRibbonOnClickOutside);
     }
 
-
-  function closeOnClickOutside(event) {
-    var modal = document.getElementById('modal');
-    if (modal.style.display === 'flex' && !modal.contains(event.target) && event.target !== document.getElementById('callOrText')) {
-      closeModal();
+    function closeRibbonOnClickOutside(event) {
+      var modal = document.getElementById('modal');
+      var modalContent = document.getElementById('modal-content');
+      if (modal.style.display === 'flex' && !modalContent.contains(event.target) && event.target !== document.getElementById('callOrText')) {
+        closeRibbonModal();
+      }
     }
-  }
 
-    function makeCall() {
+    function makeRibbonCall() {
       // Link to make a phone call
       window.location.href = 'tel:+18019896386';
-      closeModal();
+      closeRibbonModal();
     }
 
-    function sendText() {
+    function sendRibbonText() {
       // Link to open a text prepopulated with a message
       var message = "Hi Sandi! My name is [Your Name], and I'd like to connect.";
       window.location.href = 'sms:+18019896386?body=' + encodeURIComponent(message);
-      closeModal();
+      closeRibbonModal();
     }
 
     function sendEmail() {

@@ -47,6 +47,14 @@
     touch-action: manipulation;
   }
 
+.paginationSidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
 </style>
 
 					<div id="sidebar">
@@ -223,6 +231,14 @@
             startCarousel();
         });
     });
+
+    // If the body has class 'blog', start the sidebar closed
+    if (document.body.classList.contains('blog')) {
+      var sidebar = document.getElementById('sidebar');
+      if (sidebar && !sidebar.classList.contains('inactive')) {
+        sidebar.classList.add('inactive');
+      }
+    }
 });
 
 							</script>

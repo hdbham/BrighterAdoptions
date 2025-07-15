@@ -1,8 +1,116 @@
+# Modern SEO-Optimized Robots.txt for Brighter Adoptions
+# https://brighteradoption.com/robots.txt
+
+# Allow all crawlers
 User-agent: *
 Allow: /
+
+# Block sensitive areas
 Disallow: /admin/
-Disallow: /cdn-cgi/, /_components/
+Disallow: /_components/
+Disallow: /cdn-cgi/
+Disallow: /assets/images/Meet the Team_files/
+Disallow: /assets/images/Meet the Team.html
+Disallow: /assets/images/saved_resource.html
 
-Host: brighteradoption.com
+# Block common security and admin paths
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+Disallow: /wp-content/uploads/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /temp/
+Disallow: /cache/
+Disallow: /logs/
+Disallow: /error_log
+Disallow: /access_log
 
-Sitemap: https://brighterweb.netlify.app/sitemap.xml
+# Block search and filter pages that could create duplicate content
+Disallow: /*?*
+Disallow: /*&*
+Disallow: /search
+Disallow: /filter
+Disallow: /sort
+
+# Block file types that don't need indexing
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.docx$
+Disallow: /*.xls$
+Disallow: /*.xlsx$
+Disallow: /*.ppt$
+Disallow: /*.pptx$
+Disallow: /*.zip$
+Disallow: /*.rar$
+Disallow: /*.tar$
+Disallow: /*.gz$
+
+# Block image files from being indexed (they should be in sitemap instead)
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.png$
+Disallow: /*.gif$
+Disallow: /*.svg$
+Disallow: /*.webp$
+
+# Specific crawler optimizations
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Block AI training crawlers (optional - some sites want to block these)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+# Block archive.org (optional - some sites want to block this)
+User-agent: ia_archiver
+Disallow: /
+
+# Block social media crawlers that might cause issues
+User-agent: facebookexternalhit
+Disallow: /
+
+User-agent: Twitterbot
+Disallow: /
+
+# Host directive for canonical domain
+Host: https://brighteradoption.com
+
+# Sitemap locations
+Sitemap: https://brighteradoption.com/sitemap-index.xml
+
+# Additional SEO directives
+# Clean-param directive for URL parameters that don't affect content
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&fbclid&gclid&msclkid&ref&source&medium&campaign&term&content&fbclid&gclid&msclkid&ref&source&medium&campaign&term&content
+
+# Crawl-delay for all other bots
+Crawl-delay: 2

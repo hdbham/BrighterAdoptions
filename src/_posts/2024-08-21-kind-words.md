@@ -1,8 +1,8 @@
 ---
-layout: blog
+layout: blogPost.njk
 date: '2024-08-21T11:02:10-06:00'
 title: 'Kind words '
-excerpt: 'Dear Sandi,'
+excerpt: 'Where do I start?  Youre amazing! What you do for moms and families is absolutely incredible! When I started my adoption journey I thought I would never find the perfect person to go through this tough time with, and then I found you.'
 thumbnail: /assets/images/image02.jpg
 imageAlt: Alyssa with her daughter
 author: Alyssa Nicole

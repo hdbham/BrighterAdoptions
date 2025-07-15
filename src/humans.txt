@@ -1,0 +1,25 @@
+/* TEAM */
+    Founder: Brighter Adoptions Team
+    Contact: info@brighteradoption.com
+    From: Layton, Utah, USA
+
+/* SITE */
+    Last update: 2024
+    Language: English
+    Doctype: HTML5
+    IDE: Visual Studio Code
+    Standards: HTML5, CSS3, JavaScript
+    Components: 11ty, Nunjucks, Sass
+    Software: Node.js, npm
+
+/* THANKS */
+    Name: Brighter Adoptions Team
+    Name: Our Clients
+    Name: The Adoption Community
+
+/* SITE */
+    Name: Brighter Adoptions
+    URL: https://brighteradoption.com
+    Description: Licensed child placing agency providing adoption services in Utah
+    Keywords: adoption agency, Utah, birth mothers, pregnancy, adoption services
+    Author: Brighter Adoptions Team 

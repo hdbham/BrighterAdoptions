@@ -5,310 +5,385 @@ pagination:
   alias: posts
 ---
 
-
+<!DOCTYPE HTML>
 <html lang="en">
 	<head>
-		<title>Blog</title>
+		<title>Adoption Resources & Support | Brighter Adoptions Blog</title>
 		<meta charset="utf-8" />
-		<meta name="robots" content="all">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Helpful articles, guidance, and support for birth mothers considering adoption. Find answers to your questions and connect with our caring team.">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+		
+		<!-- SEO Meta Tags -->
+		<meta name="author" content="Brighter Adoptions">
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+		<meta name="language" content="en">
+		<meta name="revisit-after" content="7 days">
+		<meta name="distribution" content="global">
+		<meta name="keywords" content="adoption resources, birth mother support, adoption guidance, adoption articles, adoption blog, adoption agency Utah, adoption services">
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://brighteradoption.com/blog" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://brighteradoption.com/blog" />
+		<meta property="og:title" content="Adoption Resources & Support | Brighter Adoptions Blog" />
+		<meta property="og:description" content="Helpful articles, guidance, and support for birth mothers considering adoption." />
+		<meta property="og:image" content="https://brighteradoption.com/assets/images/pic300.jpg" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:site_name" content="Brighter Adoptions" />
+		<meta property="og:locale" content="en_US" />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://brighteradoption.com/blog" />
+		<meta property="twitter:title" content="Adoption Resources & Support | Brighter Adoptions Blog" />
+		<meta property="twitter:description" content="Helpful articles, guidance, and support for birth mothers considering adoption." />
+		<meta property="twitter:image" content="https://brighteradoption.com/assets/images/pic300.jpg" />
+		<meta property="twitter:site" content="@BrighterAdoption" />
+		
+		<!-- Blog Schema -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Blog",
+			"name": "Brighter Adoptions Blog",
+			"description": "Helpful articles, guidance, and support for birth mothers considering adoption",
+			"url": "https://brighteradoption.com/blog",
+			"publisher": {
+				"@type": "Organization",
+				"name": "Brighter Adoptions",
+				"logo": {
+					"@type": "ImageObject",
+					"url": "https://brighteradoption.com/assets/images/Logo.jpg",
+					"width": 200,
+					"height": 200
+				}
+			},
+			"mainEntity": {
+				"@type": "ItemList",
+				"numberOfItems": {{ posts.length }},
+				"itemListElement": [
+					{% for post in posts %}
+					{
+						"@type": "ListItem",
+						"position": {{ loop.index }},
+						"item": {
+							"@type": "BlogPosting",
+							"headline": "{{ post.data.title }}",
+							"description": "{{ post.data.excerpt }}",
+							"image": "{{ post.data.thumbnail }}",
+							"url": "https://brighteradoption.com{{ post.url }}",
+							"datePublished": "{{ post.data.date | dateIso }}",
+							"author": {
+								"@type": "Organization",
+								"name": "Brighter Adoptions"
+							}
+						}
+					}{% if not loop.last %},{% endif %}
+					{% endfor %}
+				]
+			},
+			"inLanguage": "en-US",
+			"isAccessibleForFree": true
+		}
+		</script>
+		
+		<!-- Breadcrumb Schema -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "https://brighteradoption.com"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Blog",
+					"item": "https://brighteradoption.com/blog"
+				}
+			]
+		}
+		</script>
+		
+		<!-- Preconnect for performance -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="dns-prefetch" href="//fonts.googleapis.com">
+		
+		<!-- Preload critical resources -->
+		<link rel="preload" href="/assets/css/main.css" as="style">
+		<link rel="preload" href="/assets/css/fontawesome-all.min.css" as="style">
+		
+		<!-- CSS -->
+		<link rel="stylesheet" href="/assets/css/main.css">
 		<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
-		<link rel="stylesheet" href="/assets/css/main.css">	</head>
-	<body class="is-preload">
-
-
-<style>
-	/* @import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900&display=swap');  */
-   
-  
-  section { 
-	  display: block;
-  } 
-  
-  .is-relative { 
-	  position: relative !important;
-  } 
-  
-  .py-20 { 
-	  padding-top: 5rem !important; 
-	  padding-bottom: 5rem !important;
-  } 
-  
-  .section { 
-	  padding: 3rem 1.5rem;
-  } 
-  
-  .is-relative { 
-	  position: relative;
-  } 
-  
-  *,:before,:after { 
-	  box-sizing: inherit;
-  } 
-  
-  img { 
-	  height: auto; 
-	  max-width: 100%;
-  } 
-  
-  .mt-24 { 
-	  margin-top: 6rem !important;
-  } 
-  
-  .is-absolute { 
-	  position: absolute;
-  } 
-  
-  .is-top-0 { 
-	  top: 0;
-  } 
-  
-  .is-left-0 { 
-	  left: 0;
-  } 
-  
-  .mt-52 { 
-	  margin-top: 13rem !important;
-  } 
-  
-  .is-right-0 { 
-	  right: 0;
-  } 
-  
-  .container { 
-	transform: scale(.8rem);
-	padding: 10px;
-	  flex-grow: 1; 
-	  margin: 0 auto; 
-	  position: relative; 
-	  width: auto;
-  } 
-  
-  @media screen and (min-width: 1024px){ 
-	.container { 
-	  max-width: 960px;
-	} 
-  }     
-  
-  @media screen and (min-width: 1216px){ 
-	.container:not(.is-max-desktop) { 
-	  max-width: 1088px;
-	} 
-  }     
-  
-  @media screen and (min-width: 1408px){ 
-	.container:not(.is-max-desktop):not(.is-max-widescreen) { 
-	  max-width: 1088px;
-	} 
-  }     
-  
-  .mx-auto { 
-	  margin-left: auto !important; 
-	  margin-right: auto !important;
-  } 
-  
-  .mb-20 { 
-	  margin-bottom: 5rem !important;
-  } 
-  
-  .has-text-centered { 
-	  text-align: center !important;
-  } 
-  
-  .has-mw-2xl { 
-	  max-width: 42rem;
-  } 
-  
-  .columns { 
-	  margin-left: -.75rem; 
-	  margin-right: -.75rem; 
-	  margin-top: -.75rem;
-  } 
-  
-  .columns:last-child { 
-	  margin-bottom: -.75rem;
-  } 
-  
-  .columns.is-multiline { 
-	  flex-wrap: wrap;
-  } 
-  
-  @media screen and (min-width: 769px), print{ 
-	.columns:not(.is-desktop) { 
-	  display: flex;
-	} 
-  }     
-  
-  span { 
-	  font-style: inherit; 
-	  font-weight: inherit;
-  } 
-  
-  .is-size-7 { 
-	  font-size: 1rem !important;
-  } 
-  
-  h2 { 
-	  margin: 0; 
-	  padding: 0;
-  } 
-  
-  h2 { 
-	  font-size: 100%; 
-	  font-weight: normal;
-  } 
-  
-  .title { 
-	  word-break: break-word;
-  } 
-  
-  .title { 
-	  color: #0A2463; 
-	  font-size: 2.25rem; 
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/x-icon" href="/assets/images/LogoHeart.jpg">
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/LogoHeart.jpg">
+		<meta name="theme-color" content="#F5BF50">
+		
+		<style>
+			/* Modern Blog Listing Styles */
+			.blog-listing-wrapper {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 2rem 0;
+			}
+			
+			.blog-hero {
+				text-align: center;
+				margin-bottom: 4rem;
+				padding: 3rem 2rem;
+				background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+				border-radius: 20px;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+				border: 1px solid rgba(245, 191, 80, 0.1);
+			}
+			
+			.blog-hero h1 {
+				font-size: 3rem;
+				color: #2c3e50;
+				margin-bottom: 1rem;
+				line-height: 1.2;
+				font-weight: 700;
+			}
+			
+			.blog-hero p {
+				font-size: 1.2rem;
+				color: #6c757d;
+				max-width: 600px;
+				margin: 0 auto;
+				line-height: 1.6;
+			}
+			
+			.featured-post {
+				background: #ffffff;
+				border-radius: 20px;
+				overflow: hidden;
+				box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+				margin-bottom: 3rem;
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+			
+			.featured-post:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+			}
+			
+			.featured-post-image {
+				width: 100%;
+				height: 400px;
+				object-fit: cover;
+			}
+			
+			.featured-post-content {
+				padding: 2.5rem;
+			}
+			
+			.featured-post-date {
+				background: #f8e6b3;
+				color: #2c3e50;
+				padding: 0.5rem 1rem;
+				border-radius: 25px;
+				font-size: 0.9rem;
 	  font-weight: 600; 
-	  line-height: 1.125;
-  } 
-  
-  .mt-8 { 
-	  margin-top: 2rem !important;
-  } 
-  
-  .mb-10 { 
-	  margin-bottom: 2.5rem !important;
-  } 
-  
-  .title:not(:last-child) { 
+				display: inline-block;
+				margin-bottom: 1rem;
+			}
+			
+			.featured-post-title {
+				font-size: 2rem;
+				color: #2c3e50;
+				margin-bottom: 1rem;
+				font-weight: 700;
+				line-height: 1.3;
+			}
+			
+			.featured-post-excerpt {
+				font-size: 1.1rem;
+				color: #6c757d;
+				line-height: 1.7;
 	  margin-bottom: 1.5rem;
   } 
   
-  .title.is-2 { 
-	  font-size: 3rem;
-  } 
-  
-  p { 
-	  margin: 0; 
-	  padding: 0;
-  } 
-  
-  .has-text-grey-dark { 
-	  color: #838EA4 !important;
-  } 
-  
-  .is-size-5 { 
-	  font-size: 1.25rem !important;
-  } 
-  
-  .column { 
-	  display: block; 
-	  flex-basis: 0; 
-	  flex-grow: 1; 
-	  flex-shrink: 1; 
-	  padding: .75rem;
-  } 
-  
-  .mb-16 { 
-	  margin-bottom: 4rem !important;
-  } 
-  
-  @media screen and (min-width: 769px), print{ 
-	.column.is-8 { 
-	  flex: none; 
-	  width: 66.66667%;
-	} 
-  
-	.column.is-4 { 
-	  flex: none; 
-	  width: 33.33333%;
-	} 
-  }     
-  
-  @media screen and (min-width: 1024px){ 
-	.mb-0-desktop { 
-	  margin-bottom: 0px !important;
-	} 
-  }     
-  
-  small { 
-	  font-size: .875em;
-  } 
-  
-  .has-text-info { 
-	  color: #45C1FF !important;
-  } 
-  
-  .has-text-weight-semibold { 
-	  font-weight: 600 !important;
-  } 
-  
-  .mb-4 { 
-	  margin-bottom: 1rem !important;
-  } 
-  
-  .is-inline-block { 
-	  display: inline-block !important;
-  } 
-  
-  .title.is-3 { 
-	  font-size: 2.25rem;
-  } 
-  
-  .mb-8 { 
-	  margin-bottom: 2rem !important;
-  } 
-  
-  a { 
-	  color: #ff9645; 
-	  cursor: pointer; 
-	  text-decoration: none;
-  } 
-  
-  .is-size-6 { 
-	  font-size: 1.125rem !important;
-  } 
-  
-  a:hover { 
-	  color: #FF1F44;
-  } 
-  
-  .image { 
-	  display: block; 
-	  position: relative;
-  } 
-  
-  .is-cover { 
-	  object-fit: cover;
-  } 
-  
-  .is-rounded { 
-	  border-radius: .5rem;
-  } 
-  
-  .image.is-fullwidth { 
-	  width: 100%;
-  } 
-  
-  
-  /* These were inline style tags. Uses id+class to override almost everything */
-  #style-STMMY.style-STMMY {  
-	 overflow: hidden;  
-  }  
-  #style-YMUm2.style-YMUm2 {  
-	 height:400px;  
-  }  
-  #style-koYgp.style-koYgp {  
-	 height:400px;  
-  }  
-  #style-xCpnU.style-xCpnU {  
-	 height:400px;  
-  }  
-  #style-gfzo7.style-gfzo7 {  
-	 height:400px;  
-  }  
-  #style-PO8F4.style-PO8F4 {  
-	 height:400px;  
-  }  
-  
-  </style>
+			.posts-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+				gap: 2rem;
+				margin-bottom: 3rem;
+			}
+			
+			.post-card {
+				background: #ffffff;
+				border-radius: 15px;
+				overflow: hidden;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+			
+			.post-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+			}
+			
+			.post-card img {
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+			}
+			
+			.post-card-content {
+				padding: 1.5rem;
+			}
+			
+			.post-date {
+				font-size: 0.9rem;
+				color: #6c757d;
+				margin-bottom: 0.5rem;
+			}
+			
+			.post-title {
+				font-size: 1.3rem;
+				color: #2c3e50;
+				margin-bottom: 1rem;
+				font-weight: 600;
+				line-height: 1.4;
+			}
+			
+			.post-excerpt {
+				color: #6c757d;
+				margin-bottom: 1rem;
+				line-height: 1.6;
+			}
+			
+			.pagination-wrapper {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 1.5rem;
+				margin: 3rem 0;
+				padding: 2.5rem;
+				background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+				border-radius: 20px;
+				box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+				border: 1px solid rgba(245, 191, 80, 0.1);
+			}
+			
+			.pagination-link {
+				background: #f8e6b3;
+				color: #2c3e50;
+				padding: 12px 20px;
+				border: none;
+				border-radius: 25px;
+				font-size: 0.9rem;
+				font-weight: 600;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				text-decoration: none;
+				display: inline-flex;
+				align-items: center;
+				gap: 8px;
+				min-width: 120px;
+				justify-content: center;
+			}
+			
+			.pagination-link:hover {
+				background: #F5BF50;
+				transform: translateY(-2px);
+				box-shadow: 0 4px 12px rgba(245, 191, 80, 0.3);
+			}
+			
+			.pagination-link:disabled {
+				opacity: 0.5;
+				cursor: not-allowed;
+				transform: none;
+			}
+			
+			.pagination-link:disabled:hover {
+				background: #f8e6b3;
+				transform: none;
+				box-shadow: none;
+			}
+			
+			.pagination-info {
+				color: #6c757d;
+				font-weight: 600;
+				font-size: 1rem;
+				padding: 0 20px;
+			}
+			
+			.pagination-arrow {
+				font-size: 1.1rem;
+				font-weight: bold;
+			}
+			
+			/* Responsive Design */
+			@media (max-width: 768px) {
+				.blog-listing-wrapper {
+					padding: 1rem;
+				}
+				
+				.blog-hero h1 {
+					font-size: 2.5rem;
+				}
+				
+				.blog-hero p {
+					font-size: 1.1rem;
+				}
+				
+				.featured-post-content {
+					padding: 2rem 1.5rem;
+				}
+				
+				.featured-post-title {
+					font-size: 1.8rem;
+				}
+				
+				.posts-grid {
+					grid-template-columns: 1fr;
+				}
+				
+				.pagination-wrapper {
+					flex-direction: column;
+					gap: 1.5rem;
+					padding: 2rem;
+				}
+				
+				.pagination-link {
+					min-width: 100px;
+					padding: 10px 16px;
+				}
+			}
+			
+			@media (max-width: 480px) {
+				.blog-hero {
+					padding: 2rem 1rem;
+				}
+				
+				.blog-hero h1 {
+					font-size: 2rem;
+				}
+				
+				.featured-post-content {
+					padding: 1.5rem 1rem;
+				}
+				
+				.featured-post-title {
+					font-size: 1.6rem;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -318,94 +393,103 @@ pagination:
 
 							{% include "./_components/header.njk" %}
 
-							
-<section data-section-id="1" data-share="" data-category="blog" data-component-id="2d4a0295_01_awz" class="is-relative section py-20 snipcss-kdSzP style-STMMY" id="style-STMMY">
-
-  {# <img class="is-absolute is-left-0 is-top-0 mt-24 is-hidden-touch" src="https://shuffle.dev/zeus-assets/icons/dots/blue-dot-left-bars.svg" alt="" data-config-id="auto-img-1-1"> #}
-  {# <img class="is-absolute is-right-0 is-top-0 mt-52 is-hidden-touch" src="https://shuffle.dev/zeus-assets/icons/dots/yellow-dot-right-shield.svg" alt="" data-config-id="auto-img-2-1"> #}
-  <div class="container">
-   
-    {# newest blog post gets this styling #}
+					<div class="blog-listing-wrapper">
+						<!-- Blog Hero -->
+						<header class="blog-hero">
+							<h1>Adoption Resources & Support</h1>
+							<p>Helpful articles, guidance, and support for birth mothers considering adoption. Find answers to your questions and connect with our caring team.</p>
+						</header>
+						
+						<!-- Featured Post -->
     {% for post in posts %}
     {% if loop.index == 1 %}
-
-    <div class="columns is-multiline">
-      <div class="column is-8 mb-16">
-        <div class="mb-10">
+						<article class="featured-post">
           <a href="{{post.url}}">
-            <img class="image is-fullwidth is-cover is-rounded style-YMUm2" src="{{ post.data.thumbnail }}" aria-label="{{post.data.title}}" data-config-id="image1" id="style-YMUm2">
+								<img src="{{ post.data.thumbnail }}" alt="{{post.data.title}}" class="featured-post-image">
           </a>
+							<div class="featured-post-content">
+								<div class="featured-post-date">
+									{{ post.data.date | customDateFormat("medium") }}
         </div>
-        <span class="is-inline-block mb-4 has-text-grey-dark" data-config-id="date1">
-          {{ post.data.date | customDateFormat("medium") }} 
-		  {# {% for tag in post.data.tags %}
-		  <a href="/tags/{{ tag | slug }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-		{% endfor %}#}        </span> 
-        <h2 class="mb-4 title is-3" data-config-id="{{ post.data.title }}">
-          {{ post.data.title }}
+								<h2 class="featured-post-title">
+									<a href="{{post.url}}" style="color: inherit; text-decoration: none;">{{ post.data.title }}</a>
         </h2>
-        <p class="mb-8 is-size-5 has-text-grey-dark" data-config-id="desc1">
-          {{ post.data.excerpt }}        </p>
-          <a class="is-size-6" href="{{post.url}}" data-config-id="action">
-            Read more
-          </a>
-  
-      </div>
-      {% else %}
-      {# others like this but i need to exclude the newest because it is above#}
-      <div class="column is-4 mb-16">
-        <div class="mb-10">
+								<p class="featured-post-excerpt">
+									{{ post.data.excerpt }}
+								</p>
+								<a href="{{post.url}}" class="read-more-button">Read Full Article →</a>
+							</div>
+						</article>
+						{% endif %}
+						{% endfor %}
+						
+						<!-- Posts Grid -->
+						<div class="posts-grid">
+							{% for post in posts %}
+							{% if loop.index > 1 %}
+							<article class="post-card">
           <a href="{{post.url}}">
-          <img class="image is-fullwidth is-cover is-rounded style-koYgp" src="{{ post.data.thumbnail }}" aria-label="{{post.data.title}}"data-config-id="image2" id="style-koYgp">
+									<img src="{{ post.data.thumbnail }}" alt="{{post.data.title}}">
             </a>
+								<div class="post-card-content">
+									<div class="post-date">
+										{{ post.data.date | customDateFormat("medium") }}
         </div>
-        <span class="is-inline-block mb-4 has-text-grey-dark" data-config-id="date2">
-          {{ post.data.date | customDateFormat("medium") }} </span>
-		  {# {% for tag in post.data.tags %}
-		  <a href="/tags/{{ tag | slug }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-		{% endfor %}    #}
-        <h2 class="mb-4 title is-3" data-config-id="{{ post.data.title }}">
-          {{ post.data.title }}   
-        </h2>
-        <p class="mb-8 is-size-5 has-text-grey-dark" data-config-id="desc2">
-          {{post.data.excerpt | truncate(140)}}
-        </p>
-        <a class="is-size-6" href="{{post.url}}" data-config-id="action">
-          Read more
-        </a>
+									<h3 class="post-title">
+										<a href="{{post.url}}" style="color: inherit; text-decoration: none;">{{ post.data.title }}</a>
+									</h3>
+									<p class="post-excerpt">
+										{{post.data.excerpt | truncate(120)}}
+									</p>
+									<a href="{{post.url}}" class="post-link">Read Full Article →</a>
       </div>
+							</article>
       {% endif %}
       {% endfor %}
     </div>
 
-      <div class="pagination">
-        {% if pagination.href.previous %}
-          <a href="{{ pagination.href.previous }}">Previous Page</a>
-        {% endif %}
-  
-        Page {{ pagination.pageNumber }} of {{ pagination.totalPages }}
-  
-        {% if pagination.href.next %}
-          <a href="{{ pagination.href.next }}">Next Page</a>
-        {% endif %}
+												<!-- Pagination -->
+						{% if pagination.totalPages > 1 %}
+						<nav class="pagination-wrapper">
+							{% if pagination.href.previous %}
+							<a href="{{ pagination.href.previous }}" class="pagination-link">
+								<span class="pagination-arrow">←</span>
+								<span>Previous</span>
+							</a>
+							{% else %}
+							<span class="pagination-link" style="opacity: 0.5; cursor: not-allowed;">
+								<span class="pagination-arrow">←</span>
+								<span>Previous</span>
+							</span>
+							{% endif %}
+							
+							<span class="pagination-info">
+								Page {{ pagination.pageNumber }} of {{ pagination.totalPages }}
+							</span>
+							
+							{% if pagination.href.next %}
+							<a href="{{ pagination.href.next }}" class="pagination-link">
+								<span>Next</span>
+								<span class="pagination-arrow">→</span>
+							</a>
+							{% else %}
+							<span class="pagination-link" style="opacity: 0.5; cursor: not-allowed;">
+								<span>Next</span>
+								<span class="pagination-arrow">→</span>
+							</span>
+							{% endif %}
+						</nav>
+						{% endif %}
       </div>
-
-  </div>
-</section>
-
-
 						</div>
 					</div>
 
 					{% include "./_components/sidebar.njk" %}
 					{% include "./_components/callnow.njk" %}
-
-
 			</div>
 
 		<!-- Scripts -->					
-		
 		{% include "./_components/rawscripts.njk" %}
 
-
 	</body>
+</html>

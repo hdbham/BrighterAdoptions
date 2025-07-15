@@ -1,5 +1,5 @@
 ---
-layout: blog.njk
+layout: blogPost.njk
 date: '2024-01-03T00:00:00-07:00'
 title: ' Nurturing Academic Success'
 excerpt: >-

@@ -1,31 +1,29 @@
+<!-- Blog Preview Section -->
 <section>
-  <header class="major">
-    <h2 style="font-size: 25px;">Read our thoughts</h2>
-  </header>
-  <div class="posts">
-    {% set count = 0 %}
-    {% for post in collections.blogPosts | reverse %}
-    {% if count < 4 and post.data.tags.includes("featured")%}
-      <article>
-      <a href="{{ post.url }}" class="image" style="max-height: 40%;">
-        <img src="{{ post.data.thumbnail }}" aria-label="{{post.data.title}}">
-      </a>
-      <span style="font-size: 16px; color:#4a4a4a67">
-        {{ post.data.date | customDateFormat("medium") }}
-    
-        </span>
-      <h3 style="font-size: 22px;">{{ post.data.title }}</h3>
-      <p>
-        {{post.data.excerpt | truncate(140)}}
-      </p>
-      <ul class="actions">
-      
-        <li><a href="{{ post.url }}" aria-label="Read article {{post.data.title}}" style=" font-size: 16px; color: #FF4564">Read Now</a></li>
-      </ul>
-      </article>
-      {% set count = count + 1 %}
-    {% endif %}
-    {% endfor %}
-  </div>
-
-  </section>
+	<header class="major">
+		<h2>Read our thoughts</h2>
+	</header>
+	<div class="posts">
+		{% set count = 0 %}
+		{% for post in collections.blogPosts | reverse %}
+		{% if count < 4 and post.data.tags.includes("featured")%}
+			<article>
+				<a href="{{ post.url }}" class="image">
+					<img src="{{ post.data.thumbnail }}" alt="{{post.data.title}}">
+				</a>
+				<span class="post-date">
+					{{ post.data.date | customDateFormat("medium") }}
+				</span>
+				<h3>{{ post.data.title }}</h3>
+				<p>
+					{{post.data.excerpt | truncate(140)}}
+				</p>
+				<ul class="actions">
+					<li><a href="{{ post.url }}" aria-label="Read article {{post.data.title}}">Read Full Article →</a></li>
+				</ul>
+			</article>
+			{% set count = count + 1 %}
+		{% endif %}
+		{% endfor %}
+	</div>
+</section>

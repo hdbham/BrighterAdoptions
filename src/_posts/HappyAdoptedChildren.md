@@ -1,5 +1,5 @@
 ---
-layout: blog.njk
+layout: blogPost.njk
 date: '2023-12-29T00:00:00-07:00'
 title: Celebrating Happy Adopted Children
 excerpt: >-

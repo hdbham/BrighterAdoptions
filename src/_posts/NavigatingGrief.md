@@ -1,5 +1,5 @@
 ---
-layout: blog.njk
+layout: blogPost.njk
 imageAlt: 'kids playing in sprinklers, lomography'
 date: '2023-12-29T00:00:00-07:00'
 title: I Didn't Realize There Was Grief Involved
