@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ title or 'Brighter Adoptions' }}</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="{{ description or 'Adoption agency in Utah providing support for birth mothers and adoptive families.' }}" />
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+  <link rel="icon" type="image/x-icon" href="/assets/images/LogoHeart.jpg">
+</head>
+<body class="is-preload">
+  <div id="wrapper">
+    {% include "../_components/sidebar.njk" %}
+    <div id="main">
+      <div class="inner">
+        {% include "../_components/header.njk" %}
+        {{ content | safe }}
+      </div>
+    </div>
+  </div>
+  {% include "../_components/callnow.njk" %}
+  {% include "../_components/rawscripts.njk" %}
+</body>
+</html> 

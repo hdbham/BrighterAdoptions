@@ -2,23 +2,15 @@
 layout: blogPost.njk
 date: '2023-12-29T00:00:00-07:00'
 title: Celebrating Happy Adopted Children
-excerpt: >-
-  This blog post celebrates the sheer happiness and contagious smiles of adopted
-  children, emphasizing the love, resilience, and joy they bring into their
-  families and the world.
-thumbnail: /assets/images/pic08.jpg
-imageAlt: >-
-  young girl holi festival chalk of different colors on each finger holding to
-  camera
+excerpt: ''
+thumbnail: /assets/images/blogimages/pexels-karolina-grabowska-7946452.jpg
+imageAlt: ''
 author: Hunter
 tags:
-  - adoption
-  - emotions
-  - grief
-  - happiness
-  - joy
-  - birthmom
+  - featured
+  - post
 ---
+
 There's an undeniable magic in witnessing the joy, laughter, and boundless happiness of children, especially those who have found their forever homes through adoption. Let's celebrate the beautiful stories and vibrant smiles of children who light up the world with their happiness:
 
 **The Unmatched Resilience of Adopted Children**: Adopted children exude a resilience that's both inspiring and heartwarming. Their ability to adapt, thrive, and find happiness in their new families speaks volumes about their strength and the unwavering love that surrounds them.

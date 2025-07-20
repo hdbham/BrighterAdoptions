@@ -1,0 +1,204 @@
+<!-- Table of Contents Component -->
+{% if headings and headings.length > 0 %}
+<div class="toc-section">
+  <div class="toc-header">
+    <h3 class="toc-title">Table of Contents</h3>
+    <button class="toc-toggle" onclick="toggleTOC()">
+      <span class="toc-toggle-text">Show</span>
+      <i class="fas fa-chevron-down"></i>
+    </button>
+  </div>
+  <nav class="toc-nav" id="toc-nav">
+    <ul class="toc-list">
+      {% for heading in headings %}
+      <li class="toc-item toc-level-{{ heading.level }}">
+        <a href="#{{ heading.id }}" class="toc-link" onclick="scrollToHeading('{{ heading.id }}')">
+          {{ heading.text }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>
+{% endif %}
+
+<style>
+.toc-section {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+.toc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.toc-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.toc-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6c757d;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.toc-toggle:hover {
+  color: #f5bf50;
+}
+
+.toc-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.toc-toggle.active i {
+  transform: rotate(180deg);
+}
+
+.toc-nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.toc-nav.active {
+  max-height: 500px;
+}
+
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-item {
+  border-bottom: 1px solid #e9ecef;
+}
+
+.toc-item:last-child {
+  border-bottom: none;
+}
+
+.toc-link {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: #6c757d;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.toc-link:hover {
+  background: #f8e6b3;
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.toc-level-1 {
+  font-weight: 500;
+}
+
+.toc-level-2 {
+  padding-left: 1rem;
+  font-size: 0.85rem;
+}
+
+.toc-level-3 {
+  padding-left: 2rem;
+  font-size: 0.8rem;
+}
+
+.toc-link.active {
+  background: #f8e6b3;
+  color: #2c3e50;
+  border-left: 3px solid #f5bf50;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .toc-header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .toc-link {
+    padding: 0.5rem 1rem;
+  }
+  
+  .toc-level-2 {
+    padding-left: 0.75rem;
+  }
+  
+  .toc-level-3 {
+    padding-left: 1.5rem;
+  }
+}
+</style>
+
+<script>
+function toggleTOC() {
+  const nav = document.getElementById('toc-nav');
+  const toggle = document.querySelector('.toc-toggle');
+  const toggleText = document.querySelector('.toc-toggle-text');
+  
+  nav.classList.toggle('active');
+  toggle.classList.toggle('active');
+  
+  if (nav.classList.contains('active')) {
+    toggleText.textContent = 'Hide';
+  } else {
+    toggleText.textContent = 'Show';
+  }
+}
+
+function scrollToHeading(id) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+}
+
+// Highlight current section in TOC
+function updateTOC() {
+  const headings = document.querySelectorAll('h2, h3, h4');
+  const tocLinks = document.querySelectorAll('.toc-link');
+  
+  let currentHeading = null;
+  
+  headings.forEach(heading => {
+    const rect = heading.getBoundingClientRect();
+    if (rect.top <= 100) {
+      currentHeading = heading.id;
+    }
+  });
+  
+  tocLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + currentHeading) {
+      link.classList.add('active');
+    }
+  });
+}
+
+// Update TOC on scroll
+window.addEventListener('scroll', updateTOC);
+</script> 

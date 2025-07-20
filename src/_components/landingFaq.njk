@@ -1,0 +1,214 @@
+<!-- Shared FAQ Component for Landing Pages -->
+<section class="faq-section">
+	<header class="major">
+		<h2>Frequently Asked Questions</h2>
+	</header>
+	<div class="faq-container">
+		<div class="faq-accordion">
+			{% for question in questions %}
+			<details class="faq-item">
+				<summary class="faq-question">
+					<h3>{{ question.question }}</h3>
+					<span class="faq-toggle"></span>
+				</summary>
+				<div class="faq-answer">
+					<p>{{ question.answer }}</p>
+					{% if question.contact_prompt %}
+					<div class="faq-contact-prompt">
+						<p>{{ question.contact_prompt | safe }}</p>
+					</div>
+					{% endif %}
+				</div>
+			</details>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<style>
+	/* FAQ Styles for Landing Pages */
+	.faq-section {
+		background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+		padding: 3rem;
+		border-radius: 20px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+		margin: 3rem 0;
+	}
+	
+	.faq-section h2 {
+		text-align: center;
+		color: #2c3e50;
+		font-size: 2rem;
+		margin-bottom: 2rem;
+		font-weight: 700;
+	}
+	
+	.faq-accordion details {
+		background: #ffffff;
+		border-left: 6px solid #F5BF50;
+		position: relative;
+		margin-bottom: 16px;
+		border-radius: 12px;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+		border: 1px solid rgba(248, 230, 179, 0.2);
+		overflow: hidden;
+		transition: all 0.3s ease;
+	}
+	
+	.faq-accordion details:hover {
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+	}
+	
+	.faq-accordion details:nth-child(2n) {
+		border-left: 6px solid #d1e8f5;
+	}
+	
+	.faq-accordion details:nth-child(3n) {
+		border-left: 6px solid #f5d1e0;
+	}
+	
+	.faq-accordion summary {
+		padding: 24px 30px;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		transition: background-color 0.3s ease;
+		list-style: none;
+	}
+	
+	.faq-accordion summary:hover {
+		background-color: rgba(248, 230, 179, 0.15);
+	}
+	
+	.faq-accordion summary h3 {
+		color: #2c3e50;
+		margin: 0;
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 1.4;
+		flex: 1;
+		position: relative;
+		padding-left: 2.2em;
+	}
+	
+	.faq-accordion summary h3::before {
+		content: "💛";
+		position: absolute;
+		left: 0;
+		top: 0.1em;
+		font-size: 1.2em;
+	}
+	
+	.faq-accordion details:nth-child(2n) summary h3::before {
+		content: "💙";
+	}
+	
+	.faq-accordion details:nth-child(3n) summary h3::before {
+		content: "💖";
+	}
+	
+	.faq-accordion summary .faq-toggle {
+		font-size: 24px;
+		font-weight: normal;
+		color: #f8e6b3;
+		transition: transform 0.3s ease;
+		margin-left: 20px;
+		user-select: none;
+		position: relative;
+	}
+	
+	.faq-accordion summary .faq-toggle::before {
+		content: "+";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	.faq-accordion details[open] summary .faq-toggle::before {
+		content: "×";
+	}
+	
+	.faq-accordion details[open] summary {
+		background-color: rgba(248, 230, 179, 0.2);
+	}
+	
+	.faq-accordion .faq-answer {
+		padding: 0 30px 24px;
+		background-color: rgba(245, 191, 80, 0.02);
+	}
+	
+	.faq-accordion .faq-answer p {
+		color: #5a6c7d;
+		line-height: 1.7;
+		margin: 0;
+		font-size: 16px;
+	}
+	
+	.faq-accordion .faq-answer .faq-contact-prompt {
+		margin-top: 16px;
+		padding: 16px;
+		background: rgba(248, 230, 179, 0.3);
+		border-radius: 8px;
+		border-left: 3px solid #f8e6b3;
+	}
+	
+	.faq-accordion .faq-answer .faq-contact-prompt p {
+		margin: 0;
+		font-size: 14px;
+	}
+	
+	.faq-accordion .faq-answer .faq-contact-prompt p a {
+		color: #2c3e50;
+		text-decoration: underline;
+		font-weight: 600;
+	}
+	
+	.faq-accordion .faq-answer .faq-contact-prompt p a:hover {
+		color: #F5BF50;
+	}
+	
+	/* Remove default summary arrow */
+	.faq-accordion summary::-webkit-details-marker {
+		display: none;
+	}
+	
+	.faq-accordion summary::marker {
+		display: none;
+	}
+	
+	/* Responsive adjustments */
+	@media screen and (max-width: 980px) {
+		.faq-accordion summary {
+			padding: 20px 24px;
+		}
+		
+		.faq-accordion summary h3 {
+			font-size: 16px;
+		}
+		
+		.faq-accordion .faq-answer {
+			padding: 0 24px 20px;
+		}
+	}
+	
+	@media screen and (max-width: 736px) {
+		.faq-section {
+			padding: 2rem 1rem;
+		}
+		
+		.faq-accordion summary {
+			padding: 16px 20px;
+		}
+		
+		.faq-accordion summary h3 {
+			font-size: 15px;
+			padding-left: 1.8em;
+		}
+		
+		.faq-accordion .faq-answer {
+			padding: 0 20px 16px;
+		}
+	}
+</style> 

@@ -1,6 +1,39 @@
 <!-- Sidebar (Blog Overlay Version) -->
 <style>
 @import url('/assets/css/main.css');
+
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-article {
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.pagination-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #bbb;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-dot.active {
+  background-color: #333;
+}
 </style>
 <div id="sidebar" class="inactive">
   <a href="#sidebar" class="toggle" id="blog-sidebar-toggle">Toggle</a>
@@ -43,13 +76,12 @@
         <div class="carousel">
           <div class="carousel-inner">
             {% for post in collections.staffProfiles %}
-            <div class="profile-article">
+            <div class="profile-article"{% if loop.first %} style="display: block;"{% else %} style="display: none;"{% endif %}>
               <div class="profile-content">
                 <img src="{{ post.data.image }}" alt="photo of {{post.data.name}} - {{ post.data.job }}" class="profile-image" />
                 <p class="profile-info"><strong>{{post.data.name}}</strong></br>{{ post.data.job }}</p>
               </div>
             </div>
-            {% set count = count + 1 %}
             {% endfor %}
           </div>
           <div class="paginationSidebar"></div>

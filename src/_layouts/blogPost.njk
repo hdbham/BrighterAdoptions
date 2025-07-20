@@ -410,6 +410,208 @@
 #sidebar.force-inactive .toggle {
   display: none !important;
 }
+
+/* FAQ Styles for Blog Posts */
+.faq-accordion {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.faq-accordion .faq-item {
+	background: #ffffff;
+	border-left: 6px solid #F5BF50;
+	position: relative;
+	margin-bottom: 16px;
+	border-radius: 12px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+	border: 1px solid rgba(248, 230, 179, 0.2);
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+
+.faq-accordion .faq-item:hover {
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.faq-accordion .faq-item.active {
+	border-color: #f8e6b3;
+	box-shadow: 0 4px 20px rgba(248, 230, 179, 0.2);
+}
+
+.faq-accordion .faq-item:nth-child(2n) {
+	background: #ffffff;
+	border-left: 6px solid #d1e8f5;
+}
+
+.faq-accordion .faq-item:nth-child(3n) {
+	background: #ffffff;
+	border-left: 6px solid #f5d1e0;
+}
+
+.faq-accordion .faq-question {
+	padding: 24px 30px;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: background-color 0.3s ease;
+}
+
+.faq-accordion .faq-question:hover {
+	background-color: rgba(248, 230, 179, 0.15);
+}
+
+.faq-accordion .faq-question h3 {
+	color: #2c3e50;
+	margin: 0;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.4;
+	flex: 1;
+	position: relative;
+	padding-left: 2.2em;
+}
+
+.faq-accordion .faq-question h3::before {
+	content: "💛";
+	position: absolute;
+	left: 0;
+	top: 0.1em;
+	font-size: 1.2em;
+}
+
+.faq-accordion .faq-item:nth-child(2n) .faq-question h3::before {
+	content: "💙";
+}
+
+.faq-accordion .faq-item:nth-child(3n) .faq-question h3::before {
+	content: "💖";
+}
+
+.faq-accordion .faq-toggle {
+	font-size: 24px;
+	font-weight: normal;
+	color: #f8e6b3;
+	transition: transform 0.3s ease;
+	margin-left: 20px;
+	user-select: none;
+}
+
+.faq-accordion .faq-answer {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease;
+	background-color: rgba(245, 191, 80, 0.02);
+}
+
+.faq-accordion .faq-answer p {
+	color: #5a6c7d;
+	line-height: 1.7;
+	margin: 0;
+	font-size: 16px;
+}
+
+.faq-accordion .faq-answer .faq-contact-prompt {
+	margin-top: 16px;
+	padding: 16px;
+	background: rgba(248, 230, 179, 0.3);
+	border-radius: 8px;
+	border-left: 3px solid #f8e6b3;
+}
+
+.faq-accordion .faq-answer .faq-contact-prompt p {
+	margin: 0;
+	font-size: 14px;
+}
+
+.faq-accordion .faq-answer .faq-contact-prompt a {
+	color: #2c3e50;
+	text-decoration: underline;
+	font-weight: 600;
+}
+
+.faq-accordion .faq-answer .faq-contact-prompt a:hover {
+	color: #F5BF50;
+}
+
+.faq-accordion .faq-item.active .faq-question {
+	background-color: rgba(248, 230, 179, 0.2);
+}
+
+.faq-accordion .faq-item.active .faq-question .faq-toggle {
+	transform: rotate(45deg);
+}
+
+.faq-accordion .faq-item.active .faq-answer {
+	max-height: 500px;
+	padding: 0 30px 24px;
+}
+
+/* CTA Section Styles */
+.blog-cta-section {
+	background: linear-gradient(135deg, #F5BF50 0%, #FFD700 100%);
+	padding: 40px;
+	margin: 40px 0;
+	border-radius: 16px;
+	text-align: center;
+	box-shadow: 0 8px 25px rgba(245, 191, 80, 0.3);
+}
+
+.blog-cta-section h3 {
+	color: #2c3e50;
+	font-size: 1.8em;
+	margin-bottom: 15px;
+}
+
+.blog-cta-section p {
+	color: #2c3e50;
+	font-size: 1.1em;
+	margin-bottom: 25px;
+	line-height: 1.6;
+}
+
+.blog-cta-buttons {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.blog-cta-button {
+	display: inline-block;
+	padding: 15px 30px;
+	background: #2c3e50;
+	color: white;
+	text-decoration: none;
+	border-radius: 8px;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	border: 2px solid #2c3e50;
+}
+
+.blog-cta-button:hover {
+	background: transparent;
+	color: #2c3e50;
+	transform: translateY(-2px);
+}
+
+.blog-cta-button.secondary {
+	background: transparent;
+	color: #2c3e50;
+	border: 2px solid #2c3e50;
+}
+
+.blog-cta-button.secondary:hover {
+	background: #2c3e50;
+	color: white;
+}
+
+/* Contact Form Spacing */
+.contact-form-section {
+	margin-top: 60px;
+	padding-top: 40px;
+	border-top: 3px solid #F5BF50;
+}
 		</style>
 		<script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -467,6 +669,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 					{% include "../_components/header.njk" %}
 					
+					<!-- CTA Section -->
+					<section class="blog-cta-section">
+						<h3>Ready to Start Your Adoption Journey?</h3>
+						<p>Whether you're considering adoption or need support, we're here to help. Our experienced team provides compassionate guidance every step of the way.</p>
+						<div class="blog-cta-buttons">
+							<a href="tel:+18019896386" class="blog-cta-button">
+								📞 Call Us Now
+							</a>
+							<a href="#contact-form" class="blog-cta-button secondary" onclick="document.getElementById('contact-form').scrollIntoView({behavior: 'smooth'})">
+								✉️ Get Started
+							</a>
+						</div>
+					</section>
+				
+					
 					<div class="blog-post-wrapper">
 						<!-- Blog Header -->
 						<header class="blog-header">
@@ -485,7 +702,8 @@ document.addEventListener('DOMContentLoaded', function () {
 							<img src="{{ thumbnail }}" alt="{{title}}" class="blog-featured-image">
 							{% endif %}
 						</header>
-						
+
+							
 						<!-- Blog Content -->
 						<article class="blog-content">
 							{{content | safe}}
@@ -498,13 +716,28 @@ document.addEventListener('DOMContentLoaded', function () {
 							</a>
 						</nav>
 						
+						
+						
+						<!-- CTA Section -->
+						<section class="blog-cta-section">
+							<h3>Ready to Start Your Adoption Journey?</h3>
+							<p>Whether you're considering adoption or need support, we're here to help. Our experienced team provides compassionate guidance every step of the way.</p>
+							<div class="blog-cta-buttons">
+								<a href="tel:+18019896386" class="blog-cta-button">
+									📞 Call Us Now
+								</a>
+								<a href="#contact-form" class="blog-cta-button secondary" onclick="document.getElementById('contact-form').scrollIntoView({behavior: 'smooth'})">
+									✉️ Get Started
+								</a>
+							</div>
+						</section>
 						<!-- Related Posts -->
 						<section class="related-posts">
 							<h2>More Adoption Resources</h2>
 							<div class="related-grid">
 								{% set count = 0 %}
-								{% for post in collections.blogPosts | reverse %}
-								{% if count < 3 and post.data.tags.includes("adoption") and post.url != page.url %}
+								{% for post in collections.generalBlogPosts | shuffle %}
+								{% if count < 3 and post.url != page.url %}
 								<article class="related-post">
 									<a href="{{ post.url }}">
 										<img src="{{ post.data.thumbnail }}" alt="{{post.data.title}}">
@@ -527,6 +760,11 @@ document.addEventListener('DOMContentLoaded', function () {
 								{% endfor %}
 							</div>
 						</section>
+
+						<!-- Contact Form -->
+						<div class="contact-form-section">
+							{% include "../_components/contactForm.njk" %}
+						</div>
 					</div>
 				</div>
 			</div>
@@ -589,6 +827,27 @@ document.addEventListener('DOMContentLoaded', function () {
     updateToggleVisibility();
   }
 })();
+</script>
+
+<!-- FAQ Accordion functionality for blog posts -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	const faqItems = document.querySelectorAll('.faq-accordion .faq-item');
+	faqItems.forEach(item => {
+		const question = item.querySelector('.faq-question');
+		const answer = item.querySelector('.faq-answer');
+		const toggle = item.querySelector('.faq-toggle');
+		if (question && answer && toggle) {
+			question.addEventListener('click', function() {
+				const isActive = item.classList.contains('active');
+				faqItems.forEach(i => i.classList.remove('active'));
+				if (!isActive) {
+					item.classList.add('active');
+				}
+			});
+		}
+	});
+});
 </script>
 
 	</body>

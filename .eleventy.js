@@ -2,12 +2,13 @@ module.exports = function(eleventyConfig) {
 
 
     eleventyConfig.addPassthroughCopy({"src/assets/css/main.css": "assets/css/main.css"});
-    eleventyConfig.addPassthroughCopy({"src/assets/js/breakpoints.min.js": "/assets/jsbreakpoints.min.js"});
+    eleventyConfig.addPassthroughCopy({"src/assets/js/breakpoints.min.js": "/assets/js/breakpoints.min.js"});
     eleventyConfig.addPassthroughCopy({"src/assets/js/browser.min.js": "/assets/js/browser.min.js"});
     eleventyConfig.addPassthroughCopy({"src/assets/js/jquery.min.js": "/assets/js/jquery.min.js"});
     eleventyConfig.addPassthroughCopy({"src/assets/js/main.js" : "/assets/js/main.js"});
     eleventyConfig.addPassthroughCopy({"src/assets/js/util.js" : "/assets/js/util.js"});
-    eleventyConfig.addPassthroughCopy({"assets/css/fontawesome-all.min.css": "all.min.css"});
+    eleventyConfig.addPassthroughCopy({"src/assets/css/fontawesome-all.min.css": "assets/css/fontawesome-all.min.css"});
+    eleventyConfig.addPassthroughCopy({"src/assets/webfonts": "/assets/webfonts"});
 
     eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
 
@@ -28,6 +29,44 @@ module.exports = function(eleventyConfig) {
     
     eleventyConfig.addCollection('blogPosts', function (collectionApi) {
         return collectionApi.getFilteredByGlob('src/_posts/*.md');
+    });
+
+    eleventyConfig.addCollection('generalBlogPosts', function (collectionApi) {
+        const locationTags = ['utah', 'texas', 'florida', 'ohio', 'illinois', 'missouri', 'colorado', 'nevada', 'arizona', 'idaho', 'wyoming'];
+        return collectionApi.getFilteredByGlob('src/_posts/*.md').filter(post => {
+            if (!post.data.tags) return true;
+            return !post.data.tags.some(tag => locationTags.includes(tag.toLowerCase()));
+        });
+    });
+
+    // Add a collection for featured blog posts
+    eleventyConfig.addCollection('featuredBlogPosts', function (collectionApi) {
+        return collectionApi.getFilteredByGlob('src/_posts/*.md').filter(post => {
+            return post.data.tags && post.data.tags.includes("featured");
+        });
+    });
+
+    // Add a shuffle filter for randomizing arrays
+    eleventyConfig.addFilter("shuffle", function(array) {
+        if (!Array.isArray(array)) return array;
+        
+        const shuffled = [...array];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled;
+    });
+
+    // Add a some filter for checking if any element matches a condition
+    eleventyConfig.addFilter("some", function(array, callback) {
+        if (!Array.isArray(array)) return false;
+        return array.some(callback);
+    });
+
+    // Add a filter to get only posts with the 'homepage' tag
+    eleventyConfig.addFilter("hasHomepageTag", function(collection) {
+      return collection.filter(post => post.data.tags && post.data.tags.includes("homepage"));
     });
 
     eleventyConfig.addCollection('faq', function (collectionApi) {
@@ -61,6 +100,10 @@ module.exports = function(eleventyConfig) {
           };
         });
       });
+
+    eleventyConfig.addCollection('locationSpecific', function (collectionApi) {
+        return collectionApi.getFilteredByGlob('src/_locationspecific/*.md');
+    });
 
     return {
         dir: {

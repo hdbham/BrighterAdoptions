@@ -20,6 +20,7 @@ Copyright (c) Font Awesome
     underline-thickness="25"
     underline-position="-50"
     unicode-range="U+0020-F8E8"
+    
   />
     <missing-glyph />
     <glyph glyph-name="firefox-browser" unicode="&#xe007;" horiz-adv-x="512" 

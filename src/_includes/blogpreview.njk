@@ -1,0 +1,32 @@
+<!-- Blog Preview Section -->
+<!-- DEBUG: Number of generalBlogPosts: {{ collections.generalBlogPosts.length }} -->
+<!-- DEBUG: Number of featuredBlogPosts: {{ collections.featuredBlogPosts.length }} -->
+<section>
+	<header class="major">
+		<h2>Read our thoughts</h2>
+	</header>
+	<div class="posts">
+		{% set count = 0 %}
+		{% for post in collections.generalBlogPosts | shuffle %}
+		<!-- DEBUG: Processing post {{ loop.index }}: {{ post.data.title }} -->
+		{% if count < 4 %}
+			<article>
+				<a href="{{ post.url }}" class="image">
+					<img src="{{ post.data.thumbnail }}" alt="{{post.data.title}}">
+				</a>
+				<span class="post-date">
+					{{ post.data.date | customDateFormat("medium") }}
+				</span>
+				<h3>{{ post.data.title }}</h3>
+				<p>
+					{{post.data.excerpt | truncate(140)}}
+				</p>
+				<ul class="actions">
+					<li><a href="{{ post.url }}" class="read-more-link" aria-label="Read article {{post.data.title}}">Read Full Article →</a></li>
+				</ul>
+			</article>
+		{% endif %}
+		{% set count = count + 1 %}
+		{% endfor %}
+	</div>
+</section>

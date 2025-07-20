@@ -13,6 +13,12 @@ Disallow: /assets/images/Meet the Team_files/
 Disallow: /assets/images/Meet the Team.html
 Disallow: /assets/images/saved_resource.html
 
+# Block individual FAQ pages (they should only be accessible via the main FAQ section)
+Disallow: /faq/
+
+# Block individual staff profile pages (they should only be accessible via the team carousel)
+Disallow: /staffProfiles/
+
 # Block common security and admin paths
 Disallow: /wp-admin/
 Disallow: /wp-includes/

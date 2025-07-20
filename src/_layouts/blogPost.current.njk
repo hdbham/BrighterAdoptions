@@ -1,0 +1,629 @@
+---
+---
+<html lang="en">
+	<head>
+		<title>{{ title }} | Brighter Adoptions Blog</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="{{excerpt}}">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+		
+		<!-- SEO Meta Tags -->
+		<meta name="author" content="Brighter Adoptions">
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+		<meta name="language" content="en">
+		<meta name="revisit-after" content="7 days">
+		<meta name="distribution" content="global">
+		
+		<!-- Keywords from post tags -->
+		{% if tags %}
+		<meta name="keywords" content="{{ tags.join(', ') }}, adoption, birth mother support, adoption agency Utah">
+		{% else %}
+		<meta name="keywords" content="adoption, birth mother support, adoption agency Utah, adoption resources">
+		{% endif %}
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://brighteradoption.com{{ page.url }}" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="{{ title }}" />
+		<meta property="og:description" content="{{excerpt}}" />
+		<meta property="og:image" content="{{ thumbnail }}" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:url" content="https://brighteradoption.com{{ page.url }}" />
+		<meta property="og:site_name" content="Brighter Adoptions" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="article:published_time" content="{{ date | dateIso }}" />
+		<meta property="article:modified_time" content="{{ date | dateIso }}" />
+		<meta property="article:author" content="Brighter Adoptions" />
+		{% if tags %}
+		<meta property="article:tag" content="{{ tags.join(', ') }}" />
+		{% endif %}
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:title" content="{{ title }}" />
+		<meta property="twitter:description" content="{{excerpt}}" />
+		<meta property="twitter:image" content="{{ thumbnail }}" />
+		<meta property="twitter:url" content="https://brighteradoption.com{{ page.url }}" />
+		<meta property="twitter:site" content="@BrighterAdoption" />
+		
+		<!-- Article Schema -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BlogPosting",
+			"headline": "{{ title }}",
+			"description": "{{excerpt}}",
+			"image": "{{ thumbnail }}",
+			"author": {
+				"@type": "Organization",
+				"name": "Brighter Adoptions",
+				"url": "https://brighteradoption.com"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Brighter Adoptions",
+				"logo": {
+					"@type": "ImageObject",
+					"url": "https://brighteradoption.com/assets/images/Logo.jpg",
+					"width": 200,
+					"height": 200
+				}
+			},
+			"datePublished": "{{ date | dateIso }}",
+			"dateModified": "{{ date | dateIso }}",
+			"mainEntityOfPage": {
+				"@type": "WebPage",
+				"@id": "https://brighteradoption.com{{ page.url }}"
+			},
+			"url": "https://brighteradoption.com{{ page.url }}",
+			{% if tags %}
+			"keywords": "{{ tags.join(', ') }}",
+			{% endif %}
+			"articleSection": "Adoption Resources",
+			"inLanguage": "en-US",
+			"isAccessibleForFree": true
+		}
+		</script>
+		
+		<!-- Breadcrumb Schema -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "https://brighteradoption.com"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Blog",
+					"item": "https://brighteradoption.com/blog"
+				},
+				{
+					"@type": "ListItem",
+					"position": 3,
+					"name": "{{ title }}",
+					"item": "https://brighteradoption.com{{ page.url }}"
+				}
+			]
+		}
+		</script>
+		
+		<!-- Preconnect for performance -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="dns-prefetch" href="//fonts.googleapis.com">
+		
+		<!-- Preload critical resources -->
+		<link rel="preload" href="/assets/css/main.css" as="style">
+		<link rel="preload" href="/assets/css/fontawesome-all.min.css" as="style">
+		
+		<!-- CSS -->
+		<link rel="stylesheet" href="/assets/css/main.css">
+		<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/x-icon" href="/assets/images/LogoHeart.jpg">
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/LogoHeart.jpg">
+		<meta name="theme-color" content="#F5BF50">
+		
+		<!-- Include progress bar component -->
+		{% include "../_components/progressBar.njk" %}
+		
+		<style>
+			/* Modern Blog Post Styles */
+			.blog-post-wrapper {
+				max-width: 900px;
+				margin: 0 auto;
+				padding: 2rem 0;
+			}
+			
+			.blog-header {
+				text-align: center;
+				margin-bottom: 3rem;
+				padding: 2rem;
+				background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+				border-radius: 20px;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+				border: 1px solid rgba(245, 191, 80, 0.1);
+			}
+			
+			.blog-header h1 {
+				font-size: 2.5rem;
+				color: #2c3e50;
+				margin-bottom: 1rem;
+				line-height: 1.3;
+				font-weight: 700;
+			}
+			
+			.blog-meta {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 1rem;
+				margin-bottom: 2rem;
+				font-size: 1rem;
+				color: #6c757d;
+			}
+			
+			.blog-meta .date {
+				background: #f8e6b3;
+				padding: 0.5rem 1rem;
+				border-radius: 25px;
+				color: #2c3e50;
+				font-weight: 600;
+			}
+			
+			.blog-featured-image {
+				width: 100%;
+				max-width: 600px;
+				height: auto;
+				border-radius: 15px;
+				box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+				margin: 2rem auto;
+				display: block;
+			}
+			
+			.blog-content {
+				background: #ffffff;
+				padding: 3rem;
+				border-radius: 20px;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+				margin-bottom: 3rem;
+				line-height: 1.8;
+				font-size: 1.1rem;
+				color: #2c3e50;
+			}
+			
+			/* Add IDs to headings for TOC */
+			.blog-content h2,
+			.blog-content h3,
+			.blog-content h4 {
+				scroll-margin-top: 100px;
+			}
+			
+			.blog-content h2 {
+				color: #2c3e50;
+				font-size: 1.8rem;
+				margin: 2rem 0 1rem 0;
+				font-weight: 600;
+				border-left: 4px solid #f8e6b3;
+				padding-left: 1rem;
+			}
+			
+			.blog-content h3 {
+				color: #2c3e50;
+				font-size: 1.5rem;
+				margin: 1.5rem 0 1rem 0;
+				font-weight: 600;
+			}
+			
+			.blog-content p {
+				margin-bottom: 1.5rem;
+			}
+			
+			.blog-content ul, .blog-content ol {
+				margin: 1.5rem 0;
+				padding-left: 2rem;
+			}
+			
+			.blog-content li {
+				margin-bottom: 0.5rem;
+			}
+			
+			.blog-content blockquote {
+				background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+				border-left: 4px solid #f8e6b3;
+				padding: 1.5rem;
+				margin: 2rem 0;
+				border-radius: 10px;
+				font-style: italic;
+				color: #5a6c7d;
+			}
+			
+			.related-posts {
+				margin-top: 4rem;
+			}
+			
+			.related-posts h2 {
+				text-align: center;
+				font-size: 2rem;
+				color: #2c3e50;
+				margin-bottom: 2rem;
+				font-weight: 600;
+			}
+			
+			.related-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 2rem;
+				margin-top: 2rem;
+			}
+			
+			.related-post {
+				background: #ffffff;
+				border-radius: 15px;
+				overflow: hidden;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+			
+			.related-post:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+			}
+			
+			.related-post img {
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+			}
+			
+			.related-post-content {
+				padding: 1.5rem;
+			}
+			
+			.related-post-date {
+				font-size: 0.9rem;
+				color: #6c757d;
+				margin-bottom: 0.5rem;
+			}
+			
+			.related-post-title {
+				font-size: 1.2rem;
+				color: #2c3e50;
+				margin-bottom: 1rem;
+				font-weight: 600;
+				line-height: 1.4;
+			}
+			
+			.related-post-excerpt {
+				color: #6c757d;
+				margin-bottom: 1rem;
+				line-height: 1.6;
+			}
+			
+			.related-post-tags {
+				display: flex;
+				gap: 0.5rem;
+				margin-bottom: 1rem;
+				flex-wrap: wrap;
+			}
+			
+			.related-post-tags .tag {
+				background: #f8e6b3;
+				color: #2c3e50;
+				padding: 0.25rem 0.75rem;
+				border-radius: 15px;
+				font-size: 0.8rem;
+				font-weight: 500;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+			}
+			
+			/* Responsive Design */
+			@media (max-width: 768px) {
+				.blog-post-wrapper {
+					padding: 1rem;
+				}
+				
+				.blog-header h1 {
+					font-size: 2rem;
+				}
+				
+				.blog-content {
+					padding: 2rem 1.5rem;
+					font-size: 1rem;
+				}
+				
+				.related-grid {
+					grid-template-columns: 1fr;
+				}
+				
+				.blog-meta {
+					flex-direction: column;
+					gap: 0.5rem;
+				}
+			}
+			
+			@media (max-width: 480px) {
+				.blog-header {
+					padding: 1.5rem;
+				}
+				
+				.blog-content {
+					padding: 1.5rem 1rem;
+				}
+				
+				.blog-header h1 {
+					font-size: 1.8rem;
+				}
+			}
+
+/* Blog template only: force large screens to use tablet sidebar rules with !important */
+@media screen and (min-width: 981px) {
+  #sidebar {
+    box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.175) !important;
+    height: 100% !important;
+    left: 0 !important;
+    position: fixed !important;
+    top: 0 !important;
+    z-index: 10000 !important;
+    max-height: none !important;
+    overflow-y: visible !important;
+  }
+  #sidebar > .inner {
+    -webkit-overflow-scrolling: touch !important;
+    height: 100% !important;
+    left: 0 !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    position: absolute !important;
+    top: 0 !important;
+  }
+}
+/* Sidebar force-inactive: mimics inactive but is not toggled by main JS */
+#sidebar.force-inactive {
+  /* closed styles */
+  transform: translateX(-100%) !important;
+  transition: transform 0.3s;
+}
+#sidebar.force-open {
+  /* open styles */
+  transform: none !important;
+  transition: transform 0.3s;
+}
+@media (max-width: 1280px) {
+  #sidebar.force-inactive {
+    /* If you want the sidebar to behave differently on small screens, adjust here */
+    transform: translateX(-100%) !important;
+  }
+}
+.floating-sidebar-toggle {
+  position: fixed;
+  top: 2em;
+  left: 2em;
+  z-index: 20000;
+  width: 3.5em;
+  height: 3.5em;
+  background: #fff;
+  border-radius: 0.5em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+.floating-sidebar-toggle:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+.floating-sidebar-toggle .fa-bars {
+  font-size: 2rem;
+  color: #111;
+}
+.floating-sidebar-toggle.hide {
+  display: none !important;
+}
+/* Hide the original sidebar toggle when floating toggle is visible */
+#sidebar.force-inactive .toggle {
+  display: none !important;
+}
+		</style>
+		<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (document.body.classList.contains('blogpost-page')) {
+    var mq = window.matchMedia('(min-width: 981px)');
+    var sidebar = document.getElementById('sidebar');
+    var toggle = sidebar && sidebar.querySelector('.toggle');
+
+    function setSidebarForceInactive() {
+      if (mq.matches && sidebar && !sidebar.classList.contains('force-inactive') && !sidebar.classList.contains('force-open')) {
+        sidebar.classList.add('force-inactive');
+      } else if ((!mq.matches || sidebar.classList.contains('force-open')) && sidebar && sidebar.classList.contains('force-inactive')) {
+        sidebar.classList.remove('force-inactive');
+      }
+    }
+
+    // Listen for toggle button click to allow opening
+    if (toggle) {
+      toggle.addEventListener('click', function () {
+        if (sidebar.classList.contains('force-inactive')) {
+          sidebar.classList.remove('force-inactive');
+          sidebar.classList.add('force-open');
+        } else if (sidebar.classList.contains('force-open')) {
+          sidebar.classList.remove('force-open');
+          sidebar.classList.add('force-inactive');
+        }
+      });
+    }
+
+    setSidebarForceInactive();
+    mq.addEventListener('change', function() {
+      // Remove force-open if resizing
+      if (!mq.matches && sidebar.classList.contains('force-open')) {
+        sidebar.classList.remove('force-open');
+      }
+      setSidebarForceInactive();
+    });
+  }
+});
+</script>
+	</head>
+	<body class="is-preload blogpost-page">
+
+		<!-- Sidebar Toggle and Sidebar -->
+		{% include "../_components/sidebar.njk" %}
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			{% include "../_components/callnow.njk" %}
+
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+
+					{% include "../_components/header.njk" %}
+					
+					<div class="blog-post-wrapper">
+						<!-- Blog Header -->
+						<header class="blog-header">
+							<h1>{{ title }}</h1>
+							<div class="blog-meta">
+								<span class="date">{{date | customDateFormat("medium")}}</span>
+								{% if tags %}
+								<span class="tags">
+									{% for tag in tags %}
+									<span class="tag">{{ tag }}</span>
+									{% endfor %}
+								</span>
+								{% endif %}
+							</div>
+							{% if thumbnail %}
+							<img src="{{ thumbnail }}" alt="{{title}}" class="blog-featured-image">
+							{% endif %}
+						</header>
+						
+						<!-- Blog Content -->
+						<article class="blog-content">
+							{{content | safe}}
+						</article>
+						
+						<!-- Navigation -->
+						<nav class="blog-navigation">
+							<a href="/blog" class="blog-button back-button">
+								<i class="fas fa-arrow-left"></i> Back to Blog
+							</a>
+						</nav>
+						
+						<!-- Related Posts -->
+						<section class="related-posts">
+							<h2>More Adoption Resources</h2>
+							<div class="related-grid">
+								{% set relatedPosts = collections.relatedPosts(page, 3) %}
+								{% for post in relatedPosts %}
+								<article class="related-post">
+									<a href="{{ post.url }}">
+										<img src="{{ post.data.thumbnail or '/assets/images/pic300.jpg' }}" alt="{{post.data.title}}">
+									</a>
+									<div class="related-post-content">
+										<div class="related-post-date">
+											{{ post.data.date | dateFilter }}
+										</div>
+										<h3 class="related-post-title">
+											<a href="{{ post.url }}">{{ post.data.title }}</a>
+										</h3>
+										<p class="related-post-excerpt">
+											{{post.data.excerpt | truncate(120)}}
+										</p>
+																{% if post.tags %}
+						<div class="related-post-tags">
+							{% for tag in post.tags | slice(0, 2) %}
+											{% if tag != 'post' and tag != 'hidden' %}
+											<span class="tag">{{ tag | replace('-', ' ') | title }}</span>
+											{% endif %}
+											{% endfor %}
+										</div>
+										{% endif %}
+										<a href="{{ post.url }}" class="read-more-link">Read Full Article →</a>
+									</div>
+								</article>
+								{% endfor %}
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		
+		<!-- Scripts -->
+		{% include "../_components/rawscripts.njk" %}
+		<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (document.body.classList.contains('blogpost-page')) {
+    var mq = window.matchMedia('(min-width: 981pcx)');
+    var sidebar = document.getElementById('sidebar');
+    function setSidebarForceInactive(e) {
+      if (mq.matches && sidebar && !sidebar.classList.contains('force-inactive')) {
+        sidebar.classList.add('force-inactive');
+      } else if (!mq.matches && sidebar && sidebar.classList.contains('force-inactive')) {
+        sidebar.classList.remove('force-inactive');
+      }
+    }
+    setSidebarForceInactive();
+    mq.addEventListener('change', setSidebarForceInactive);
+  }
+});
+</script>
+
+<!-- Floating Hamburger Toggle for Sidebar -->
+<button class="floating-sidebar-toggle hide" id="floatingSidebarToggle" aria-label="Open sidebar">
+  <i class="fas fa-bars"></i>
+</button>
+<script>
+(function() {
+  var sidebar = document.getElementById('sidebar');
+  var floatToggle = document.getElementById('floatingSidebarToggle');
+  function updateToggleVisibility() {
+    if (!sidebar) return;
+    // Show the floating toggle only if sidebar has force-inactive
+    if (sidebar.classList.contains('force-inactive')) {
+      floatToggle.classList.remove('hide');
+      // Hide the original sidebar toggle
+      var origToggle = sidebar.querySelector('.toggle');
+      if (origToggle) origToggle.style.display = 'none';
+    } else {
+      floatToggle.classList.add('hide');
+      // Show the original sidebar toggle
+      var origToggle = sidebar.querySelector('.toggle');
+      if (origToggle) origToggle.style.display = '';
+    }
+  }
+  if (floatToggle && sidebar) {
+    floatToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      sidebar.classList.remove('force-inactive');
+      updateToggleVisibility();
+    });
+    // Observe sidebar class changes
+    var observer = new MutationObserver(updateToggleVisibility);
+    observer.observe(sidebar, { attributes: true, attributeFilter: ['class'] });
+    // Initial state
+    updateToggleVisibility();
+  }
+})();
+</script>
+
+	</body>
+</html>

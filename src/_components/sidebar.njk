@@ -91,7 +91,7 @@
 											<li><a href="/counseling">Counseling Services</a></li>
 										</ul>
 									</li> #}
-									<li><a href="/blog">blog</a></li>
+									<li><a href="/blog">Blog</a></li>
 
 								</ul>
 
@@ -106,13 +106,13 @@
 								}
 							
 								.carousel-inner {
-								display: flex;
+								position: relative;
 								overflow: hidden;
 								}
 							
 								.profile-article {
-								flex: 0 0 auto;
-								width: 100%; /* Adjust width as needed */
+								position: relative;
+								width: 100%;
 								padding: 0 10px; /* Adjust padding as needed */
 								box-sizing: border-box;
 								}
@@ -131,6 +131,7 @@
 								background-color: #bbb;
 								margin: 0 5px;
 								cursor: pointer;
+								transition: background-color 0.3s ease;
 								}
 							
 								.pagination-dot.active {
@@ -157,13 +158,12 @@
 									<div class="carousel">
 									  <div class="carousel-inner">
 										{% for post in collections.staffProfiles %}
-										<div class="profile-article">
+										<div class="profile-article"{% if loop.first %} style="display: block;"{% else %} style="display: none;"{% endif %}>
 										  <div class="profile-content">
 											<img src="{{ post.data.image }}" alt="photo of {{post.data.name}} - {{ post.data.job }}" class="profile-image" />
 											<p class="profile-info"><strong>{{post.data.name}}</strong></br>{{ post.data.job }}</p>
 										  </div>
 										</div>
-										{% set count = count + 1 %}
 										{% endfor %}
 									  </div>
 									  <div class="paginationSidebar"></div>
@@ -240,7 +240,6 @@
       }
     }
 });
-
 							</script>
 							
 

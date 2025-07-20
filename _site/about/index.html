@@ -25,7 +25,7 @@
 </style>
 									<header id="header">
 										<a href="https://www.brighteradoption.com" style="text-decoration: none; border: 0;">
-											<img src="/assets/images/Logo.png" alt="logo heart with rays" style="max-height: 4rem; max-width: 10rem;" class="logo">
+											<img src="/assets/images/Logo.jpg" alt="logo heart with rays" style="max-height: 4rem; max-width: 10rem;" class="logo">
 										  </a>
 																			  <ul class="icons">
 										<!-- Twitter -->
@@ -532,6 +532,18 @@ small {
     
       <div class="column is-4">
 		  <div class="box p-6 pb-12 has-text-centered">
+			<img class="image is-fullwidth is-cover is-rounded mx-auto mb-6" style="height: 100%; width: auto;" src="/assets/images/maryjaneprof.png" alt="" data-config-id="image2">
+			<h3 class="is-size-4 has-text-weight-semibold" data-config-id="name2">Mary Jane</h3>
+			<p class="mb-8 has-text-grey-dark" data-config-id="title2">Caseworker</p>
+
+            <p> <p>Mary Jane was impressed with each birth mom's courage and genuine selflessness, which led her to work full time to help moms feel comfortable throughout their pregnancy and the adoptive process.</p>
+</p> <br>
+			
+		  </div>
+		</div>
+    
+      <div class="column is-4">
+		  <div class="box p-6 pb-12 has-text-centered">
 			<img class="image is-fullwidth is-cover is-rounded mx-auto mb-6" style="height: 100%; width: auto;" src="/assets/images/robinprof.png" alt="" data-config-id="image2">
 			<h3 class="is-size-4 has-text-weight-semibold" data-config-id="name2">Robin</h3>
 			<p class="mb-8 has-text-grey-dark" data-config-id="title2">Social Worker</p>
@@ -549,18 +561,6 @@ small {
 			<p class="mb-8 has-text-grey-dark" data-config-id="title2">Caseworker</p>
 
             <p> <p>Whitney brings academic expertise and a patient, considerate, and empathetic nature to provide invaluable support to birth mothers on their adoption journey.</p>
-</p> <br>
-			
-		  </div>
-		</div>
-    
-      <div class="column is-4">
-		  <div class="box p-6 pb-12 has-text-centered">
-			<img class="image is-fullwidth is-cover is-rounded mx-auto mb-6" style="height: 100%; width: auto;" src="/assets/images/maryjaneprof.png" alt="" data-config-id="image2">
-			<h3 class="is-size-4 has-text-weight-semibold" data-config-id="name2">Mary Jane</h3>
-			<p class="mb-8 has-text-grey-dark" data-config-id="title2">Caseworker</p>
-
-            <p> <p>Mary Jane was impressed with each birth mom's courage and genuine selflessness, which led her to work full time to help moms feel comfortable throughout their pregnancy and the adoptive process.</p>
 </p> <br>
 			
 		  </div>
@@ -667,7 +667,7 @@ small {
 
 
 									
-									<li><a href="/blog">blog</a></li>
+									<li><a href="/blog">Blog</a></li>
 
 								</ul>
 
@@ -682,13 +682,13 @@ small {
 								}
 							
 								.carousel-inner {
-								display: flex;
+								position: relative;
 								overflow: hidden;
 								}
 							
 								.profile-article {
-								flex: 0 0 auto;
-								width: 100%; /* Adjust width as needed */
+								position: relative;
+								width: 100%;
 								padding: 0 10px; /* Adjust padding as needed */
 								box-sizing: border-box;
 								}
@@ -707,6 +707,7 @@ small {
 								background-color: #bbb;
 								margin: 0 5px;
 								cursor: pointer;
+								transition: background-color 0.3s ease;
 								}
 							
 								.pagination-dot.active {
@@ -733,53 +734,47 @@ small {
 									<div class="carousel">
 									  <div class="carousel-inner">
 										
-										<div class="profile-article">
+										<div class="profile-article" style="display: block;">
 										  <div class="profile-content">
 											<img src="/assets/images/sandiprof.png" alt="photo of Sandi Quick - Director" class="profile-image" />
 											<p class="profile-info"><strong>Sandi Quick</strong></br>Director</p>
 										  </div>
 										</div>
 										
-										
-										<div class="profile-article">
+										<div class="profile-article" style="display: none;">
 										  <div class="profile-content">
 											<img src="/assets/images/shayleeprof.png" alt="photo of Shaylee - Counselor" class="profile-image" />
 											<p class="profile-info"><strong>Shaylee</strong></br>Counselor</p>
 										  </div>
 										</div>
 										
-										
-										<div class="profile-article">
+										<div class="profile-article" style="display: none;">
 										  <div class="profile-content">
 											<img src="/assets/images/taylorprof.png" alt="photo of Taylor - Caseworker" class="profile-image" />
 											<p class="profile-info"><strong>Taylor</strong></br>Caseworker</p>
 										  </div>
 										</div>
 										
-										
-										<div class="profile-article">
-										  <div class="profile-content">
-											<img src="/assets/images/robinprof.png" alt="photo of Robin - Social Worker" class="profile-image" />
-											<p class="profile-info"><strong>Robin</strong></br>Social Worker</p>
-										  </div>
-										</div>
-										
-										
-										<div class="profile-article">
-										  <div class="profile-content">
-											<img src="/assets/images/whitneyprof.png" alt="photo of Whitney - Caseworker" class="profile-image" />
-											<p class="profile-info"><strong>Whitney</strong></br>Caseworker</p>
-										  </div>
-										</div>
-										
-										
-										<div class="profile-article">
+										<div class="profile-article" style="display: none;">
 										  <div class="profile-content">
 											<img src="/assets/images/maryjaneprof.png" alt="photo of Mary Jane - Caseworker" class="profile-image" />
 											<p class="profile-info"><strong>Mary Jane</strong></br>Caseworker</p>
 										  </div>
 										</div>
 										
+										<div class="profile-article" style="display: none;">
+										  <div class="profile-content">
+											<img src="/assets/images/robinprof.png" alt="photo of Robin - Social Worker" class="profile-image" />
+											<p class="profile-info"><strong>Robin</strong></br>Social Worker</p>
+										  </div>
+										</div>
+										
+										<div class="profile-article" style="display: none;">
+										  <div class="profile-content">
+											<img src="/assets/images/whitneyprof.png" alt="photo of Whitney - Caseworker" class="profile-image" />
+											<p class="profile-info"><strong>Whitney</strong></br>Caseworker</p>
+										  </div>
+										</div>
 										
 									  </div>
 									  <div class="paginationSidebar"></div>
@@ -854,7 +849,6 @@ small {
       }
     }
 });
-
 							</script>
 							
 

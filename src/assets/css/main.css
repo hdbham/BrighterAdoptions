@@ -1455,7 +1455,7 @@ form {
 label {
   color: #3d4449;
   display: block;
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 600;
   margin: 0 0 1em 0;
 }
@@ -2938,7 +2938,7 @@ button:disabled,
     margin-bottom: 20px;
   }
   .faq-item h3 {
-    font-size: 18px;
+    font-size: 20px;
   }
   .service-area,
   .local-benefits {
@@ -2946,11 +2946,11 @@ button:disabled,
   }
   .service-area h3,
   .local-benefits h3 {
-    font-size: 20px;
+    font-size: 22px;
   }
   .service-area li,
   .local-benefits li {
-    font-size: 15px;
+    font-size: 17px;
     padding-left: 28px;
   }
 }
@@ -3035,7 +3035,7 @@ button:disabled,
   font-family: "Quicksand", sans-serif;
 }
 .posts article h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin: 0.5rem 1.5rem 1rem;
   color: #2c3e50;
   line-height: 1.3;
@@ -3046,7 +3046,7 @@ button:disabled,
   margin: 0 1.5rem 1.5rem;
   color: #5a6c7d;
   line-height: 1.6;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   font-family: "Quicksand", sans-serif;
   flex-grow: 1;
 }
@@ -3153,10 +3153,10 @@ button:disabled,
     max-width: calc(33.333% - 1.33rem);
   }
   .posts article h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   .posts article p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 1280px) {
@@ -3165,10 +3165,10 @@ button:disabled,
     max-width: calc(50% - 1rem);
   }
   .posts article h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   .posts article p {
-    font-size: 0.9rem;
+    font-size: 1.05rem;
   }
 }
 @media screen and (max-width: 980px) {
@@ -3183,12 +3183,12 @@ button:disabled,
     height: 180px;
   }
   .posts article h3 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     margin: 0.5rem 1.2rem 0.75rem;
   }
   .posts article p {
     margin: 0 1.2rem 1.2rem;
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
   .posts article .post-date {
     margin: 0.75rem 1.2rem 0.25rem;
@@ -3214,16 +3214,16 @@ button:disabled,
     height: 160px;
   }
   .posts article h3 {
-    font-size: 1rem;
+    font-size: 1.4rem;
     margin: 0.5rem 1rem 0.75rem;
   }
   .posts article p {
     margin: 0 1rem 1rem;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
   .posts article .post-date {
     margin: 0.75rem 1rem 0.25rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .posts article .actions {
     margin: 0 1rem 1rem;
@@ -3352,7 +3352,7 @@ button:disabled,
   -ms-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
   transition: margin-left 0.5s ease, box-shadow 0.5s ease;
   background-color: #f5f6f7;
-  font-size: 0.9em;
+  font-size: 1em;
   position: relative;
   width: 26em;
 }
@@ -3689,7 +3689,7 @@ button:disabled,
   color: inherit;
   cursor: pointer;
   display: block;
-  font-size: 0.9em;
+  font-size: 1em;
   padding: 0.625em 0;
 }
 #menu ul a:hover, #menu ul span:hover {
@@ -3750,7 +3750,7 @@ button:disabled,
   padding-left: 1em;
 }
 #menu > ul > li > ul a, #menu > ul > li > ul span {
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 #menu > ul > li > ul > li {
   margin: 0.125em 0 0 0;

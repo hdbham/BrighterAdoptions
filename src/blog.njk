@@ -1,6 +1,6 @@
 ---
 pagination:
-  data: collections.blogPosts
+  data: collections.generalBlogPosts
   size: 5
   alias: posts
 ---
@@ -398,6 +398,11 @@ pagination:
 						<header class="blog-hero">
 							<h1>Adoption Resources & Support</h1>
 							<p>Helpful articles, guidance, and support for birth mothers considering adoption. Find answers to your questions and connect with our caring team.</p>
+							<div style="margin-top: 2rem;">
+								<a href="/location-blog/" style="display: inline-block; padding: 12px 24px; background: #F5BF50; color: #2c3e50; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; border: 2px solid #F5BF50;">
+									📍 Find Location-Specific Resources
+								</a>
+							</div>
 						</header>
 						
 						<!-- Featured Post -->
@@ -417,7 +422,7 @@ pagination:
 								<p class="featured-post-excerpt">
 									{{ post.data.excerpt }}
 								</p>
-								<a href="{{post.url}}" class="read-more-button">Read Full Article →</a>
+								<a href="{{post.url}}" class="read-more-link">Read Full Article →</a>
 							</div>
 						</article>
 						{% endif %}
@@ -441,7 +446,7 @@ pagination:
 									<p class="post-excerpt">
 										{{post.data.excerpt | truncate(120)}}
 									</p>
-									<a href="{{post.url}}" class="post-link">Read Full Article →</a>
+									<a href="{{post.url}}" class="read-more-link">Read Full Article →</a>
       </div>
 							</article>
       {% endif %}

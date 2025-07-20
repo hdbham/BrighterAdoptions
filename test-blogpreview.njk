@@ -1,0 +1,13 @@
+---
+layout: page.njk
+---
+
+# Test Blog Preview
+
+Number of featured posts: {{ collections.featuredBlogPosts.length }}
+
+{% for post in collections.featuredBlogPosts %}
+- {{ post.data.title }}
+{% endfor %}
+
+{% include "blogpreview.njk" %} 

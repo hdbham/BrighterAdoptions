@@ -1,0 +1,124 @@
+{% if title and text %}
+<section class="blog-cta-section">
+    <div class="container">
+        <div class="blog-cta-content">
+            <h2>{{ title }}</h2>
+            <p>{{ text }}</p>
+            <div class="blog-cta-buttons">
+                <a href="tel:801-989-6386" class="btn btn-primary">
+                    <i class="fas fa-phone"></i>
+                    Call (801) 989-6386
+                </a>
+                <a href="sms:801-989-6386" class="btn btn-secondary">
+                    <i class="fas fa-comment"></i>
+                    Text Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.blog-cta-section {
+    background: linear-gradient(135deg, #f8e6b3 0%, #f5bf50 100%);
+    padding: 3rem 0;
+    margin: 3rem 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(245, 191, 80, 0.3);
+}
+
+.blog-cta-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.blog-cta-content h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.blog-cta-content p {
+    color: #34495e;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.blog-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn-secondary {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #1e7e34;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.btn i {
+    font-size: 1.1rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .blog-cta-section {
+        padding: 2rem 1rem;
+        margin: 2rem 1rem;
+    }
+    
+    .blog-cta-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .blog-cta-content p {
+        font-size: 1rem;
+    }
+    
+    .blog-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+    }
+}
+</style>
+{% endif %} 

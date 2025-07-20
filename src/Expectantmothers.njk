@@ -40,6 +40,34 @@
     margin-right: 20px; /* Adjust spacing between bullet and text */
   }
 }
+
+.element-style {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 736px) {
+    p {
+        font-size: 1.6em;
+    }
+    .testimonial .review > p {
+        font-size: 2.2em;
+    }
+    .testimonial .detbox .name.dark {
+        font-size: 2.4rem;
+        color: #1b1c1d;
+    }
+    .review.dark h4 {
+        color: #4B5258;
+        font-size: 2.6em;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .testimonial .review > p {
+        font-size: 29px;
+    }
+}
 	</style>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -148,19 +176,25 @@
 									<h2>Read Our Thoughts</h2>
 									<div class="posts">
 										{% set count = 0 %}
-										{% for post in collections.blogPosts | reverse %}
-											{% if post.data.tags and "birth-mother" in post.data.tags %}
-												{% if count < 2 %}
-													<article>
-														<a href="{{ post.url }}" class="image"><img src="{{ post.data.thumbnail }}" alt="image of {{post.data.title}}" /></a>
-														<h3>{{ post.data.title }}</h3>
-														<p>{{ post.data.excerpt }}</p>
-														<ul class="actions">
-															<li><a href="{{ post.url }}" class="button">More</a></li>
-														</ul>
-													</article>
-													{% set count = count + 1 %}
-												{% endif %}
+										{% for post in collections.featuredBlogPosts | shuffle %}
+											{% set hasBirthMotherTag = false %}
+											{% if post.data.tags %}
+												{% for tag in post.data.tags %}
+													{% if tag.includes("birth-mother") %}
+														{% set hasBirthMotherTag = true %}
+													{% endif %}
+												{% endfor %}
+											{% endif %}
+											{% if hasBirthMotherTag and count < 2 %}
+												<article>
+													<a href="{{ post.url }}" class="image"><img src="{{ post.data.thumbnail }}" alt="image of {{post.data.title}}" /></a>
+													<h3>{{ post.data.title }}</h3>
+													<p>{{ post.data.excerpt }}</p>
+													<ul class="actions">
+														<li><a href="{{ post.url }}" class="read-more-link" aria-label="Read article {{post.data.title}}">Read Full Article →</a></li>
+													</ul>
+												</article>
+												{% set count = count + 1 %}
 											{% endif %}
 										{% endfor %}
 									</div>
