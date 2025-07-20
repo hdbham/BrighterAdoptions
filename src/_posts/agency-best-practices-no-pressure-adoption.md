@@ -1,13 +1,14 @@
 ---
 layout: blogPost.njk
 date: '2024-12-15T00:00:00-07:00'
-title: "Agency Best Practices: How to Prevent Rushing Decisions in Adoption"
+title: 'Agency Best Practices: How to Prevent Rushing Decisions in Adoption'
 excerpt: >-
-  Learn proven strategies for adoption agencies to prevent rushing decisions and create 
-  pressure-free environments. Discover policies, training methods, and communication protocols 
-  that protect birth parent rights and ensure ethical adoption practices.
+  Learn proven strategies for adoption agencies to prevent rushing decisions and
+  create  pressure-free environments. Discover policies, training methods, and
+  communication protocols  that protect birth parent rights and ensure ethical
+  adoption practices.
 thumbnail: /assets/images/pic19.jpg
-imageAlt: Adoption agency staff providing patient, supportive care to birth parents
+imageAlt: 'Adoption agency staff providing patient, supportive care to birth parents'
 author: Brighter Adoptions Team
 tags:
   - post
@@ -17,7 +18,6 @@ tags:
   - birth-parent-rights
   - adoption-policies
   - featured
-  - homepage
 ---
 
 # Agency Best Practices: How to Prevent Rushing Decisions in Adoption
