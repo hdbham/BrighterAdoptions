@@ -8,6 +8,18 @@ permalink: "/location-blog/"
 ---
 
 <style>
+#wrapper {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
 .location-blog-header {
 	text-align: center;
 	padding: 3rem 20px;
@@ -256,23 +268,29 @@ permalink: "/location-blog/"
 	<a href="#" class="location-filter" data-location="alaska">Alaska</a>
 	<a href="#" class="location-filter" data-location="arizona">Arizona</a>
 	<a href="#" class="location-filter" data-location="arkansas">Arkansas</a>
+	<a href="#" class="location-filter" data-location="california">California</a>
 	<a href="#" class="location-filter" data-location="colorado">Colorado</a>
 	<a href="#" class="location-filter" data-location="florida">Florida</a>
+	<a href="#" class="location-filter" data-location="georgia">Georgia</a>
 	<a href="#" class="location-filter" data-location="idaho">Idaho</a>
 	<a href="#" class="location-filter" data-location="illinois">Illinois</a>
+	<a href="#" class="location-filter" data-location="indiana">Indiana</a>
 	<a href="#" class="location-filter" data-location="kansas">Kansas</a>
 	<a href="#" class="location-filter" data-location="louisiana">Louisiana</a>
+	<a href="#" class="location-filter" data-location="massachusetts">Massachusetts</a>
+	<a href="#" class="location-filter" data-location="michigan">Michigan</a>
 	<a href="#" class="location-filter" data-location="mississippi">Mississippi</a>
 	<a href="#" class="location-filter" data-location="missouri">Missouri</a>
 	<a href="#" class="location-filter" data-location="montana">Montana</a>
 	<a href="#" class="location-filter" data-location="nevada">Nevada</a>
 	<a href="#" class="location-filter" data-location="new-mexico">New Mexico</a>
+	<a href="#" class="location-filter" data-location="new-york">New York</a>
 	<a href="#" class="location-filter" data-location="ohio">Ohio</a>
 	<a href="#" class="location-filter" data-location="west-virginia">West Virginia</a>
 	<a href="#" class="location-filter" data-location="wyoming">Wyoming</a>
 </div>
 
-{% set stateNames = ['alabama', 'alaska', 'arizona', 'arkansas', 'colorado', 'florida', 'idaho', 'illinois', 'kansas', 'louisiana', 'mississippi', 'missouri', 'montana', 'nevada', 'new-mexico', 'ohio', 'west-virginia', 'wyoming'] %}
+{% set stateNames = ['alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado', 'florida', 'georgia', 'idaho', 'illinois', 'indiana', 'kansas', 'louisiana', 'massachusetts', 'michigan', 'mississippi', 'missouri', 'montana', 'nevada', 'new-mexico', 'new-york', 'ohio', 'west-virginia', 'wyoming'] %}
 
 <div class="location-grid" id="location-posts">
 	{% for post in collections.locationSpecific | shuffle %}
