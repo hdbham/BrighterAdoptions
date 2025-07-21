@@ -19,6 +19,7 @@ tags:
   - adoption-finalization
   - birth-mother-support
   - featured
+  - homepage
 ---
 
 # What Happens After You Sign the Papers in Utah: The Complete Post-Placement Guide
