@@ -6,7 +6,7 @@ excerpt: >-
   Mental health challenges and addiction are common realities that shouldn't
   prevent you from considering  adoption. Learn how to navigate these challenges
   while making the best decision for yourself and your child.
-thumbnail: /assets/images/blogimages/pexels-kindelmedia-7978478.jpg
+thumbnail: /assets/images/pic16.jpg
 imageAlt: Mental health support and adoption counseling
 author: Brighter Adoptions Team
 tags:

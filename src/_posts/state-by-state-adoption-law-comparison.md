@@ -6,7 +6,7 @@ excerpt: >-
   Comprehensive comparison of adoption laws across all 50 states. Learn about
   revocation periods,  legal requirements, birth certificate laws, and how to
   choose the right state for your adoption.
-thumbnail: /assets/images/blogimages/pexels-kindelmedia-8293592.jpg
+thumbnail: /assets/images/pic15.jpg
 imageAlt: Map of United States showing different adoption laws by state
 author: Brighter Adoptions Team
 tags:
