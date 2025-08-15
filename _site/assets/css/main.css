@@ -1452,6 +1452,20 @@ form {
   margin: 0 0 2em 0;
 }
 
+/* Honeypot field styles to prevent spam */
+.hidden {
+  display: none !important;
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+}
+
 label {
   color: #3d4449;
   display: block;

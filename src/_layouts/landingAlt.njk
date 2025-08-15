@@ -623,9 +623,16 @@
 						<section id="contact-form" class="contact-form-section">
 							<h2>Get Help Now</h2>
 							<div class="simplified-contact">
-								<form name="contactV2" netlify class="contact-form-simple">
+								<form name="contactV2" netlify netlify-honeypot="bot-field" class="contact-form-simple">
 									<!-- Hidden field for Netlify form handling -->
 									<input type="hidden" name="form-name" value="contactV2" />
+									
+									<!-- Honeypot field to prevent spam -->
+									<p class="hidden">
+										<label>
+											Don't fill this out if you're human: <input name="bot-field" type="text" />
+										</label>
+									</p>
 									
 									<div class="form-row">
 										<div class="form-group">

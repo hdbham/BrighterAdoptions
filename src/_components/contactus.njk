@@ -68,7 +68,14 @@ font-family: 'Quicksand' !important;
         <div class="contact-container">
             <h2>Let's talk!</h2>
             <a id="contactus"></a>
-            <form name="contact" netlify>
+            <form name="contact" netlify netlify-honeypot="bot-field">
+                <!-- Honeypot field to prevent spam -->
+                <p class="hidden">
+                    <label>
+                        Don't fill this out if you're human: <input name="bot-field" type="text" />
+                    </label>
+                </p>
+                
                 <label for="name">Hi, Sandi! My name is</label>
                 <input type="text" id="name" name="name" placeholder="Type here" oninput="updateGreeting()">
                 <label for="client-type">I am a</label>
