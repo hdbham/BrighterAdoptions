@@ -68,7 +68,7 @@ font-family: 'Quicksand' !important;
         <div class="contact-container">
             <h2>Let's talk!</h2>
             <a id="contactus"></a>
-            <form name="contact" netlify netlify-honeypot="bot-field">
+            <form name="contact" action="/submittedformblogview" method="POST" netlify netlify-honeypot="bot-field">
                 <!-- Honeypot field to prevent spam -->
                 <p class="hidden">
                     <label>
@@ -101,65 +101,8 @@ font-family: 'Quicksand' !important;
                 <br>
 
                 <input type="submit" value="Send message!" id="submitBtn">
-                <div id="familyDiv" style="display:none;">
-                    <p id="adoptingFamiliesMsg" style="">Thank you for your interest <span id="FamGreetingName"></span>! We don't work with adoptive families, but we can point you in the right direction! <br><br> Click below to learn more about adopting families.</p>
-                    <a class="button" style="color: black;" href="/adoptivefamilies" id="adoptingFamiliesLink"> Adopt a Baby</a>
-                </div>
             </form>
         </div>
     </div>
-        
-    <script>
-       function updateGreeting() {
-        var nameInput = document.getElementById('name');
-        var greeting = document.getElementById('greetingName');
-        greeting.textContent = "- " + nameInput.value;
-
-        var Famgreeting = document.getElementById('FamGreetingName');
-        Famgreeting.textContent = nameInput.value;
-    }
-
-    document.getElementById('client-type').addEventListener('change', function() {
-        var greeting = document.getElementById('greetingName');
-
-        var clientType = this.value;
-        var dueDateField = document.querySelector('.due-date');
-        var recentBirthDateField = document.querySelector('.recent-birth-date');
-        var submitBtn = document.getElementById('submitBtn');
-        var familyDiv = document.getElementById('familyDiv');
-        var lookingLabel = document.querySelector('label[for="looking"]');
-        var lookingInput = document.getElementById('looking');
-        var contactLabel = document.querySelector('label[for="contact"]');
-        var contactInput = document.getElementById('contact');
-
-        if (clientType === 'expectant mother') {
-            dueDateField.style.display = 'block';
-            recentBirthDateField.style.display = 'none';
-        } 
-        
-        if (clientType === 'recent mother') {
-            dueDateField.style.display = 'none';
-            recentBirthDateField.style.display = 'block';
-        } 
-        
-        if (clientType === "family") {
-                recentBirthDateField.style.display = 'none';
-                greeting = 'none';
-                submitBtn.style.display = 'none';
-                familyDiv.style.display = 'block';
-                lookingLabel.style.display = 'none';
-                lookingInput.style.display = 'none';
-                contactLabel.style.display = 'none';
-                contactInput.style.display = 'none';
-            } else {
-                submitBtn.style.display = 'block';
-                familyDiv.style.display = 'none';
-                lookingLabel.style.display = 'block';
-                lookingInput.style.display = 'block';
-                contactLabel.style.display = 'block';
-                contactInput.style.display = 'block';
-            }
-    });
-    </script>
 </body>
 </html>
