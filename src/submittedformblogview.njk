@@ -1,0 +1,182 @@
+---
+pagination:
+  data: collections.generalBlogPosts
+  size: 8
+  alias: recommendedPosts
+  reverse: true
+---
+
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Form Submitted Successfully | Brighter Adoptions</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="Thank you for reaching out to Brighter Adoptions. We've received your submission and will be in touch soon.">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+		
+		<!-- CSS -->
+		<link rel="stylesheet" href="/assets/css/main.css">
+		<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/x-icon" href="/assets/images/LogoHeart.jpg">
+		
+		<style>
+			.success-banner {
+				background: linear-gradient(135deg, #f8e6b3 0%, #F5BF50 100%);
+				padding: 2rem;
+				border-radius: 15px;
+				margin: 2rem 0;
+				text-align: center;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+				border: 1px solid rgba(245, 191, 80, 0.3);
+			}
+			
+			.success-banner h1 {
+				color: #2c3e50;
+				font-size: 2.5rem;
+				margin-bottom: 1rem;
+			}
+			
+			.success-banner p {
+				color: #2c3e50;
+				font-size: 1.2rem;
+				max-width: 800px;
+				margin: 0 auto;
+				line-height: 1.6;
+			}
+
+			.recommended-posts {
+				margin-top: 3rem;
+			}
+
+			.recommended-posts h2 {
+				text-align: center;
+				margin-bottom: 2rem;
+				color: #2c3e50;
+			}
+
+			.posts-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 2rem;
+				margin-bottom: 3rem;
+			}
+			
+			.post-card {
+				background: #ffffff;
+				border-radius: 15px;
+				overflow: hidden;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+			
+			.post-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+			}
+			
+			.post-card img {
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+			}
+			
+			.post-card-content {
+				padding: 1.5rem;
+			}
+			
+			.post-title {
+				font-size: 1.3rem;
+				color: #2c3e50;
+				margin-bottom: 1rem;
+				font-weight: 600;
+				line-height: 1.4;
+			}
+			
+			.post-excerpt {
+				color: #6c757d;
+				margin-bottom: 1rem;
+				line-height: 1.6;
+			}
+
+			.read-more-link {
+				display: inline-block;
+				color: rgb(0, 0, 0);
+				font-weight: 600;
+				text-decoration: none;
+				transition: color 0.3s ease;
+			}
+
+			.read-more-link:hover {
+				color: rgb(0, 0, 0);
+			}
+
+			@media (max-width: 768px) {
+				.success-banner {
+					margin: 1rem;
+					padding: 1.5rem;
+				}
+
+				.success-banner h1 {
+					font-size: 2rem;
+				}
+
+				.success-banner p {
+					font-size: 1.1rem;
+				}
+
+				.posts-grid {
+					grid-template-columns: 1fr;
+					margin: 1rem;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+		<div id="wrapper">
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+					{% include "./_components/header.njk" %}
+
+					<!-- Success Banner -->
+					<div class="success-banner">
+						<h1>Thank You for Reaching Out! 🌟</h1>
+						<p>We've received your submission and our caring team will be in touch with you soon. While you wait, we invite you to explore our blog articles below that might help answer some of your questions about adoption.</p>
+					</div>
+
+					<!-- Recommended Posts -->
+					<div class="recommended-posts">
+						<h2>Recommended Articles for You</h2>
+						<div class="posts-grid">
+							{% for post in recommendedPosts %}
+							<article class="post-card">
+								<a href="{{post.url}}">
+									<img src="{{ post.data.thumbnail }}" alt="{{post.data.title}}">
+								</a>
+								<div class="post-card-content">
+									<h3 class="post-title">
+										<a href="{{post.url}}" style="color: inherit; text-decoration: none;">{{post.data.title}}</a>
+									</h3>
+									<p class="post-excerpt">
+										{{post.data.excerpt | truncate(120)}}
+									</p>
+									<a href="{{post.url}}" class="read-more-link">Read Full Article →</a>
+								</div>
+							</article>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{% include "./_components/sidebar.njk" %}
+			{% include "./_components/callnow.njk" %}
+		</div>
+
+		<!-- Scripts -->					
+		{% include "./_components/rawscripts.njk" %}
+	</body>
+</html>
